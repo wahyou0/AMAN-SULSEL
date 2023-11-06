@@ -11,8 +11,8 @@ class Tabel_anggotaController extends Controller
     
     public function index()
     {
-        $inventaris = tabel_anggota::all();
-        return view('admin.dashboard', compact('inventaris'));
+        
+        return view('admin.anggota.index');
     }
 
     

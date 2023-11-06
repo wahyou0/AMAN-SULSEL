@@ -55,7 +55,7 @@
                         </a>
                         <ul class="collapse submenu list-unstyled" id="forms" data-bs-parent="#accordionExample">
                             <li>
-                                <a href="./form-bootstrap-basic.html"> Data Anggota </a>
+                                <a href="{{ url('/anggota') }}"> Data Anggota </a>
                             </li>
                             <li>
                                 <a href="./form-bootstrap-basic.html"> Kegiatan </a>

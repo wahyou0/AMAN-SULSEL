@@ -673,13 +673,7 @@
                                                     <td><div class="td-content">35</div></td>
                                                     <td><div class="td-content"><a href="javascript:void(0);" class="text-info"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-info feather feather-chevrons-right"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg> Email</a></div></td>
                                                 </tr>
-                                                <tr>
-                                                    <td><div class="td-content product-name"><img src="../src/assets/img/product-camera.jpg" alt="product"><div class="align-self-center"><p class="prd-name">Camera</p><p class="prd-category text-primary">Digital</p></div></div></td>
-                                                    <td><div class="td-content"><span class="pricing">$126.04</span></div></td>
-                                                    <td><div class="td-content"><span class="discount-pricing">$26.04</span></div></td>
-                                                    <td><div class="td-content">30</div></td>
-                                                    <td><div class="td-content"><a href="javascript:void(0);" class="text-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-secondary feather feather-chevrons-right"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg> Referral</a></div></td>
-                                                </tr>
+                                               
     
     
                                             </tbody>
