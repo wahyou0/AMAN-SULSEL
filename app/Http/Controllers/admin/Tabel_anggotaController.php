@@ -11,8 +11,9 @@ class Tabel_anggotaController extends Controller
     
     public function index()
     {
+        $anggota = tabel_anggota::all();
         
-        return view('admin.anggota.index');
+        return view('admin.anggota.index', compact('anggota'));
     }
 
     
@@ -24,7 +25,10 @@ class Tabel_anggotaController extends Controller
     
     public function store(Request $request)
     {
-        //
+        $model = $request->all();
+
+        tabel_anggota::create($model);
+        return redirect('/anggota');
     }
 
     

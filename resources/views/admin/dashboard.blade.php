@@ -32,6 +32,35 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('cork-v3/src/plugins/css/dark/table/datatable/dt-global_style.css') }}">
     <!-- END PAGE LEVEL STYLES -->
 
+    {{-- modal --}}
+    <link href="{{ asset('cork-v3/src/assets/css/light/components/modal.css') }}" rel="stylesheet" type="text/css" />
+    {{-- end modal --}}
+
+    <!-- date time picker -->
+    <link href="{{ asset('cork-v3/src/plugins/src/flatpickr/flatpickr.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('cork-v3/src/plugins/src/noUiSlider/nouislider.min.css') }}" rel="stylesheet" type="text/css">
+    <!-- END THEME GLOBAL STYLES -->
+
+    <!--  BEGIN CUSTOM STYLE FILE  -->
+    <link href="{{ asset('cork-v3/src/assets/css/light/scrollspyNav.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('cork-v3/src/plugins/css/light/flatpickr/custom-flatpickr.css') }}" rel="stylesheet" type="text/css">
+
+    <link href="{{ asset('cork-v3/src/assets/css/dark/scrollspyNav.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('cork-v3/src/plugins/css/dark/flatpickr/custom-flatpickr.css') }}" rel="stylesheet" type="text/css">
+    <!--  END date time picker  -->
+
+    {{-- icon --}}
+    <link rel="stylesheet" href="{{ asset('cork-v3/src/plugins/src/font-icons/fontawesome/css/regular.css') }}">
+    <link rel="stylesheet" href="{{ asset('cork-v3/src/plugins/src/font-icons/fontawesome/css/fontawesome.css') }}">
+    
+    <link href="{{ asset('cork-v3/src/assets/css/light/scrollspyNav.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('cork-v3/src/assets/css/light/components/font-icons.css') }}" rel="stylesheet" type="text/css">
+    
+    <link href="{{ asset('cork-v3/src/assets/css/dark/scrollspyNav.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('cork-v3/src/assets/css/dark/components/font-icons.css') }}" rel="stylesheet" type="text/css">
+    {{-- end icon --}}
+
+
 </head>
 <body class=" layout-boxed">
     <!-- BEGIN LOADER -->
@@ -84,7 +113,6 @@
                                         <nav class="breadcrumb-style-one" aria-label="breadcrumb">
                                             <ol class="breadcrumb">
                                                 <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-                                                <li class="breadcrumb-item active" aria-current="page">Salesss</li>
                                             </ol>
                                         </nav>
                         
@@ -158,6 +186,7 @@
     <script src="{{ asset('cork-v3/src/plugins/src/waves/waves.min.js') }}"></script>
     <script src="{{ asset('cork-v3/layouts/vertical-light-menu/app.js') }}"></script>
     <script src="{{ asset('cork-v3/src/assets/js/custom.js') }}"></script>
+    <script src="{{ asset('cork-v3/src/plugins/src/highlight/highlight.pack.js') }}"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
@@ -185,6 +214,26 @@
         });
     </script>
     <!-- END PAGE LEVEL SCRIPTS -->
+
+    {{-- date time picker --}}
+    <script src="{{ asset('cork-v3/src/assets/js/scrollspyNav.js') }}"></script>
+    <script src="{{ asset('cork-v3/src/plugins/src/flatpickr/flatpickr.js') }}"></script>
+
+    <script src="{{ asset('cork-v3/src/plugins/src/flatpickr/custom-flatpickr.js') }}"></script>
+    <script>
+        var f3 = flatpickr(document.getElementById('rangeCalendarFlatpickr'), {
+            mode: "range"
+        });
+    </script>
+    {{-- end date time picker --}}
+
+    {{-- icon --}}
+    <script src="{{ asset('cork-v3/src/assets/js/scrollspyNav.js') }}"></script>
+    <script src="{{ asset('cork-v3/src/plugins/src/font-icons/feather/feather.min.js') }}"></script>
+    <script>
+        feather.replace();
+    </script>
+    {{-- end icon --}}
 
 </body>
 </html>

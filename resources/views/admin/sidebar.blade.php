@@ -33,9 +33,6 @@
                             <li>
                                 <a href="./index.html"> Analytics </a>
                             </li>
-                            <li class="active">
-                                <a href="./index2.html"> Sales </a>
-                            </li>
                         </ul>
                     </li>
 
@@ -80,9 +77,6 @@
                             <li>
                                 <a href="./user-profile.html"> Profile </a>
                             </li>
-                            <li>
-                                <a href="./user-account-settings.html"> Account Settings </a>
-                            </li>
                         </ul>
                     </li>
 
@@ -121,14 +115,6 @@
                         <div class="heading"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus"><line x1="5" y1="12" x2="19" y2="12"></line></svg><span>TABLES AND FORMS</span></div>
                     </li>
 
-                    <li class="menu">
-                        <a href="./table-basic.html" aria-expanded="false" class="dropdown-toggle">
-                            <div class="">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-layout"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
-                                <span>Tables</span>
-                            </div>
-                        </a>
-                    </li>
 
                     <li class="menu">
                         <a href="#datatables" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -143,15 +129,6 @@
                         <ul class="collapse submenu list-unstyled" id="datatables" data-bs-parent="#accordionExample">
                             <li>
                                 <a href="./table-datatable-basic.html"> Basic </a>
-                            </li>
-                            <li>
-                                <a href="./table-datatable-striped-table.html"> Striped </a>
-                            </li>
-                            <li>
-                                <a href="./table-datatable-custom.html"> Custom </a>
-                            </li>
-                            <li>
-                                <a href="./table-datatable-miscellaneous.html"> Miscellaneous </a>
                             </li>
                         </ul>
                     </li>
@@ -172,18 +149,6 @@
                             </div>
                         </a>
                         <ul class="collapse submenu list-unstyled" id="pages" data-bs-parent="#accordionExample">
-                            <li>
-                                <a href="./pages-knowledge-base.html"> Knowledge Base </a>
-                            </li>
-                            <li>
-                                <a href="./pages-faq.html"> FAQ </a>
-                            </li>
-                            <li>
-                                <a href="./pages-contact-us.html"> Contact Form </a>
-                            </li>
-                            <li>
-                                <a href="./pages-error404.html" target="_blank"> Error </a>
-                            </li>
                             <li>
                                 <a href="./pages-maintenence.html" target="_blank"> Maintanence </a>
                             </li>
@@ -206,30 +171,6 @@
                             </li>
                             <li>
                                 <a href="./auth-boxed-signup.html" target="_blank"> Sign Up </a>
-                            </li>
-                            <li>
-                                <a href="./auth-boxed-lockscreen.html" target="_blank"> Unlock </a>
-                            </li>
-                            <li>
-                                <a href="./auth-boxed-password-reset.html" target="_blank"> Reset </a>
-                            </li>
-                            <li>
-                                <a href="./auth-boxed-2-step-verification.html" target="_blank"> 2 Step </a>
-                            </li>
-                            <li>
-                                <a href="./auth-cover-signin.html" target="_blank"> Sign In Cover </a>
-                            </li>
-                            <li>
-                                <a href="./auth-cover-signup.html" target="_blank"> Sign Up Cover </a>
-                            </li>
-                            <li>
-                                <a href="./auth-cover-lockscreen.html" target="_blank"> Unlock Cover </a>
-                            </li>
-                            <li>
-                                <a href="./auth-cover-password-reset.html" target="_blank"> Reset Cover </a>
-                            </li>
-                            <li>
-                                <a href="./auth-cover-2-step-verification.html" target="_blank"> 2 Step Cover </a>
                             </li>
                         </ul>
                     </li>
