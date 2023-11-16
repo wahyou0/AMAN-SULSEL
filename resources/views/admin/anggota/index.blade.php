@@ -6,7 +6,7 @@
                 <nav class="breadcrumb-style-one" aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Tabel</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Striped</li>
+                        <li class="breadcrumb-item active" aria-current="page">Kader</li>
                     </ol>
                 </nav>
             </div>
@@ -55,17 +55,16 @@
                                     <td>{{ $data->no_hp }}</td>
                                     <td>{{ $data->email }}</td>
                                     <td>
-                                        <form method="POST" action="{{ url('anggota'.$data->id) }}">
+                                        <form method="POST" action="{{ url('anggota/delete/'.$data->id) }}">
                                             @csrf
-                                            <input type="hidden" name="_method" value="DELETE">
-                                            <a href="{{ url('anggota/edit/'.$data->id) }}">
-                                                <button class="btn btn-outline-success btn-icon mb-2 me-2">
+                                            <a class="btn btn-outline-success btn-icon mb-2 me-2" href="{{ url('anggota/edit/'.$data->id) }}">
                                                     <i data-feather="edit"></i>
-                                                </button>
                                             </a>
-                                            <button class="btn btn-outline-danger btn-icon mb-2 me-2">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                            <button class="btn btn-outline-danger btn-icon mb-2 me-2 show-confirm">
                                                 <i data-feather="trash-2"></i>
                                             </button>
+                                        </button>
                                         </form>
                                     </td>
                                 </tr>
@@ -98,7 +97,7 @@
                   <div class="modal-content">
 
                     <div class="modal-header" id="inputFormModalLabel">
-                        <h5 class="modal-title">Form Tambah <b>Data Anggota</b></h5>
+                        <h5 class="modal-title">Form Tambah <b>Data Kader</b></h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
                     </div>
                     <div class="modal-body">
@@ -185,6 +184,20 @@
                                     <input type="email" class="form-control" name="email" placeholder="Email" aria-label="email">
                                 </div>
                             </div>
+                            {{-- <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <span class="input-group-text">
+                                        <i data-feather="mail"></i> 
+                                    </span>
+                                    <select id="select-beast" class="form-control" placeholder="Select a person..." autocomplete="off">
+                                        <option value="">Select a person...</option>
+                                        <option value="4">Thomas Edison</option>
+                                        <option value="1">Nikola</option>
+                                        <option value="3">Nikola Tesla</option>
+                                        <option value="5">Arnold Schwarzenegger</option>
+                                    </select>
+                                </div>
+                            </div> --}}
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-success mt-2 mb-2 btn-no-effect" data-bs-dismiss="modal">Simpan</button>
                             </div>
@@ -196,6 +209,15 @@
                   </div>
                 </div>
             </div>
+            {{-- <script>
+                new TomSelect("#select-beast",{
+                    create: true,
+                    sortField: {
+                        field: "text",
+                        direction: "asc"
+                    }
+                });
+            </script> --}}
             
 
 @endsection

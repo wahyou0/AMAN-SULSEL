@@ -51,15 +51,18 @@
 
     {{-- icon --}}
     <link rel="stylesheet" href="{{ asset('cork-v3/src/plugins/src/font-icons/fontawesome/css/regular.css') }}">
+
     <link rel="stylesheet" href="{{ asset('cork-v3/src/plugins/src/font-icons/fontawesome/css/fontawesome.css') }}">
-    
-    <link href="{{ asset('cork-v3/src/assets/css/light/scrollspyNav.css') }}" rel="stylesheet" type="text/css">
+
     <link href="{{ asset('cork-v3/src/assets/css/light/components/font-icons.css') }}" rel="stylesheet" type="text/css">
-    
-    <link href="{{ asset('cork-v3/src/assets/css/dark/scrollspyNav.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('cork-v3/src/assets/css/dark/components/font-icons.css') }}" rel="stylesheet" type="text/css">
     {{-- end icon --}}
 
+    
+    <link rel="stylesheet" type="text/css" href="{{ asset('cork-v3/src/plugins/css/light/tomSelect/custom-tomSelect.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('cork-v3/src/plugins/css/dark/tomSelect/custom-tomSelect.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" integrity="sha512-gOQQLjHRpD3/SEOtalVq50iDn4opLVup2TF8c4QPI3/NmUPNZOk2FG0ihi8oCU/qYEsw4P6nuEZT2lAG0UNYaw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 <body class=" layout-boxed">
@@ -234,6 +237,42 @@
         feather.replace();
     </script>
     {{-- end icon --}}
+
+    <script src="https://code.jquery.com/jquery-migrate-3.4.1.min.js" integrity="sha256-UnTxHm+zKuDPLfufgEMnKGXDl6fEIjtM+n1Q6lL73ok=" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+    @if (session()->has('success'))
+    <script>
+        swal("Selamat!","{!!Session::get('success')!!}","success",{
+            button:"ok"
+        })
+    </script>
+    @endif
+
+    <script>
+        $('.show-confirm').click(function(event) {
+            // ambil form terdekat dari class confirm-delete
+            let form =  $(this).closest("form");
+            //nge ran swal dulu
+            event.preventDefault();
+            swal({
+                title: `Apakah Anda Yakin Ingin Menghapus Data Ini ?`,
+                text: "Jika anda menghapusnya, akan terhapus selamanya",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+            .then((willDelete) => {
+                if (willDelete) {
+                form.submit();
+                }
+            });
+        });
+    </script>
+
+    <script src="{{ asset('cork-v3/src/plugins/src/tomSelect/tom-select.base.js') }}"></script>
+    <script src="{{ asset('cork-v3/src/plugins/src/tomSelect/custom-tom-select.js') }}"></script>
+
 
 </body>
 </html>

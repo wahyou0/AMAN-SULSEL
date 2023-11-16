@@ -3,8 +3,8 @@
 
             <ul class="navbar-item theme-brand flex-row  text-center">
                 <li class="nav-item theme-logo">
-                    <a href="index.html">
-                        <img src="{{ asset('cork-v3/src/assets/img/logo2.svg') }}" class="navbar-logo" alt="logo">
+                    <a href="{{ url('/') }}">
+                        <img src="{{ asset('logo/logo-aman.jpg') }}">
                     </a>
                 </li>
                 <li class="nav-item theme-text">
@@ -119,7 +119,8 @@
                     <a href="javascript:void(0);" class="nav-link dropdown-toggle user" id="userProfileDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="avatar-container">
                             <div class="avatar avatar-sm avatar-indicators avatar-online">
-                                <img alt="avatar" src="../src/assets/img/profile-30.png" class="rounded-circle">
+                                {{-- <img alt="avatar" src="../src/assets/img/profile-30.png" class="rounded-circle"> --}}
+                                {{ Auth::user()->name }}
                             </div>
                         </div>
                     </a>
@@ -131,7 +132,7 @@
                                     &#x1F44B;
                                 </div>
                                 <div class="media-body">
-                                    <h5>Shaun Park</h5>
+                                    <h5>{{ Auth::user()->username }}</h5>
                                     <p>Project Leader</p>
                                 </div>
                             </div>
