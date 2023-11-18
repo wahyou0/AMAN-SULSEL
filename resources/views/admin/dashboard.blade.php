@@ -64,6 +64,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" integrity="sha512-gOQQLjHRpD3/SEOtalVq50iDn4opLVup2TF8c4QPI3/NmUPNZOk2FG0ihi8oCU/qYEsw4P6nuEZT2lAG0UNYaw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+
 </head>
 <body class=" layout-boxed">
     <!-- BEGIN LOADER -->
@@ -243,10 +244,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
     @if (session()->has('success'))
     <script>
-        swal("Selamat!","{!!Session::get('success')!!}","success",{
+        swal("Berhasil!","{!!Session::get('success')!!}","success",{
             button:"ok"
         })
     </script>
+    @endif
+
+    @if (session()->has('gagal'))
+        <script>
+            swal("Oopss!","{!!Session::get('gagal')!!}","error",{
+                button:"ok"
+            })
+        </script>
     @endif
 
     <script>
@@ -273,6 +282,65 @@
     <script src="{{ asset('cork-v3/src/plugins/src/tomSelect/tom-select.base.js') }}"></script>
     <script src="{{ asset('cork-v3/src/plugins/src/tomSelect/custom-tom-select.js') }}"></script>
 
+    <script>
+        var sCol = {
+            chart: {
+            height: 350,
+            type: 'bar',
+            toolbar: {
+            show: false,
+            }
+            },
+            plotOptions: {
+            bar: {
+            horizontal: false,
+            columnWidth: '55%',
+            endingShape: 'rounded'  
+            },
+            },
+            dataLabels: {
+            enabled: false
+            },
+            stroke: {
+            show: true,
+            width: 2,
+            colors: ['transparent']
+            },
+            series: [{
+            name: 'Net Profit',
+            data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+            }, {
+            name: 'Revenue',
+            data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+            }],
+            xaxis: {
+            categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
+            },
+            yaxis: {
+            title: {
+            text: '$ (thousands)'
+            }
+            },
+            fill: {
+            opacity: 1
+
+            },
+            tooltip: {
+            y: {
+            formatter: function (val) {
+            return "$ " + val + " thousands"
+            }
+            }
+            }
+            }
+
+            var chart = new ApexCharts(
+            document.querySelector("#s-col"),
+            sCol
+            );
+
+            chart.render();
+    </script>
 
 </body>
 </html>

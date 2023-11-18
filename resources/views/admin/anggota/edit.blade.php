@@ -37,7 +37,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Tanggal Lahir</label>
                         <div class="col-sm-10">
-                            <input id="rangeCalendarFlatpickr" type="date" class="form-control flatpickr flatpickr-input active" name="tgl_lahir" value="{{ $data->tgl_lahir }}" placeholder="{{ $data->tgl_lahir }}">
+                            <input id="basicFlatpickr" type="date" class="form-control flatpickr flatpickr-input active" name="tgl_lahir" value="{{ $data->tgl_lahir }}" placeholder="{{ $data->tgl_lahir }}">
                         </div>
                     </div>
                     <div class="row mb-3">

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\kegiatan;
 use App\Models\tabel_anggota;
 use Illuminate\Http\Request;
+use App\Models\kegiatan_aman;
 use DB;
 
 class KegiatanController extends Controller
@@ -23,9 +24,9 @@ class KegiatanController extends Controller
     public function create()
     {
         $data = tabel_anggota::all();
-        // dd($data);
+        $kegiatan = kegiatan_aman::all();
 
-        return view('admin.kegiatan.create', compact('data'));
+        return view('admin.kegiatan.create', compact('data','kegiatan'));
     }
 
     

@@ -27,9 +27,14 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">Kegiatan</label>
+                        <label class="col-sm-2 col-form-label">Pernah Mengikuti</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="kegiatan">
+                            <select id="select-beast" class="form-control" placeholder="Select a person..." autocomplete="off" name="kegiatan">
+                                <option hidden value="Laki-laki">Pilih Kegiatan ...</option>
+                                @foreach ($kegiatan as $a)
+                                <option value="{{ $a->nama_kegiatan }}">{{ $a->nama_kegiatan }}</option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -50,4 +55,4 @@
         });
     </script>
 
-@endsection    
+@endsection     c
