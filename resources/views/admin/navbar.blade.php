@@ -3,12 +3,12 @@
 
             <ul class="navbar-item theme-brand flex-row  text-center">
                 <li class="nav-item theme-logo">
-                    <a href="{{ url('/') }}">
+                    <a href="{{ url('/home') }}">
                         <img src="{{ asset('logo/logo-aman.jpg') }}">
                     </a>
                 </li>
                 <li class="nav-item theme-text">
-                    <a href="index.html" class="nav-link"> AMAN </a>
+                    <a href="{{ url('/home') }}" class="nav-link"> AMAN </a>
                 </li>
             </ul>
 

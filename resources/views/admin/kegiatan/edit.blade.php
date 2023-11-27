@@ -29,11 +29,18 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">Kegiatan</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="kegiatan" value="{{ $data->kegiatan }}">
+                        <label class="col-form-label col-sm-2">Kegiatan Kader</label>
+                        <div class="col-sm-10 sm-2">
+                            @foreach ($kegiatan as $x)
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck2" name="kegiatan[]" value="{{ $x->id }}" {{ in_array($x->id , explode(',' , $data->kegiatan)) ? 'checked' : ''}}>
+                            <label class="form-check-label" for="gridCheck2">
+                                {{ $x->nama_kegiatan }} {{ $x->tahun }}
+                            </label>
+                          </div>
+                          @endforeach
                         </div>
-                    </div>
+                      </div>
                     <div class="row mb-3">
                     </div>
                     <button type="submit" class="btn btn-primary">simpan</button>

@@ -52,6 +52,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('kegiatan/edit/{id}', [KegiatanController::class, 'edit']);
         Route::post('kegiatan/update', [KegiatanController::class, 'update']);
         Route::delete('kegiatan/delete/{id}', [KegiatanController::class, 'destroy']);
+        Route::get('kegiatan/view/{id}', [KegiatanController::class, 'view']);
 
         Route::get('kegiatan_aman', [Kegiatan_amanController::class, 'index']);
         Route::get('kegiatan_aman/create', [Kegiatan_amanController::class, 'create']);
@@ -73,6 +74,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('kader_aman/edit/{id}', [Kader_amanController::class, 'edit']);
         Route::post('kader_aman/update', [Kader_amanController::class, 'update']);
         Route::delete('kader_aman/delete/{id}', [Kader_amanController::class, 'destroy']);
+        Route::get('kader_aman/view/{id}', [Kader_amanController::class, 'view']);
     });
 });
 

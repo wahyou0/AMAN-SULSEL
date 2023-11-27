@@ -42,6 +42,9 @@
                                     <td>
                                         <form method="POST" action="{{ url('kegiatan/delete/'.$data->id) }}">
                                             @csrf
+                                            <a class="btn btn-outline-success btn-icon mb-2 me-2" href="{{ url('kegiatan/view/'.$data->id) }}">
+                                                <i data-feather="eye"></i>
+                                            </a>
                                             <a class="btn btn-outline-success btn-icon mb-2 me-2" href="{{ url('kegiatan/edit/'.$data->id) }}">
                                                     <i data-feather="edit"></i>
                                             </a>

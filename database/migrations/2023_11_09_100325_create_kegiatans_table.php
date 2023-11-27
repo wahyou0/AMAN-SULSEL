@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('id_kader');
             $table->string('nama_kader');
             $table->string('kegiatan');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

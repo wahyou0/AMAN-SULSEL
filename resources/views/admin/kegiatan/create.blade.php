@@ -18,7 +18,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Nama Kader</label>
                         <div class="col-sm-10">
-                            <select id="select-beast" class="form-control" placeholder="Select a person..." autocomplete="off" name="nama_kader">
+                            <select id="select-beast" class="form-control" placeholder="Select a person..." autocomplete="off" name="id_kader">
                                 <option value="Laki-laki">Laki - Laki</option>
                                 @foreach ($data as $a)
                                 <option value="{{ $a->id }}">{{ $a->nama_lengkap }}</option>
@@ -27,14 +27,22 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">Pernah Mengikuti</label>
+                        <label class="col-form-label col-sm-2">Kegiatan Kader</label>
+                        <div class="col-sm-10 sm-2">
+                            @foreach ($kegiatan as $x)
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck2" name="kegiatan[]" value="{{ $x->nama_kegiatan }} {{ $x->tahun }}">
+                            <label class="form-check-label" for="gridCheck2">
+                                {{ $x->nama_kegiatan }} {{ $x->tahun }}
+                            </label>
+                          </div>
+                          @endforeach
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label">Foto</label>
                         <div class="col-sm-10">
-                            <select id="select-beast" class="form-control" placeholder="Select a person..." autocomplete="off" name="kegiatan">
-                                <option hidden value="Laki-laki">Pilih Kegiatan ...</option>
-                                @foreach ($kegiatan as $a)
-                                <option value="{{ $a->nama_kegiatan }}">{{ $a->nama_kegiatan }}</option>
-                                @endforeach
-                            </select>
+                            <input type="file" class="form-control" name="image" accept="image/*">
                         </div>
                     </div>
                     <div class="row mb-3">

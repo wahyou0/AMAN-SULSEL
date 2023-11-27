@@ -18,13 +18,33 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Nama Lengkap</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="nama_lengkap">
+                            <input type="text" class="form-control @error('nama_lengkap')
+                                    is-invalid
+                                @enderror" name="nama_lengkap">
+                                @error('nama_lengkap')
+                                    <div class="invalid-feedback">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                         </div>
                     </div>
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Nama Panggilan</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" name="nama_panggilan">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label">Foto</label>
+                        <div class="col-sm-10">
+                            <input type="file" class="form-control @error('image')
+                            is-invalid
+                        @enderror" name="image" accept="image/*">
+                        @error('image')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -102,13 +122,19 @@
                         </div>
                     </fieldset>
                     <div class="row mb-3">
-                        <label class="col-form-label col-sm-2">Kegiatan Kader</label>
+                        <label class="col-form-label col-sm-2">Pelatihan Yang telah diikuti</label>
                         <div class="col-sm-10 sm-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="kegiatan_diikuti[]" value="belum mengikuti pelatihan">
+                                <label class="form-check-label" for="gridCheck2">
+                                    Belum Mengikuti Pelatihan
+                                </label>
+                            </div>
                             @foreach ($kegiatan as $x)
                           <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck2" name="kegiatan_diikuti[]" value="{{ $x->nama_kegiatan }}">
+                            <input class="form-check-input" type="checkbox" id="gridCheck2" name="kegiatan_diikuti[]" value="{{ $x->nama_kegiatan }} {{ $x->tahun }}">
                             <label class="form-check-label" for="gridCheck2">
-                                {{ $x->nama_kegiatan }}
+                                {{ $x->nama_kegiatan }} {{ $x->tahun }}
                             </label>
                           </div>
                           @endforeach

@@ -29,6 +29,22 @@
                         </div>
                     </div>
                     <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label">Foto</label>
+                        <div class="col-sm-10">
+                            @if ($data->image)
+                                <img src="{{ asset('storage/'.$data->image)}}" style="width: 20%">
+                            @endif
+                                <input type="file" class="form-control @error('image')
+                                is-invalid
+                                    @enderror" name="image" accept="image/*" value="{{ $data->image }}">
+                                    @error('image')
+                                        <div class="invalid-feedback">
+                                            {{ $message }}
+                                        </div>
+                                    @enderror
+                        </div>
+                    </div>
+                    <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Tempat Lahir</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control" name="tempat_lahir" value="{{ $data->tempat_lahir}}">
@@ -83,13 +99,13 @@
                         <label class="col-form-label col-sm-2 pt-0">Status Kader</label>
                         <div class="col-sm-10">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="status_kader" id="gridRadios1" value="Aktif">
+                                <input class="form-check-input" type="radio" name="status_kader" id="gridRadios1" value="Aktif" {{$data->status_kader === 'Aktif' ? 'checked' : ''}}>
                                 <label class="form-check-label" for="gridRadios1">
                                     Aktif
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="status_kader" id="gridRadios2" value="Tidak Aktif">
+                                <input class="form-check-input" type="radio" name="status_kader" id="gridRadios2" value="Tidak Aktif" {{$data->status_kader === 'Tidak Aktif' ? 'checked' : ''}}>
                                 <label class="form-check-label" for="gridRadios2">
                                     Tidak Aktif
                                 </label>
@@ -103,13 +119,20 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col-form-label col-sm-2">Kegiatan Kader</label>
-                        <div class="col-sm-10 sm-2">
+                        <label class="col-form-label col-sm-3">Pelatihan/Pendidikan Yang telah diikuti</label>
+                        <div class="col-sm-8 sm-2">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="kegiatan_diikuti[]" value="belum mengikuti pelatihan">
+                                <label class="form-check-label" for="gridCheck2">
+                                    Belum Mengikuti Pelatihan
+                                </label>
+                            </div>
+                            
                             @foreach ($kegiatan as $x)
                           <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck2" name="kegiatan_diikuti[]" value="{{ $x->nama_kegiatan }}">
+                            <input class="form-check-input" type="checkbox" id="gridCheck2" name="kegiatan_diikuti[]" value="{{ $x->nama_kegiatan }} {{ $x->tahun}}" {{ in_array($x->nama_kegiatan , explode(',' , $data->kegiatan_diikuti)) ? 'checked' : ''}} >
                             <label class="form-check-label" for="gridCheck2">
-                                {{ $x->nama_kegiatan }}
+                                {{ $x->nama_kegiatan }} {{ $x->tahun }}
                             </label>
                           </div>
                           @endforeach

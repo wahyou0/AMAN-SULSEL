@@ -58,9 +58,19 @@
     <link href="{{ asset('cork-v3/src/assets/css/dark/components/font-icons.css') }}" rel="stylesheet" type="text/css">
     {{-- end icon --}}
 
+
+    
+    <link href="{{ asset('cork-v3/src/assets/css/light/users/user-profile.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('cork-v3/src/assets/css/dark/users/user-profile.css') }}" rel="stylesheet" type="text/css" />
+
     
     <link rel="stylesheet" type="text/css" href="{{ asset('cork-v3/src/plugins/css/light/tomSelect/custom-tomSelect.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('cork-v3/src/plugins/css/dark/tomSelect/custom-tomSelect.css') }}">
+
+    {{-- fileupload --}}
+    <link rel="stylesheet" href="{{ asset('cork-v3/src/plugins/src/filepond/FilePondPluginImagePreview.min.css') }}">
+    <link href="{{ asset('cork-v3/src/plugins/css/light/filepond/custom-filepond.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('cork-v3/src/plugins/css/dark/filepond/custom-filepond.css') }}" rel="stylesheet" type="text/css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" integrity="sha512-gOQQLjHRpD3/SEOtalVq50iDn4opLVup2TF8c4QPI3/NmUPNZOk2FG0ihi8oCU/qYEsw4P6nuEZT2lAG0UNYaw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -198,6 +208,17 @@
     <script src="{{ asset('cork-v3/src/assets/js/dashboard/dash_2.js') }}"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
+    {{-- fileupload --}}
+    <script src="{{ asset('cork-v3/src/plugins/src/filepond/filepond.min.js') }}"></script>
+    <script src="{{ asset('cork-v3/src/plugins/src/filepond/FilePondPluginFileValidateType.min.js') }}"></script>
+    <script src="{{ asset('cork-v3/src/plugins/src/filepond/FilePondPluginImageExifOrientation.min.js') }}"></script>
+    <script src="{{ asset('cork-v3/src/plugins/src/filepond/FilePondPluginImagePreview.min.js') }}"></script>
+    <script src="{{ asset('cork-v3/src/plugins/src/filepond/FilePondPluginImageCrop.min.js') }}"></script>
+    <script src="{{ asset('cork-v3/src/plugins/src/filepond/FilePondPluginImageResize.min.js') }}"></script>
+    <script src="{{ asset('cork-v3/src/plugins/src/filepond/FilePondPluginImageTransform.min.js') }}"></script>
+    <script src="{{ asset('cork-v3/src/plugins/src/filepond/filepondPluginFileValidateSize.min.js') }}"></script>
+    <script src="{{ asset('cork-v3/src/plugins/src/filepond/custom-filepond.js') }}"></script>
+
     <!-- BEGIN PAGE LEVEL SCRIPTS -->
     <script src="{{ asset('cork-v3/src/plugins/src/table/datatable/datatables.js') }}"></script>
     <script>
@@ -284,13 +305,13 @@
 
     <script>
         var sCol = {
-            chart: {
-            height: 350,
-            type: 'bar',
-            toolbar: {
-            show: false,
-            }
-            },
+                chart: {
+                    height: 350,
+                    type: 'bar',
+                    toolbar: {
+                        show: false,
+                    }
+                },
             plotOptions: {
             bar: {
             horizontal: false,

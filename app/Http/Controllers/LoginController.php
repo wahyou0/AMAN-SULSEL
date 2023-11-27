@@ -67,6 +67,21 @@ class LoginController extends Controller
 
     public function create(Request $request)
     {
+        $request->validate([
+            'name' => 'required',
+            'username' => 'required',
+            'email' => 'required',
+            'password' => 'required',
+        ],
+            [
+                'username.required' => 'Username tidak boleh kosong',
+                'email.required' => '@gmail.com',
+                'password.required' => 'password tidak boleh kosong',
+                'password.minlength' => 'password minimal 8 karakter',
+                
+            ],  
+        );
+
         User::create([
             'name' => $request['name'],
             'username' => $request['username'],

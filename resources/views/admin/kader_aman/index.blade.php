@@ -25,6 +25,7 @@
                             <thead>
                                 <tr>
                                     <th>No.</th>
+                                    <th>Foto</th>
                                     <th>Nama Lengkap</th>
                                     <th>Nama Panggilan</th>
                                     <th>Tempat Lahir</th>
@@ -44,6 +45,7 @@
                                 @foreach ($kader as $data)
                                 <tr>
                                     <td>{{ $no++ }}</td>
+                                    <td><img src="{{ asset('storage/'.$data->image)}}" alt="" style="width: 2cm"></td>
                                     <td>{{ $data->nama_lengkap }}</td>
                                     <td>{{ $data->nama_panggilan }}</td>
                                     <td>{{ $data->tempat_lahir }}</td>
@@ -56,6 +58,10 @@
                                     <td>
                                         <form method="POST" action="{{ url('kader_aman/delete/'.$data->id) }}">
                                             @csrf
+                                            <a class="btn btn-outline-success btn-icon mb-2 me-2" href="{{ url('kader_aman/view/'.$data->id) }}">
+                                                <i data-feather="eye"></i>
+                                            </a>
+
                                             <a class="btn btn-outline-success btn-icon mb-2 me-2" href="{{ url('kader_aman/edit/'.$data->id) }}">
                                                     <i data-feather="edit"></i>
                                             </a>
@@ -72,6 +78,7 @@
                             <tfoot>
                                 <tr>
                                     <th>No.</th>
+                                    <th>Foto</th>
                                     <th>Nama Lengkap</th>
                                     <th>Nama Panggilan</th>
                                     <th>Tempat Lahir</th>
