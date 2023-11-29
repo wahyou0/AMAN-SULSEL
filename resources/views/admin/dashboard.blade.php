@@ -17,7 +17,6 @@
     <!-- END GLOBAL MANDATORY STYLES -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
-    <link href="{{ asset('cork-v3/src/plugins/src/apex/apexcharts.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('cork-v3/src/assets/css/light/components/list-group.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('cork-v3/src/assets/css/light/dashboard/dash_2.css') }}" rel="stylesheet" type="text/css" />
 
@@ -71,6 +70,10 @@
     <link rel="stylesheet" href="{{ asset('cork-v3/src/plugins/src/filepond/FilePondPluginImagePreview.min.css') }}">
     <link href="{{ asset('cork-v3/src/plugins/css/light/filepond/custom-filepond.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('cork-v3/src/plugins/css/dark/filepond/custom-filepond.css') }}" rel="stylesheet" type="text/css" />
+
+    {{-- apexcharts --}}
+    <script src="{{ asset('apxcharts/dist/apexcharts.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('apxcharts/dist/apexcharts.css') }}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" integrity="sha512-gOQQLjHRpD3/SEOtalVq50iDn4opLVup2TF8c4QPI3/NmUPNZOk2FG0ihi8oCU/qYEsw4P6nuEZT2lAG0UNYaw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -204,9 +207,11 @@
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-    <script src="{{ asset('cork-v3/src/plugins/src/apex/apexcharts.min.js') }}"></script>
     <script src="{{ asset('cork-v3/src/assets/js/dashboard/dash_2.js') }}"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+
+    {{-- apexcharts --}}
+    
 
     {{-- fileupload --}}
     <script src="{{ asset('cork-v3/src/plugins/src/filepond/filepond.min.js') }}"></script>
@@ -303,65 +308,6 @@
     <script src="{{ asset('cork-v3/src/plugins/src/tomSelect/tom-select.base.js') }}"></script>
     <script src="{{ asset('cork-v3/src/plugins/src/tomSelect/custom-tom-select.js') }}"></script>
 
-    <script>
-        var sCol = {
-                chart: {
-                    height: 350,
-                    type: 'bar',
-                    toolbar: {
-                        show: false,
-                    }
-                },
-            plotOptions: {
-            bar: {
-            horizontal: false,
-            columnWidth: '55%',
-            endingShape: 'rounded'  
-            },
-            },
-            dataLabels: {
-            enabled: false
-            },
-            stroke: {
-            show: true,
-            width: 2,
-            colors: ['transparent']
-            },
-            series: [{
-            name: 'Net Profit',
-            data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
-            }, {
-            name: 'Revenue',
-            data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
-            }],
-            xaxis: {
-            categories: ['Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'],
-            },
-            yaxis: {
-            title: {
-            text: '$ (thousands)'
-            }
-            },
-            fill: {
-            opacity: 1
-
-            },
-            tooltip: {
-            y: {
-            formatter: function (val) {
-            return "$ " + val + " thousands"
-            }
-            }
-            }
-            }
-
-            var chart = new ApexCharts(
-            document.querySelector("#s-col"),
-            sCol
-            );
-
-            chart.render();
-    </script>
 
 </body>
 </html>

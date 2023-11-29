@@ -25,7 +25,7 @@ Route::get('/', function () {
     return view('login');
 });
 
-Route::get('home', [DashboardController::class, 'index']);
+
 
 // Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::controller(LoginController::class)->group(function (){
@@ -38,6 +38,8 @@ Route::controller(LoginController::class)->group(function (){
 
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['middleware' => ['cekUserLogin:1']], function () {
+
+        Route::get('home', [DashboardController::class, 'index']);
 
         Route::get('anggota', [Tabel_anggotaController::class, 'index']);
         Route::get('anggota/create', [Tabel_anggotaController::class, 'create']);

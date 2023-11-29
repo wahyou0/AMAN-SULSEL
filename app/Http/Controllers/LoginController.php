@@ -13,7 +13,7 @@ class LoginController extends Controller
     {
         if($user = Auth::user()){
             if ($user->level == '1') {
-                return redirect()->intended('anggota');
+                return redirect()->intended('home');
             } elseif ($user->level == '2') {
                 return redirect()->intended('kegiatan');
             }
@@ -30,6 +30,7 @@ class LoginController extends Controller
         ],
             [
                 'username.required' => 'Username tidak boleh kosong',
+                'password.required' => 'Password tidak boleh kosong',
             ]    
         );
 
@@ -39,7 +40,7 @@ class LoginController extends Controller
             $request->session()->regenerate();
             $user = Auth::user();
             if ($user->level == '1') {
-                return redirect()->intended('anggota');
+                return redirect()->intended('home');
             } elseif ($user->level == '2') {
                 return redirect()->intended('kegiatan');
             }
@@ -89,7 +90,7 @@ class LoginController extends Controller
             'password' => Hash::make($request['password']),
             'level' => $request['level'],
         ]);
-        return redirect('/anggota')->with('succes', 'Registrasi Admin Berhasil');
+        return redirect('/home')->with('succes', 'Registrasi Admin Berhasil');
     }
 
 }
