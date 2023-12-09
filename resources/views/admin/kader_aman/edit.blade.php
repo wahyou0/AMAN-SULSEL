@@ -31,9 +31,9 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Foto</label>
                         <div class="col-sm-10">
-                            @if ($data->image)
+                            {{-- @if ($data->image)
                                 <img src="{{ asset('storage/'.$data->image)}}" style="width: 20%">
-                            @endif
+                            @endif --}}
                                 <input type="file" class="form-control @error('image')
                                 is-invalid
                                     @enderror" name="image" accept="image/*" value="{{ $data->image }}">

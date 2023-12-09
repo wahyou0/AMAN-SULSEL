@@ -28,9 +28,19 @@
                         </div>
                     </div>
                     <div class="row mb-3">
-                        <label class="col-sm-4 col-form-label">Pengurus Daerah</label>
+                        <label class="col-sm-4 col-form-label">PD</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" name="pengurus_daerah" value="{{ $data->pengurus_daerah }}">
+                            <select id="select-beast" class="form-control" placeholder="Select a person..." autocomplete="off" name="pengurus_daerah">
+                                <option hidden value="{{ $data->pengurus_daerah }}">{{ $data->pengurus_daerah}}</option>
+                                <option value="AMAN Gowa">AMAN Gowa</option>
+                                <option value="AMAN Majene">AMAN Majene</option>
+                                <option value="AMAN Mamasa">AMAN Mamasa</option>
+                                <option value="AMAN Maros">AMAN Maros</option>
+                                <option value="AMAN Massenrempulu">AMAN Massenrempulu</option>
+                                <option value="AMAN Sidrap">AMAN Sidrap</option>
+                                <option value="AMAN Sinjai">AMAN Sinjai</option>
+                                <option value="AMAN Toraja">AMAN Toraja</option>
+                            </select>
                         </div>
                     </div>
                     <div class="row mb-3">

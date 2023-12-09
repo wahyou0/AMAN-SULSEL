@@ -70,15 +70,17 @@ class LoginController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'username' => 'required',
-            'email' => 'required',
-            'password' => 'required',
+            'username' => 'required|unique:users,username',
+            'email' => 'required|email',
+            'password' => 'required|min:6',
         ],
             [
                 'username.required' => 'Username tidak boleh kosong',
-                'email.required' => '@gmail.com',
+                'username.unique' => 'Username sudah terdaftar gunakan username yang lain',  
+                'email.required' => 'email tidak boleh kosong',  
+                'email.email' => 'format salah, tambahkan @, contoh@exsample.com',
                 'password.required' => 'password tidak boleh kosong',
-                'password.minlength' => 'password minimal 8 karakter',
+                'password.min' => 'password minimal 6 karakter',
                 
             ],  
         );

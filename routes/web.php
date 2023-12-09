@@ -9,6 +9,8 @@ use App\Http\Controllers\admin\Kegiatan_amanController;
 use App\Http\Controllers\admin\Anggota_amanController;
 Use App\Http\Controllers\DashboardController;
 Use App\Http\Controllers\admin\Kader_amanController;
+use App\Http\Controllers\chart\ChartMassenrempulu;
+use App\Http\Controllers\KomChartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -77,6 +79,13 @@ Route::group(['middleware' => ['auth']], function () {
         Route::post('kader_aman/update', [Kader_amanController::class, 'update']);
         Route::delete('kader_aman/delete/{id}', [Kader_amanController::class, 'destroy']);
         Route::get('kader_aman/view/{id}', [Kader_amanController::class, 'view']);
+
+
+        Route::get('orong', [DashboardController::class, 'orong']);
+        Route::get('AMAN-Massenrempulu', [ChartMassenrempulu::class, 'massenrempulu']);
+
+        Route::get('chart', [KomChartController::class, 'index']);
+
     });
 });
 

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\anggota_aman;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
@@ -32,21 +32,29 @@ class DashboardController extends Controller
         // for ($i = 1; $i <= $kom; $i++){
         // $coba[] = $anggota->where('jml_laki_laki','Orong')->count();
         // }
-            
-
-        $dataluas[] = ($luas);
-        $datapeta[] = $peta;
-        $datakom[] = $kom;
+        
+        
         $jml = $laki->concat($wanita);
         $tambah = $jml->concat($total);
         
         // dd($lakikom);
 
-        return view('admin.home', compact('kom', 'dataluas','datapeta', 'datakom', 'luas', 'peta','laki','wanita','jml','total','tambah'));
+        return view('admin.home', compact('kom', 'luas', 'peta','laki','wanita','jml','total','tambah'));
     }
 
     public function orong()
     {
-        $lakikom = anggota_aman::select(DB::raw("SUM(jml_laki_laki) as lakikom"))->where('komunitas','orong')->pluck('lakikom');
+        $laki = anggota_aman::select(DB::raw("SUM(jml_laki_laki) as lakikom"))->where('pengurus_daerah','AMAN Massenrempulu')->pluck('lakikom');
+        $wanita = anggota_aman::select(DB::raw("SUM(jml_perempuan) as wanita"))->where('pengurus_daerah','AMAN Massenrempulu')->pluck('wanita');
+        $kom = anggota_aman::select(DB::raw("komunitas as kom"))->where('pengurus_daerah','AMAN Massenrempulu')->pluck('kom');
+        $luas = anggota_aman::select(DB::raw("luas_indikatif as luas"))->where('pengurus_daerah','AMAN Massenrempulu')->pluck('luas');
+        $peta = anggota_aman::select(DB::raw("luas_pemetaan as peta"))->where('pengurus_daerah','AMAN Massenrempulu')->pluck('peta');
+        $total = anggota_aman::select(DB::raw("SUM(jml_perempuan + jml_laki_laki) as total"))->where('pengurus_daerah','AMAN Massenrempulu')->pluck('total');
+
+        $jml = $laki->concat($wanita);
+        // dd($total);
+
+        return view('admin.charts.orong', compact('laki','wanita','kom','luas','peta','jml','total'));
     }
+
 }

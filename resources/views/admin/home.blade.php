@@ -19,11 +19,23 @@
                 <h5 class="">Charts Jumlah Laki-Laki dan Perempuan</h5>
             </div>
 
-            <div class="widget-content">
+            @foreach ($laki as $item)
+            <p>Jumlah Laki-laki : {{ $item }}</p>
+            @endforeach
+            
+            @foreach ($wanita as $item)
+            <p>Jumlah Perempuan : {{ $item }}</p>
+            @endforeach
+
+            @foreach ($total as $item)
+            <p>Total : {{ $item }} Orang</p>
+            @endforeach
+
+            <div class="">
+              <canvas id="myChartWilayah"></canvas>
             </div>
         </div>
     </div>
-    <div id="pie"></div>
 
 
 
@@ -43,7 +55,7 @@
         plotOptions: {
           bar: {
             horizontal: false,
-            columnWidth: '40%',
+            columnWidth: '35%',
             endingShape: 'rounded'
           },
         },
@@ -79,35 +91,32 @@
         chart.render();
     </script>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <script>
-        var options = {
-          series: @json($tambah),
-          chart: {
-          type: 'polarArea',
+      const wil = document.getElementById('myChartWilayah');
+
+      new Chart(wil, {
+        type: 'pie',
+        data: {
+          labels: ['Laki-laki', 'Perempuan'],
+          datasets: [{
+            label: 'Jumlah',
+            data: [@json($laki), @json($wanita)],
+            borderWidth: 1
+          }]
         },
-        stroke: {
-          colors: ['#fff']
-        },
-        labels: ['laki-laki','perempuan','total'],
-        fill: {
-          opacity: 0.8
-        },
-        responsive: [{
-          breakpoint: 480,
-          options: {
-            chart: {
-              width: 200
+        options: {
+          scales: {
+              x: {
+              max: 100
             },
-            legend: {
-              position: 'bottom'
+            y: {
+              max: 100
             }
           }
-        }]
-        };
-
-        var chart = new ApexCharts(document.querySelector("#pie"), options);
-        chart.render();
-
+        }
+      });
     </script>
 
 

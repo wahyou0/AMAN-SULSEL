@@ -16,6 +16,7 @@
     <link href="{{ asset('cork-v3/layouts/vertical-light-menu/css/dark/plugins.css') }}" rel="stylesheet" type="text/css" />
     <!-- END GLOBAL MANDATORY STYLES -->
 
+
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM STYLES -->
     <link href="{{ asset('cork-v3/src/assets/css/light/components/list-group.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('cork-v3/src/assets/css/light/dashboard/dash_2.css') }}" rel="stylesheet" type="text/css" />
@@ -25,15 +26,15 @@
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
     <!-- BEGIN PAGE LEVEL STYLES -->
-    <link rel="stylesheet" type="text/css" href="{{ asset('cork-v3/src/plugins/src/table/datatable/datatables.css') }}">
-    
-    <link rel="stylesheet" type="text/css" href="{{ asset('cork-v3/src/plugins/css/light/table/datatable/dt-global_style.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('cork-v3/src/plugins/css/dark/table/datatable/dt-global_style.css') }}">
-    <!-- END PAGE LEVEL STYLES -->
+    <link rel="stylesheet" type="text/css" href="{{asset('cork-v3/src/plugins/src/table/datatable/datatables.css') }}">
 
-    {{-- modal --}}
-    <link href="{{ asset('cork-v3/src/assets/css/light/components/modal.css') }}" rel="stylesheet" type="text/css" />
-    {{-- end modal --}}
+    <link rel="stylesheet" type="text/css" href="{{asset('cork-v3/src/plugins/css/light/table/datatable/dt-global_style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{asset('cork-v3/src/plugins/css/light/table/datatable/custom_dt_miscellaneous.css') }}">
+
+    <link rel="stylesheet" type="text/css" href="{{asset('cork-v3/src/plugins/css/dark/table/datatable/dt-global_style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{asset('cork-v3/src/plugins/css/dark/table/datatable/custom_dt_miscellaneous.css') }}">
+
+    <!-- END PAGE LEVEL STYLES -->
 
     <!-- date time picker -->
     <link href="{{ asset('cork-v3/src/plugins/src/flatpickr/flatpickr.css') }}" rel="stylesheet" type="text/css">
@@ -65,11 +66,6 @@
     
     <link rel="stylesheet" type="text/css" href="{{ asset('cork-v3/src/plugins/css/light/tomSelect/custom-tomSelect.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('cork-v3/src/plugins/css/dark/tomSelect/custom-tomSelect.css') }}">
-
-    {{-- fileupload --}}
-    <link rel="stylesheet" href="{{ asset('cork-v3/src/plugins/src/filepond/FilePondPluginImagePreview.min.css') }}">
-    <link href="{{ asset('cork-v3/src/plugins/css/light/filepond/custom-filepond.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ asset('cork-v3/src/plugins/css/dark/filepond/custom-filepond.css') }}" rel="stylesheet" type="text/css" />
 
     {{-- apexcharts --}}
     <script src="{{ asset('apxcharts/dist/apexcharts.js') }}"></script>
@@ -206,55 +202,24 @@
     <script src="{{ asset('cork-v3/src/plugins/src/highlight/highlight.pack.js') }}"></script>
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="{{ asset('cork-v3/src/plugins/src/table/datatable/datatables.js') }}"></script>
+    <script src="{{ asset('cork-v3/src/plugins/src/table/datatable/button-ext/dataTables.buttons.min.js') }}"></script>
+    <script src="{{ asset('cork-v3/src/plugins/src/table/datatable/button-ext/jszip.min.js') }}"></script>    
+    <script src="{{ asset('cork-v3/src/plugins/src/table/datatable/button-ext/buttons.html5.min.js') }}"></script>
+    <script src="{{ asset('cork-v3/src/plugins/src/table/datatable/button-ext/buttons.print.min.js') }}"></script>
+    <script src="{{ asset('cork-v3/src/plugins/src/table/datatable/custom_miscellaneous.js') }}"></script>
+    <!-- END PAGE LEVEL SCRIPTS -->
+
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
     <script src="{{ asset('cork-v3/src/assets/js/dashboard/dash_2.js') }}"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
 
-    {{-- apexcharts --}}
-    
-
-    {{-- fileupload --}}
-    <script src="{{ asset('cork-v3/src/plugins/src/filepond/filepond.min.js') }}"></script>
-    <script src="{{ asset('cork-v3/src/plugins/src/filepond/FilePondPluginFileValidateType.min.js') }}"></script>
-    <script src="{{ asset('cork-v3/src/plugins/src/filepond/FilePondPluginImageExifOrientation.min.js') }}"></script>
-    <script src="{{ asset('cork-v3/src/plugins/src/filepond/FilePondPluginImagePreview.min.js') }}"></script>
-    <script src="{{ asset('cork-v3/src/plugins/src/filepond/FilePondPluginImageCrop.min.js') }}"></script>
-    <script src="{{ asset('cork-v3/src/plugins/src/filepond/FilePondPluginImageResize.min.js') }}"></script>
-    <script src="{{ asset('cork-v3/src/plugins/src/filepond/FilePondPluginImageTransform.min.js') }}"></script>
-    <script src="{{ asset('cork-v3/src/plugins/src/filepond/filepondPluginFileValidateSize.min.js') }}"></script>
-    <script src="{{ asset('cork-v3/src/plugins/src/filepond/custom-filepond.js') }}"></script>
-
-    <!-- BEGIN PAGE LEVEL SCRIPTS -->
-    <script src="{{ asset('cork-v3/src/plugins/src/table/datatable/datatables.js') }}"></script>
-    <script>
-        $('#zero-config').DataTable({
-            "dom": "<'dt--top-section'<'row'<'col-12 col-sm-6 d-flex justify-content-sm-start justify-content-center'l><'col-12 col-sm-6 d-flex justify-content-sm-end justify-content-center mt-sm-0 mt-3'f>>>" +
-        "<'table-responsive'tr>" +
-        "<'dt--bottom-section d-sm-flex justify-content-sm-between text-center'<'dt--pages-count  mb-sm-0 mb-3'i><'dt--pagination'p>>",
-            "oLanguage": {
-                "oPaginate": { "sPrevious": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>', "sNext": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>' },
-                "sInfo": "Showing page _PAGE_ of _PAGES_",
-                "sSearch": '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>',
-                "sSearchPlaceholder": "Search...",
-               "sLengthMenu": "Results :  _MENU_",
-            },
-            "stripeClasses": [],
-            "lengthMenu": [7, 10, 20, 50],
-            "pageLength": 10 
-        });
-    </script>
-    <!-- END PAGE LEVEL SCRIPTS -->
-
     {{-- date time picker --}}
-    <script src="{{ asset('cork-v3/src/assets/js/scrollspyNav.js') }}"></script>
     <script src="{{ asset('cork-v3/src/plugins/src/flatpickr/flatpickr.js') }}"></script>
 
     <script src="{{ asset('cork-v3/src/plugins/src/flatpickr/custom-flatpickr.js') }}"></script>
-    <script>
-        var f3 = flatpickr(document.getElementById('rangeCalendarFlatpickr'), {
-            mode: "range"
-        });
-    </script>
+    
     {{-- end date time picker --}}
 
     {{-- icon --}}
@@ -308,6 +273,7 @@
     <script src="{{ asset('cork-v3/src/plugins/src/tomSelect/tom-select.base.js') }}"></script>
     <script src="{{ asset('cork-v3/src/plugins/src/tomSelect/custom-tom-select.js') }}"></script>
 
+    
 
 </body>
 </html>

@@ -73,7 +73,7 @@
                         <label class="col-sm-2 col-form-label">Asal Komunitas</label>
                         <div class="col-sm-10">
                             <select id="select-beast" class="form-control" placeholder="Select a person..." autocomplete="off" name="nama_komunitas">
-                                <option hidden value="Laki-laki">Pilih Komunitas ...</option>
+                                <option hidden value="">Pilih Komunitas ...</option>
                                 @foreach ($anggota as $a)
                                 <option value="{{ $a->komunitas }}">{{ $a->komunitas }}</option>
                                 @endforeach
