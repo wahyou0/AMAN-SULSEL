@@ -36,6 +36,11 @@
                             <li>
                                 <a href="{{ url('AMAN-Massenrempulu')}}"> Massenrempulu </a>
                             </li>
+                            <li>
+                                <a href="{{ url('Charts-AMAN-Gowa')}}"> Gowa </a>
+                            </li>
+
+
                             {{-- <li>
                                 <a href="{{ url('chart')}}"> CHARTS </a>
                             </li> --}}

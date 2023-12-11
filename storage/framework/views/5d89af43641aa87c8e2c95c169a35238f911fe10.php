@@ -13,18 +13,17 @@
         </div>
     </div>
 
-    <div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 layout-spacing">
         <div class="widget widget-chart-one">
-            <div class="widget-heading">
-                <h5 class="">Charts Jumlah Laki-Laki dan Perempuan</h5>
-            </div>
+
+              <h6 class="">Jumlah Laki-Laki dan Perempuan</h6>
 
             <?php $__currentLoopData = $laki; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Jumlah Laki-laki : <?php echo e($item); ?></p>
+            <p>Laki-laki : <?php echo e($item); ?></p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             
             <?php $__currentLoopData = $wanita; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Jumlah Perempuan : <?php echo e($item); ?></p>
+            <p>Perempuan : <?php echo e($item); ?></p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
             <?php $__currentLoopData = $total; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -55,7 +54,7 @@
         plotOptions: {
           bar: {
             horizontal: false,
-            columnWidth: '35%',
+            columnWidth: '100%',
             endingShape: 'rounded'
           },
         },

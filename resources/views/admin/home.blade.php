@@ -13,18 +13,17 @@
         </div>
     </div>
 
-    <div class="col-xl-11 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 layout-spacing">
         <div class="widget widget-chart-one">
-            <div class="widget-heading">
-                <h5 class="">Charts Jumlah Laki-Laki dan Perempuan</h5>
-            </div>
+
+              <h6 class="">Jumlah Laki-Laki dan Perempuan</h6>
 
             @foreach ($laki as $item)
-            <p>Jumlah Laki-laki : {{ $item }}</p>
+            <p>Laki-laki : {{ $item }}</p>
             @endforeach
             
             @foreach ($wanita as $item)
-            <p>Jumlah Perempuan : {{ $item }}</p>
+            <p>Perempuan : {{ $item }}</p>
             @endforeach
 
             @foreach ($total as $item)
@@ -55,7 +54,7 @@
         plotOptions: {
           bar: {
             horizontal: false,
-            columnWidth: '35%',
+            columnWidth: '100%',
             endingShape: 'rounded'
           },
         },

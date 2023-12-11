@@ -7,5 +7,8 @@ use Illuminate\Http\Request;
 
 class ChartGowa extends Controller
 {
-    //
+    public function gowa()
+    {
+        
+    }
 }

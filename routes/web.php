@@ -11,17 +11,9 @@ Use App\Http\Controllers\DashboardController;
 Use App\Http\Controllers\admin\Kader_amanController;
 use App\Http\Controllers\chart\ChartMassenrempulu;
 use App\Http\Controllers\KomChartController;
+use App\Http\Controllers\chart\ChartGowa;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+
 
 Route::get('/', function () {
     return view('login');
@@ -83,6 +75,7 @@ Route::group(['middleware' => ['auth']], function () {
 
         Route::get('orong', [DashboardController::class, 'orong']);
         Route::get('AMAN-Massenrempulu', [ChartMassenrempulu::class, 'massenrempulu']);
+        Route::get('Charts-AMAN-Gowa', [ChartGowa::class, 'gowa']);
 
         Route::get('chart', [KomChartController::class, 'index']);
 
