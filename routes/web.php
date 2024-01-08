@@ -9,11 +9,17 @@ use App\Http\Controllers\admin\Kegiatan_amanController;
 use App\Http\Controllers\admin\Anggota_amanController;
 Use App\Http\Controllers\DashboardController;
 Use App\Http\Controllers\admin\Kader_amanController;
+use App\Http\Controllers\admin\MapsController;
+use App\Http\Controllers\admin\PolygonController;
 use App\Http\Controllers\chart\ChartMassenrempulu;
 use App\Http\Controllers\KomChartController;
 use App\Http\Controllers\chart\ChartGowa;
-
-
+use App\Http\Controllers\chart\ChartMajene;
+use App\Http\Controllers\chart\ChartMamasa;
+use App\Http\Controllers\chart\ChartMaros;
+use App\Http\Controllers\chart\ChartSidrap;
+use App\Http\Controllers\chart\ChartSinjai;
+use App\Http\Controllers\chart\ChartToraya;
 
 Route::get('/', function () {
     return view('login');
@@ -74,10 +80,38 @@ Route::group(['middleware' => ['auth']], function () {
 
 
         Route::get('orong', [DashboardController::class, 'orong']);
-        Route::get('AMAN-Massenrempulu', [ChartMassenrempulu::class, 'massenrempulu']);
-        Route::get('Charts-AMAN-Gowa', [ChartGowa::class, 'gowa']);
-
         Route::get('chart', [KomChartController::class, 'index']);
+        Route::get('AMAN-Massenrempulu', [ChartMassenrempulu::class, 'massenrempulu']);
+        Route::get('chart-aman-gowa', [ChartGowa::class, 'gowa']);
+        Route::get('chart-majene', [ChartMajene::class, 'majene']);
+        Route::get('chart-mamasa', [ChartMamasa::class, 'mamasa']);
+        Route::get('chart-maros', [ChartMaros::class, 'maros']);
+        Route::get('chart-sidrap', [ChartSidrap::class, 'sidrap']);
+        Route::get('chart-sinjai', [ChartSinjai::class, 'sinjai']);
+        Route::get('chart-toraya', [ChartToraya::class, 'toraya']);
+
+        Route::get('map', [MapsController::class, 'index']);
+        Route::get('map/create', [MapsController::class, 'create']);
+        Route::post('map/store', [MapsController::class, 'store']);
+        Route::get('marker/tabel', [MapsController::class, 'tableMarker']);
+        Route::get('marker/edit/{id}', [MapsController::class, 'edit']);
+        Route::post('marker/update', [MapsController::class, 'update']);
+        Route::delete('marker/delete/{id}', [MapsController::class, 'destroy']);
+        Route::get('detail/{id}', [MapsController::class, 'detail']);
+
+        Route::get('pd/{id}', [MapsController::class, 'getKomunitas']);
+        // Route::get('peta', [MapsController::class, 'peta']);
+        // Route::post('draw', [MapsController::class, 'savedraw']);
+
+        Route::get('draw', [PolygonController::class, 'index']);
+        Route::post('draw/store', [PolygonController::class, 'store']);
+        Route::get('draw/edit/{id}', [PolygonController::class, 'edit']);
+        Route::post('draw/update', [PolygonController::class, 'update']);
+        Route::get('draw/tabel', [PolygonController::class, 'tabel']);
+        Route::delete('draw/delete/{id}', [PolygonController::class, 'destroy']);
+
+        Route::get('daftar-user', [LoginController::class, 'daftarUser']);
+        Route::delete('daftar-user/delete/{id}', [LoginController::class, 'destroy']);
 
     });
 });

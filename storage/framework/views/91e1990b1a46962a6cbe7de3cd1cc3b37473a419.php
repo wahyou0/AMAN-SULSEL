@@ -161,13 +161,13 @@ unset($__errorArgs, $__bag); ?>
                                 </label>
                             </div>
                             <?php $__currentLoopData = $kegiatan; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $x): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck2" name="kegiatan_diikuti[]" value="<?php echo e($x->nama_kegiatan); ?> <?php echo e($x->tahun); ?>">
-                            <label class="form-check-label" for="gridCheck2">
-                                <?php echo e($x->nama_kegiatan); ?> <?php echo e($x->tahun); ?>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck2" name="kegiatan_diikuti[]" value="<?php echo e($x->nama_kegiatan); ?> <?php echo e($x->tahun); ?>">
+                                <label class="form-check-label" for="gridCheck2">
+                                    <?php echo e($x->nama_kegiatan); ?> <?php echo e($x->tahun); ?>
 
-                            </label>
-                          </div>
+                                </label>
+                            </div>
                           <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                         </div>
                       </div>

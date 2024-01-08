@@ -107,15 +107,13 @@
                                     <div class="">
                                         <div class="seperator">
                                             <hr>
-                                            <div class="seperator-text"> <span>Or</span></div>
+                                            <div class="seperator-text"> <span></span></div>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="col-12">
-                                    <div class="text-center">
-                                        <p class="mb-0">Belum punya akun ? <a href="{{ url('register') }}" class="text-warning">Daftar disini</a></p>
-                                    </div>
+                                    
                                 </div>
                                 
                             </div>

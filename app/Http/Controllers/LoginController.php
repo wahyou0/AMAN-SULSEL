@@ -13,7 +13,7 @@ class LoginController extends Controller
     {
         if($user = Auth::user()){
             if ($user->level == '1') {
-                return redirect()->intended('home');
+                return redirect()->intended('map');
             } elseif ($user->level == '2') {
                 return redirect()->intended('kegiatan');
             }
@@ -40,7 +40,7 @@ class LoginController extends Controller
             $request->session()->regenerate();
             $user = Auth::user();
             if ($user->level == '1') {
-                return redirect()->intended('home');
+                return redirect()->intended('map');
             } elseif ($user->level == '2') {
                 return redirect()->intended('kegiatan');
             }
@@ -92,7 +92,41 @@ class LoginController extends Controller
             'password' => Hash::make($request['password']),
             'level' => $request['level'],
         ]);
-        return redirect('/home')->with('succes', 'Registrasi Admin Berhasil');
+
+        $kredensial = $request->only('username','password');
+
+        if(Auth::attempt($kredensial)) {
+            $request->session()->regenerate();
+            $user = Auth::user();
+            if ($user->level == '1') {
+                return redirect()->intended('map');
+            } elseif ($user->level == '2') {
+                return redirect()->intended('kegiatan');
+            }
+
+            return redirect()->intended('/');
+        }
+
+        return back()->withErrors([
+            'username' => 'username atau password anda salah',
+        ])->onlyInput('username');
+    }
+
+    public function daftarUser()
+    {
+        $user = User::all();
+
+        return view('admin.user.index', compact('user'));
+    }
+
+    public function destroy($id)
+    {
+        $data = User::find($id);
+        if ($data->delete()) {
+            return redirect('daftar-user')->with('success', 'User Telah di Hapus');
+        } else {
+            return back()->with(['Gagal', 'hapus User gagal']);
+        }
     }
 
 }

@@ -3,16 +3,16 @@
 
   <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
-        <div class="widget widget-chart-one">
+      <div class="widget widget-chart-one">
             
-                <h5 class="">Charts Luas Wilayah Adat Tiap  di AMAN Massenrempulu</h5>
-            </div>
+        <h5 class="">Charts Luas Wilayah Adat Tiap  di AMAN Massenrempulu</h5>
+      </div>
 
-            <div class="widget-content">
-                <div id="chart"></div>
-            </div>
-        </div>
+      <div class="widget-content">
+        <div id="chart"></div>
+      </div>
     </div>
+  </div>
 
     <div class="page-meta">
       <nav class="breadcrumb-style-one" aria-label="breadcrumb">
@@ -26,7 +26,7 @@
 
     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12- layout-spacing">
         <div class="widget widget-chart-one">
-                <h6 class="">AMAN Massenrempulu</h6>
+              <h6 class="">AMAN Massenrempulu</h6>
 
             <?php $__currentLoopData = $total; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
             <small><p>Total = <?php echo e($item); ?> Jiwa</p></small>
@@ -38,7 +38,6 @@
             </div>
         </div>
     </div>
-  </div>
   
   <div class="row">
     <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 layout-spacing">
@@ -614,16 +613,6 @@
           // }
         }
       }
-      name: 'Remove Data',
-        handler(chart) {
-          chart.data.labels.splice(-1, 1); // remove the label first
-
-          chart.data.datasets.forEach(dataset => {
-            dataset.data.pop();
-          }); 
-
-          chart.update();
-        }
     });
   </script>
 

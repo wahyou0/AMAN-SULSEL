@@ -38,7 +38,7 @@
                                 <option value="AMAN Massenrempulu">AMAN Massenrempulu</option>
                                 <option value="AMAN Sidrap">AMAN Sidrap</option>
                                 <option value="AMAN Sinjai">AMAN Sinjai</option>
-                                <option value="AMAN Toraja">AMAN Toraja</option>
+                                <option value="AMAN Toraya">AMAN Toraya</option>
                             </select>
                         </div>
                     </div>

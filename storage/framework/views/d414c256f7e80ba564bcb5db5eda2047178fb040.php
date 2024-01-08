@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>AMAN SULAWESI SELATAN </title>
-    <link rel="icon" type="image/x-icon" href="../src/assets/img/favicon.ico"/>
+    <link rel="icon" type="image/X-icon" href="<?php echo e(asset('logo/logo-aman.jpg')); ?>"/>
     <link href="<?php echo e(asset('cork-v3/layouts/vertical-light-menu/css/light/loader.css')); ?>" rel="stylesheet" type="text/css" />
     <link href="<?php echo e(asset('cork-v3/layouts/vertical-light-menu/css/dark/loader.css')); ?>" rel="stylesheet" type="text/css" />
     <script src="<?php echo e(asset('cork-v3/layouts/vertical-light-menu/loader.js')); ?>"></script>
@@ -59,6 +59,8 @@
     
 
 
+    <!-- lightbox/detail peta -->
+    <link rel="stylesheet" type="text/css" href="<?php echo e(asset('cork-v3/src/plugins/src/glightbox/glightbox.min.css')); ?>">
     
     <link href="<?php echo e(asset('cork-v3/src/assets/css/light/users/user-profile.css')); ?>" rel="stylesheet" type="text/css" />
     <link href="<?php echo e(asset('cork-v3/src/assets/css/dark/users/user-profile.css')); ?>" rel="stylesheet" type="text/css" />
@@ -77,9 +79,13 @@
 </head>
 <body class=" layout-boxed">
     <!-- BEGIN LOADER -->
-    <div id="load_screen"> <div class="loader"> <div class="loader-content">
-        <div class="spinner-grow align-self-center"></div>
-    </div></div></div>
+    <div id="load_screen"> 
+        <div class="loader"> 
+            <div class="loader-content">
+                <div class="spinner-border text-warning align-self-center  ">Loading...</div>
+            </div>
+        </div>
+    </div>
     <!--  END LOADER -->
 
     <!--  BEGIN NAVBAR  -->
@@ -229,6 +235,11 @@
         feather.replace();
     </script>
     
+
+    <!-- lightbox/detail peta -->
+    <script src="<?php echo e(asset('cork-v3/src/plugins/src/glightbox/glightbox.min.js')); ?>"></script>
+    <script src="<?php echo e(asset('cork-v3/src/plugins/src/glightbox/custom-glightbox.min.js')); ?>"></script>
+
 
     <script src="https://code.jquery.com/jquery-migrate-3.4.1.min.js" integrity="sha256-UnTxHm+zKuDPLfufgEMnKGXDl6fEIjtM+n1Q6lL73ok=" crossorigin="anonymous"></script>
 

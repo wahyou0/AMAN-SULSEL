@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Arr;
 use App\Models\kegiatan_aman;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class KegiatanController extends Controller
 {

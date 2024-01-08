@@ -46,11 +46,11 @@
                                     <td>
                                         <form method="POST" action="{{ url('kegiatan_aman/delete/'.$data->id) }}">
                                             @csrf
-                                            <a class="btn btn-outline-success btn-icon mb-2 me-2" href="{{ url('kegiatan_aman/edit/'.$data->id) }}">
+                                            <a class="btn btn-outline-success btn-icon mb-2 me-2 bs-popover rounded" href="{{ url('kegiatan_aman/edit/'.$data->id) }}" data-bs-container="body" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Edit">
                                                     <i data-feather="edit"></i>
                                             </a>
                                             <input type="hidden" name="_method" value="DELETE">
-                                            <button class="btn btn-outline-danger btn-icon mb-2 me-2 show-confirm">
+                                            <button class="btn btn-outline-danger btn-icon mb-2 me-2 bs-popover rounded show-confirm" data-bs-container="body" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Hapus">
                                                 <i data-feather="trash-2"></i>
                                             </button>
                                             
