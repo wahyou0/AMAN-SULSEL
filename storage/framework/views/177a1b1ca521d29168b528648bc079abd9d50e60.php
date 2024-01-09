@@ -29,7 +29,7 @@
               <h6 class="">AMAN Massenrempulu</h6>
 
             <?php $__currentLoopData = $total; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <small><p>Total = <?php echo e($item); ?> Jiwa</p></small>
+            <small><p>Total = <?php echo e(number_format($item)); ?> Jiwa</p></small>
             
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
@@ -44,7 +44,7 @@
       <div class="widget widget-chart-one">
               <h6 class=""> Orong</h6>
           <?php $__currentLoopData = $totalorong; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-          <small><p>Total = <?php echo e($item); ?> Jiwa</p></small>
+          <small><p>Total = <?php echo e(number_format($item)); ?> Jiwa</p></small>
           <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
           <div class="">
@@ -56,16 +56,9 @@
       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 layout-spacing">
         <div class="widget widget-chart-one">
               <h6 class=""> Bambapuang</h6>
-            <?php $__currentLoopData = $laki_bambapuang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Laki-laki = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            <?php $__currentLoopData = $wanita_bambapuang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Perempuan = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <?php $__currentLoopData = $total_bambapuang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Total = <?php echo e($item); ?> Jiwa</p>
+            <p>Total = <?php echo e(number_format($item)); ?> Jiwa</p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <div class="">
@@ -77,16 +70,9 @@
       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 layout-spacing">
         <div class="widget widget-chart-one">
                 <h6 class=""> Patongloan</h6>
-            <?php $__currentLoopData = $laki_patongloan; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Laki-laki = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            <?php $__currentLoopData = $wanita_patongloan; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Perempuan = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <?php $__currentLoopData = $total_patongloan; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Total = <?php echo e($item); ?> Jiwa</p>
+            <p>Total = <?php echo e(number_format($item)); ?> Jiwa</p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <div class="">
@@ -99,16 +85,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Tangsa</h6>
-            <?php $__currentLoopData = $laki_tangsa; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Laki-laki = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            <?php $__currentLoopData = $wanita_tangsa; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Perempuan = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <?php $__currentLoopData = $total_tangsa; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Total = <?php echo e($item); ?> Jiwa</p>
+            <p>Total = <?php echo e(number_format($item)); ?> Jiwa</p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <div class="">
@@ -121,16 +100,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Kalupini</h6>
-            <?php $__currentLoopData = $laki_kalupini; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Laki-laki = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            <?php $__currentLoopData = $wanita_kalupini; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Perempuan = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <?php $__currentLoopData = $total_kalupini; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Total = <?php echo e($item); ?> Jiwa</p>
+            <p>Total = <?php echo e(number_format($item)); ?> Jiwa</p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <div class="">
@@ -142,16 +114,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Baroko</h6>
-            <?php $__currentLoopData = $laki_baroko; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Laki-laki = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            <?php $__currentLoopData = $wanita_baroko; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Perempuan = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <?php $__currentLoopData = $total_baroko; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Total = <?php echo e($item); ?> Jiwa</p>
+            <p>Total = <?php echo e(number_format($item)); ?> Jiwa</p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <div class="">
@@ -164,16 +129,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Pana</h6>
-            <?php $__currentLoopData = $laki_pana; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Laki-laki = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            <?php $__currentLoopData = $wanita_pana; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Perempuan = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <?php $__currentLoopData = $total_pana; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Total = <?php echo e($item); ?> Jiwa</p>
+            <p>Total = <?php echo e(number_format($item)); ?> Jiwa</p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <div class="">
@@ -186,16 +144,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Marena</h6>
-            <?php $__currentLoopData = $laki_marena; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Laki-laki = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            <?php $__currentLoopData = $wanita_marena; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Perempuan = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <?php $__currentLoopData = $total_marena; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Total = <?php echo e($item); ?> Jiwa</p>
+            <p>Total = <?php echo e(number_format($item)); ?> Jiwa</p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <div class="">
@@ -208,16 +159,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Mundan</h6>
-            <?php $__currentLoopData = $laki_mundan; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Laki-laki = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            <?php $__currentLoopData = $wanita_mundan; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Perempuan = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <?php $__currentLoopData = $total_mundan; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Total = <?php echo e($item); ?> Jiwa</p>
+            <p>Total = <?php echo e(number_format($item)); ?> Jiwa</p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <div class="">
@@ -229,17 +173,9 @@
       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 layout-spacing">
         <div class="widget widget-chart-one">
             
-                <h6 class=""> Uru</h6>
-            <?php $__currentLoopData = $laki_uru; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Laki-laki = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            <?php $__currentLoopData = $wanita_uru; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Perempuan = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-  
+            <h6 class=""> Uru</h6>
             <?php $__currentLoopData = $total_uru; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Total = <?php echo e($item); ?> Jiwa</p>
+            <p>Total = <?php echo e(number_format($item)); ?> Jiwa</p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <div class="">
@@ -252,16 +188,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Batu Noni</h6>
-            <?php $__currentLoopData = $laki_batu_noni; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Laki-laki = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            <?php $__currentLoopData = $wanita_batu_noni; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Perempuan = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <?php $__currentLoopData = $total_batu_noni; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Total = <?php echo e($item); ?> Jiwa</p>
+            <p>Total = <?php echo e(number_format($item)); ?> Jiwa</p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <div class="">
@@ -273,17 +202,10 @@
       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 layout-spacing">
         <div class="widget widget-chart-one">
             
-                <h6 class=""> Angge Batu</h6>
-            <?php $__currentLoopData = $laki_angge_batu; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Laki-laki = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            <?php $__currentLoopData = $wanita_angge_batu; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Perempuan = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                <h6 class=""> Anggebuntu</h6>
   
             <?php $__currentLoopData = $total_angge_batu; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Total = <?php echo e($item); ?> Jiwa</p>
+            <p>Total = <?php echo e(number_format($item)); ?> Jiwa</p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <div class="">
@@ -296,16 +218,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Buntu Pema</h6>
-            <?php $__currentLoopData = $laki_buntu_pema; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Laki-laki = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            <?php $__currentLoopData = $wanita_buntu_pema; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Perempuan = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <?php $__currentLoopData = $total_buntu_pema; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Total = <?php echo e($item); ?> Jiwa</p>
+            <p>Total = <?php echo e(number_format($item)); ?> Jiwa</p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <div class="">
@@ -318,16 +233,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Ranga</h6>
-            <?php $__currentLoopData = $laki_ranga; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Laki-laki = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            <?php $__currentLoopData = $wanita_ranga; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Perempuan = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <?php $__currentLoopData = $total_ranga; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Total = <?php echo e($item); ?> Jiwa</p>
+            <p>Total = <?php echo e(number_format($item)); ?> Jiwa</p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <div class="">
@@ -339,17 +247,10 @@
       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 layout-spacing">
         <div class="widget widget-chart-one">
             
-                <h6 class=""> Tallu Bamba</h6>
-            <?php $__currentLoopData = $laki_tallu_bamba; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Laki-laki = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            <?php $__currentLoopData = $wanita_tallu_bamba; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Perempuan = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                <h6 class=""> Tallubamba</h6>
   
             <?php $__currentLoopData = $total_tallu_bamba; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Total = <?php echo e($item); ?> Jiwa</p>
+            <p>Total = <?php echo e(number_format($item)); ?> Jiwa</p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <div class="">
@@ -362,16 +263,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Tondon</h6>
-            <?php $__currentLoopData = $laki_tondon; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Laki-laki = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            <?php $__currentLoopData = $wanita_tondon; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Perempuan = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <?php $__currentLoopData = $total_tondon; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Total = <?php echo e($item); ?> Jiwa</p>
+            <p>Total = <?php echo e(number_format($item)); ?> Jiwa</p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <div class="">
@@ -384,16 +278,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Limbuang</h6>
-            <?php $__currentLoopData = $laki_limbuang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Laki-laki = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            <?php $__currentLoopData = $wanita_limbuang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Perempuan = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <?php $__currentLoopData = $total_limbuang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Total = <?php echo e($item); ?> Jiwa</p>
+            <p>Total = <?php echo e(number_format($item)); ?> Jiwa</p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <div class="">
@@ -406,16 +293,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Pasang</h6>
-            <?php $__currentLoopData = $laki_pasang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Laki-laki = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            <?php $__currentLoopData = $wanita_pasang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Perempuan = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <?php $__currentLoopData = $total_pasang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Total = <?php echo e($item); ?> Jiwa</p>
+            <p>Total = <?php echo e(number_format($item)); ?> Jiwa</p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <div class="">
@@ -428,16 +308,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Baringin</h6>
-            <?php $__currentLoopData = $laki_baringin; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Laki-laki = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            <?php $__currentLoopData = $wanita_baringin; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Perempuan = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <?php $__currentLoopData = $total_baringin; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Total = <?php echo e($item); ?> Jiwa</p>
+            <p>Total = <?php echo e(number_format($item)); ?> Jiwa</p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <div class="">
@@ -450,16 +323,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Tapong</h6>
-            <?php $__currentLoopData = $laki_tapong; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Laki-laki = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            <?php $__currentLoopData = $wanita_tapong; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Perempuan = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <?php $__currentLoopData = $total_tapong; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Total = <?php echo e($item); ?> Jiwa</p>
+            <p>Total = <?php echo e(number_format($item)); ?> Jiwa</p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <div class="">
@@ -472,16 +338,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Matajang</h6>
-            <?php $__currentLoopData = $laki_matajang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Laki-laki = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            <?php $__currentLoopData = $wanita_matajang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Perempuan = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <?php $__currentLoopData = $total_matajang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Total = <?php echo e($item); ?> Jiwa</p>
+            <p>Total = <?php echo e(number_format($item)); ?> Jiwa</p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <div class="">
@@ -494,16 +353,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Andulang</h6>
-            <?php $__currentLoopData = $laki_andulang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Laki-laki = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            <?php $__currentLoopData = $wanita_andulang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Perempuan = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <?php $__currentLoopData = $total_andulang; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Total = <?php echo e($item); ?> Jiwa</p>
+            <p>Total = <?php echo e(number_format($item)); ?> Jiwa</p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <div class="">
@@ -515,17 +367,9 @@
       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 layout-spacing">
         <div class="widget widget-chart-one">
             
-                <h6 class=""> Malino</h6>
-            <?php $__currentLoopData = $laki_malino; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Laki-laki = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-            
-            <?php $__currentLoopData = $wanita_malino; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Perempuan = <?php echo e($item); ?></p>
-            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-  
+            <h6 class=""> Malino</h6>
             <?php $__currentLoopData = $total_malino; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $item): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <p>Total = <?php echo e($item); ?> Jiwa</p>
+            <p>Total = <?php echo e(number_format($item)); ?> Jiwa</p>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   
             <div class="">

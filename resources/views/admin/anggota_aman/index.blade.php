@@ -49,10 +49,10 @@
                                     <td>{{ $data->pengesahan }}</td>
                                     <td>{{ $data->pengurus_daerah }}</td>
                                     <td>{{ $data->komunitas }}</td>
-                                    <td>{{ $data->luas_indikatif }}</td>
-                                    <td>{{ $data->luas_pemetaan }}</td>
-                                    <td>{{ $data->jml_laki_laki }}</td>
-                                    <td>{{ $data->jml_perempuan }}</td>
+                                    <td>{{ number_format($data->luas_indikatif) }}</td>
+                                    <td>{{ number_format($data->luas_pemetaan) }}</td>
+                                    <td>{{ number_format($data->jml_laki_laki) }}</td>
+                                    <td>{{ number_format($data->jml_perempuan) }}</td>
                                     <td>
                                         <form method="POST" action="{{ url('anggota_aman/delete/'.$data->id) }}">
                                             @csrf

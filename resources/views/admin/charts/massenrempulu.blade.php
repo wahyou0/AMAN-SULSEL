@@ -29,7 +29,7 @@
               <h6 class="">AMAN Massenrempulu</h6>
 
             @foreach ($total as $item)
-            <small><p>Total = {{ $item }} Jiwa</p></small>
+            <small><p>Total = {{ number_format($item) }} Jiwa</p></small>
             
             @endforeach
 
@@ -44,7 +44,7 @@
       <div class="widget widget-chart-one">
               <h6 class=""> Orong</h6>
           @foreach ($totalorong as $item)
-          <small><p>Total = {{ $item }} Jiwa</p></small>
+          <small><p>Total = {{ number_format($item) }} Jiwa</p></small>
           @endforeach
 
           <div class="">
@@ -56,16 +56,9 @@
       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 layout-spacing">
         <div class="widget widget-chart-one">
               <h6 class=""> Bambapuang</h6>
-            @foreach ($laki_bambapuang as $item)
-            <p>Laki-laki = {{ $item }}</p>
-            @endforeach
-            
-            @foreach ($wanita_bambapuang as $item)
-            <p>Perempuan = {{ $item }}</p>
-            @endforeach
   
             @foreach ($total_bambapuang as $item)
-            <p>Total = {{ $item }} Jiwa</p>
+            <p>Total = {{ number_format($item) }} Jiwa</p>
             @endforeach
   
             <div class="">
@@ -77,16 +70,9 @@
       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 layout-spacing">
         <div class="widget widget-chart-one">
                 <h6 class=""> Patongloan</h6>
-            @foreach ($laki_patongloan as $item)
-            <p>Laki-laki = {{ $item }}</p>
-            @endforeach
-            
-            @foreach ($wanita_patongloan as $item)
-            <p>Perempuan = {{ $item }}</p>
-            @endforeach
   
             @foreach ($total_patongloan as $item)
-            <p>Total = {{ $item }} Jiwa</p>
+            <p>Total = {{ number_format($item) }} Jiwa</p>
             @endforeach
   
             <div class="">
@@ -99,16 +85,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Tangsa</h6>
-            @foreach ($laki_tangsa as $item)
-            <p>Laki-laki = {{ $item }}</p>
-            @endforeach
-            
-            @foreach ($wanita_tangsa as $item)
-            <p>Perempuan = {{ $item }}</p>
-            @endforeach
   
             @foreach ($total_tangsa as $item)
-            <p>Total = {{ $item }} Jiwa</p>
+            <p>Total = {{ number_format($item) }} Jiwa</p>
             @endforeach
   
             <div class="">
@@ -121,16 +100,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Kalupini</h6>
-            @foreach ($laki_kalupini as $item)
-            <p>Laki-laki = {{ $item }}</p>
-            @endforeach
-            
-            @foreach ($wanita_kalupini as $item)
-            <p>Perempuan = {{ $item }}</p>
-            @endforeach
   
             @foreach ($total_kalupini as $item)
-            <p>Total = {{ $item }} Jiwa</p>
+            <p>Total = {{ number_format($item) }} Jiwa</p>
             @endforeach
   
             <div class="">
@@ -142,16 +114,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Baroko</h6>
-            @foreach ($laki_baroko as $item)
-            <p>Laki-laki = {{ $item }}</p>
-            @endforeach
-            
-            @foreach ($wanita_baroko as $item)
-            <p>Perempuan = {{ $item }}</p>
-            @endforeach
   
             @foreach ($total_baroko as $item)
-            <p>Total = {{ $item }} Jiwa</p>
+            <p>Total = {{ number_format($item) }} Jiwa</p>
             @endforeach
   
             <div class="">
@@ -164,16 +129,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Pana</h6>
-            @foreach ($laki_pana as $item)
-            <p>Laki-laki = {{ $item }}</p>
-            @endforeach
-            
-            @foreach ($wanita_pana as $item)
-            <p>Perempuan = {{ $item }}</p>
-            @endforeach
   
             @foreach ($total_pana as $item)
-            <p>Total = {{ $item }} Jiwa</p>
+            <p>Total = {{ number_format($item) }} Jiwa</p>
             @endforeach
   
             <div class="">
@@ -186,16 +144,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Marena</h6>
-            @foreach ($laki_marena as $item)
-            <p>Laki-laki = {{ $item }}</p>
-            @endforeach
-            
-            @foreach ($wanita_marena as $item)
-            <p>Perempuan = {{ $item }}</p>
-            @endforeach
   
             @foreach ($total_marena as $item)
-            <p>Total = {{ $item }} Jiwa</p>
+            <p>Total = {{ number_format($item) }} Jiwa</p>
             @endforeach
   
             <div class="">
@@ -208,16 +159,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Mundan</h6>
-            @foreach ($laki_mundan as $item)
-            <p>Laki-laki = {{ $item }}</p>
-            @endforeach
-            
-            @foreach ($wanita_mundan as $item)
-            <p>Perempuan = {{ $item }}</p>
-            @endforeach
   
             @foreach ($total_mundan as $item)
-            <p>Total = {{ $item }} Jiwa</p>
+            <p>Total = {{ number_format($item) }} Jiwa</p>
             @endforeach
   
             <div class="">
@@ -229,17 +173,9 @@
       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 layout-spacing">
         <div class="widget widget-chart-one">
             
-                <h6 class=""> Uru</h6>
-            @foreach ($laki_uru as $item)
-            <p>Laki-laki = {{ $item }}</p>
-            @endforeach
-            
-            @foreach ($wanita_uru as $item)
-            <p>Perempuan = {{ $item }}</p>
-            @endforeach
-  
+            <h6 class=""> Uru</h6>
             @foreach ($total_uru as $item)
-            <p>Total = {{ $item }} Jiwa</p>
+            <p>Total = {{ number_format($item) }} Jiwa</p>
             @endforeach
   
             <div class="">
@@ -252,16 +188,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Batu Noni</h6>
-            @foreach ($laki_batu_noni as $item)
-            <p>Laki-laki = {{ $item }}</p>
-            @endforeach
-            
-            @foreach ($wanita_batu_noni as $item)
-            <p>Perempuan = {{ $item }}</p>
-            @endforeach
   
             @foreach ($total_batu_noni as $item)
-            <p>Total = {{ $item }} Jiwa</p>
+            <p>Total = {{ number_format($item) }} Jiwa</p>
             @endforeach
   
             <div class="">
@@ -273,17 +202,10 @@
       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 layout-spacing">
         <div class="widget widget-chart-one">
             
-                <h6 class=""> Angge Batu</h6>
-            @foreach ($laki_angge_batu as $item)
-            <p>Laki-laki = {{ $item }}</p>
-            @endforeach
-            
-            @foreach ($wanita_angge_batu as $item)
-            <p>Perempuan = {{ $item }}</p>
-            @endforeach
+                <h6 class=""> Anggebuntu</h6>
   
             @foreach ($total_angge_batu as $item)
-            <p>Total = {{ $item }} Jiwa</p>
+            <p>Total = {{ number_format($item) }} Jiwa</p>
             @endforeach
   
             <div class="">
@@ -296,16 +218,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Buntu Pema</h6>
-            @foreach ($laki_buntu_pema as $item)
-            <p>Laki-laki = {{ $item }}</p>
-            @endforeach
-            
-            @foreach ($wanita_buntu_pema as $item)
-            <p>Perempuan = {{ $item }}</p>
-            @endforeach
   
             @foreach ($total_buntu_pema as $item)
-            <p>Total = {{ $item }} Jiwa</p>
+            <p>Total = {{ number_format($item) }} Jiwa</p>
             @endforeach
   
             <div class="">
@@ -318,16 +233,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Ranga</h6>
-            @foreach ($laki_ranga as $item)
-            <p>Laki-laki = {{ $item }}</p>
-            @endforeach
-            
-            @foreach ($wanita_ranga as $item)
-            <p>Perempuan = {{ $item }}</p>
-            @endforeach
   
             @foreach ($total_ranga as $item)
-            <p>Total = {{ $item }} Jiwa</p>
+            <p>Total = {{ number_format($item) }} Jiwa</p>
             @endforeach
   
             <div class="">
@@ -339,17 +247,10 @@
       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 layout-spacing">
         <div class="widget widget-chart-one">
             
-                <h6 class=""> Tallu Bamba</h6>
-            @foreach ($laki_tallu_bamba as $item)
-            <p>Laki-laki = {{ $item }}</p>
-            @endforeach
-            
-            @foreach ($wanita_tallu_bamba as $item)
-            <p>Perempuan = {{ $item }}</p>
-            @endforeach
+                <h6 class=""> Tallubamba</h6>
   
             @foreach ($total_tallu_bamba as $item)
-            <p>Total = {{ $item }} Jiwa</p>
+            <p>Total = {{ number_format($item) }} Jiwa</p>
             @endforeach
   
             <div class="">
@@ -362,16 +263,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Tondon</h6>
-            @foreach ($laki_tondon as $item)
-            <p>Laki-laki = {{ $item }}</p>
-            @endforeach
-            
-            @foreach ($wanita_tondon as $item)
-            <p>Perempuan = {{ $item }}</p>
-            @endforeach
   
             @foreach ($total_tondon as $item)
-            <p>Total = {{ $item }} Jiwa</p>
+            <p>Total = {{ number_format($item) }} Jiwa</p>
             @endforeach
   
             <div class="">
@@ -384,16 +278,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Limbuang</h6>
-            @foreach ($laki_limbuang as $item)
-            <p>Laki-laki = {{ $item }}</p>
-            @endforeach
-            
-            @foreach ($wanita_limbuang as $item)
-            <p>Perempuan = {{ $item }}</p>
-            @endforeach
   
             @foreach ($total_limbuang as $item)
-            <p>Total = {{ $item }} Jiwa</p>
+            <p>Total = {{ number_format($item) }} Jiwa</p>
             @endforeach
   
             <div class="">
@@ -406,16 +293,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Pasang</h6>
-            @foreach ($laki_pasang as $item)
-            <p>Laki-laki = {{ $item }}</p>
-            @endforeach
-            
-            @foreach ($wanita_pasang as $item)
-            <p>Perempuan = {{ $item }}</p>
-            @endforeach
   
             @foreach ($total_pasang as $item)
-            <p>Total = {{ $item }} Jiwa</p>
+            <p>Total = {{ number_format($item) }} Jiwa</p>
             @endforeach
   
             <div class="">
@@ -428,16 +308,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Baringin</h6>
-            @foreach ($laki_baringin as $item)
-            <p>Laki-laki = {{ $item }}</p>
-            @endforeach
-            
-            @foreach ($wanita_baringin as $item)
-            <p>Perempuan = {{ $item }}</p>
-            @endforeach
   
             @foreach ($total_baringin as $item)
-            <p>Total = {{ $item }} Jiwa</p>
+            <p>Total = {{ number_format($item) }} Jiwa</p>
             @endforeach
   
             <div class="">
@@ -450,16 +323,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Tapong</h6>
-            @foreach ($laki_tapong as $item)
-            <p>Laki-laki = {{ $item }}</p>
-            @endforeach
-            
-            @foreach ($wanita_tapong as $item)
-            <p>Perempuan = {{ $item }}</p>
-            @endforeach
   
             @foreach ($total_tapong as $item)
-            <p>Total = {{ $item }} Jiwa</p>
+            <p>Total = {{ number_format($item) }} Jiwa</p>
             @endforeach
   
             <div class="">
@@ -472,16 +338,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Matajang</h6>
-            @foreach ($laki_matajang as $item)
-            <p>Laki-laki = {{ $item }}</p>
-            @endforeach
-            
-            @foreach ($wanita_matajang as $item)
-            <p>Perempuan = {{ $item }}</p>
-            @endforeach
   
             @foreach ($total_matajang as $item)
-            <p>Total = {{ $item }} Jiwa</p>
+            <p>Total = {{ number_format($item) }} Jiwa</p>
             @endforeach
   
             <div class="">
@@ -494,16 +353,9 @@
         <div class="widget widget-chart-one">
             
                 <h6 class=""> Andulang</h6>
-            @foreach ($laki_andulang as $item)
-            <p>Laki-laki = {{ $item }}</p>
-            @endforeach
-            
-            @foreach ($wanita_andulang as $item)
-            <p>Perempuan = {{ $item }}</p>
-            @endforeach
   
             @foreach ($total_andulang as $item)
-            <p>Total = {{ $item }} Jiwa</p>
+            <p>Total = {{ number_format($item) }} Jiwa</p>
             @endforeach
   
             <div class="">
@@ -515,17 +367,9 @@
       <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 layout-spacing">
         <div class="widget widget-chart-one">
             
-                <h6 class=""> Malino</h6>
-            @foreach ($laki_malino as $item)
-            <p>Laki-laki = {{ $item }}</p>
-            @endforeach
-            
-            @foreach ($wanita_malino as $item)
-            <p>Perempuan = {{ $item }}</p>
-            @endforeach
-  
+            <h6 class=""> Malino</h6>
             @foreach ($total_malino as $item)
-            <p>Total = {{ $item }} Jiwa</p>
+            <p>Total = {{ number_format($item) }} Jiwa</p>
             @endforeach
   
             <div class="">

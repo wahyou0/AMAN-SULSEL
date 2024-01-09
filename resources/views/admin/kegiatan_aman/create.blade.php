@@ -54,14 +54,4 @@
         </div>
     </div>
 
-    <script>
-        new TomSelect("#select-beast",{
-            create: true,
-            sortField: {
-                field: "text",
-                direction: "asc"
-            }
-        });
-    </script>
-
 @endsection    

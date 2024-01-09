@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\kader_aman;
 use App\Models\kegiatan_aman;
 use App\Models\anggota_aman;
-use DB;
+use Illuminate\Support\Facades\DB;
 
 class Kader_amanController extends Controller
 {
@@ -134,8 +134,14 @@ class Kader_amanController extends Controller
         $kegiatan = kegiatan_aman::all();
 
         $keg = explode(',' , $data->kegiatan_diikuti);
+        $cek = DB::select('select nama_kegiatan,tahun from kegiatan_aman');
+        foreach ($cek as $key => $value) {
+            $a[] = $value->nama_kegiatan." ".$value->tahun;
+        }
         
-        return view('admin.kader_aman.edit', compact('data','anggota','kegiatan','keg'));
+        // dd($a);
+        
+        return view('admin.kader_aman.edit', compact('data','anggota','kegiatan','keg','cek','a'));
     }
 
     

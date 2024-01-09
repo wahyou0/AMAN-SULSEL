@@ -75,9 +75,9 @@ class ChartMassenrempulu extends Controller
         $wanita_ranga = anggota_aman::select(DB::raw("SUM(jml_perempuan) as wanita_ranga"))->where('komunitas','ranga')->pluck('wanita_ranga');
         $total_ranga = anggota_aman::select(DB::raw("SUM(jml_perempuan + jml_laki_laki) as total_ranga"))->where('komunitas','ranga')->pluck('total_ranga');
         
-        $laki_tallu_bamba = anggota_aman::select(DB::raw("SUM(jml_laki_laki) as laki_tallu_bamba"))->where('komunitas','Tallu Bamba')->pluck('laki_tallu_bamba');
-        $wanita_tallu_bamba = anggota_aman::select(DB::raw("SUM(jml_perempuan) as wanita_tallu_bamba"))->where('komunitas','Tallu Bamba')->pluck('wanita_tallu_bamba');
-        $total_tallu_bamba = anggota_aman::select(DB::raw("SUM(jml_perempuan + jml_laki_laki) as total_tallu_bamba"))->where('komunitas','Tallu Bamba')->pluck('total_tallu_bamba');
+        $laki_tallu_bamba = anggota_aman::select(DB::raw("SUM(jml_laki_laki) as laki_tallu_bamba"))->where('komunitas','Tallubamba')->pluck('laki_tallu_bamba');
+        $wanita_tallu_bamba = anggota_aman::select(DB::raw("SUM(jml_perempuan) as wanita_tallu_bamba"))->where('komunitas','Tallubamba')->pluck('wanita_tallu_bamba');
+        $total_tallu_bamba = anggota_aman::select(DB::raw("SUM(jml_perempuan + jml_laki_laki) as total_tallu_bamba"))->where('komunitas','Tallubamba')->pluck('total_tallu_bamba');
         
         $laki_tondon = anggota_aman::select(DB::raw("SUM(jml_laki_laki) as laki_tondon"))->where('komunitas','tondon')->pluck('laki_tondon');
         $wanita_tondon = anggota_aman::select(DB::raw("SUM(jml_perempuan) as wanita_tondon"))->where('komunitas','tondon')->pluck('wanita_tondon');
@@ -111,9 +111,9 @@ class ChartMassenrempulu extends Controller
         $wanita_malino = anggota_aman::select(DB::raw("SUM(jml_perempuan) as wanita_malino"))->where('komunitas','malino')->pluck('wanita_malino');
         $total_malino = anggota_aman::select(DB::raw("SUM(jml_perempuan + jml_laki_laki) as total_malino"))->where('komunitas','malino')->pluck('total_malino');
         
-        $laki_angge_batu = anggota_aman::select(DB::raw("SUM(jml_laki_laki) as laki_angge_batu"))->where('komunitas','angge batu')->pluck('laki_angge_batu');
-        $wanita_angge_batu = anggota_aman::select(DB::raw("SUM(jml_perempuan) as wanita_angge_batu"))->where('komunitas','angge batu')->pluck('wanita_angge_batu');
-        $total_angge_batu = anggota_aman::select(DB::raw("SUM(jml_perempuan + jml_laki_laki) as total_angge_batu"))->where('komunitas','angge batu')->pluck('total_angge_batu');
+        $laki_angge_batu = anggota_aman::select(DB::raw("SUM(jml_laki_laki) as laki_angge_batu"))->where('komunitas','Anggebuntu')->pluck('laki_angge_batu');
+        $wanita_angge_batu = anggota_aman::select(DB::raw("SUM(jml_perempuan) as wanita_angge_batu"))->where('komunitas','Anggebuntu')->pluck('wanita_angge_batu');
+        $total_angge_batu = anggota_aman::select(DB::raw("SUM(jml_perempuan + jml_laki_laki) as total_angge_batu"))->where('komunitas','Anggebuntu')->pluck('total_angge_batu');
         
 
         return view('admin.charts.massenrempulu', compact('laki',

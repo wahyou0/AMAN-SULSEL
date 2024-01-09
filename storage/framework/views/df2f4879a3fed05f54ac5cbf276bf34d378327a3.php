@@ -48,15 +48,5 @@
         </div>
     </div>
 
-    <script>
-        new TomSelect("#select-beast",{
-            create: true,
-            sortField: {
-                field: "text",
-                direction: "asc"
-            }
-        });
-    </script>
-
 <?php $__env->stopSection(); ?>    
 <?php echo $__env->make('admin.dashboard', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\AMAN-Sulsel\resources\views/admin/kegiatan_aman/create.blade.php ENDPATH**/ ?>

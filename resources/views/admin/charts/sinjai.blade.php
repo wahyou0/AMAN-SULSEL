@@ -29,7 +29,7 @@
                     <h6 class="">AMAN Sinjai</h6>
 
                 @foreach ($total as $item)
-                <small><p>Total = {{ $item }} Jiwa</p></small>
+                <small><p>Total = {{ number_format($item) }} Jiwa</p></small>
                 
                 @endforeach
 
@@ -45,7 +45,7 @@
         <div class="widget widget-chart-one">
                 <h6 class=""> Barambang Katute</h6>
             @foreach ($total_barambang_katute as $item)
-            <small><p>Total = {{ $item }} Jiwa</p></small>
+            <small><p>Total = {{ number_format($item) }} Jiwa</p></small>
             @endforeach
 
             <div class="">
@@ -58,7 +58,7 @@
             <div class="widget widget-chart-one">
                 <h6 class=""> Kampala</h6>
                 @foreach ($total_kampala as $item)
-                <p>Total = {{ $item }}</p>
+                <p>Total = {{ number_format($item) }}</p>
                 @endforeach
     
                 <div class="">
@@ -72,7 +72,7 @@
                 <h6 class=""> Karampuang</h6>
     
                 @foreach ($total_karampuang as $item)
-                <p>Total = {{ $item }} Jiwa</p>
+                <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -86,7 +86,7 @@
                 
                 <h6 class=""> PattiroToa</h6>
                 @foreach ($total_pattiro_toa as $item)
-                <p>Total = {{ $item }} Jiwa</p>
+                <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -100,7 +100,7 @@
                 
                 <h6 class="">Soppeng Turungan</h6>
                 @foreach ($total_soppeng_turungan as $item)
-                    <p>Total = {{ $item }} Jiwa</p>
+                    <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">

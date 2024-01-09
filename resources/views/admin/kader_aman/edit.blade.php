@@ -122,13 +122,13 @@
                         <label class="col-form-label col-sm-3">Pelatihan/Pendidikan Yang telah diikuti</label>
                         <div class="col-sm-8 sm-2">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="kegiatan_diikuti[]" value="belum mengikuti pelatihan">
+                                <input class="form-check-input" type="checkbox" name="kegiatan_diikuti[]" value="belum mengikuti pelatihan" {{ in_array( 'belum mengikuti pelatihan', explode(',' , $data->kegiatan_diikuti)) ? 'checked' : ''}}>
                                 <label class="form-check-label" for="gridCheck2">
                                     Belum Mengikuti Pelatihan
                                 </label>
                             </div>
                             
-                            @foreach ($kegiatan as $x)
+                            @foreach ($cek as $x)
                           <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="gridCheck2" name="kegiatan_diikuti[]" value="{{ $x->nama_kegiatan }} {{ $x->tahun}}" {{ in_array($x->nama_kegiatan , explode(',' , $data->kegiatan_diikuti)) ? 'checked' : ''}} >
                             <label class="form-check-label" for="gridCheck2">
@@ -146,15 +146,4 @@
             </div>
         </div>
     </div>
-
-    <script>
-        new TomSelect("#select-beast",{
-            create: true,
-            sortField: {
-                field: "text",
-                direction: "asc"
-            }
-        });
-    </script>
-
 @endsection    

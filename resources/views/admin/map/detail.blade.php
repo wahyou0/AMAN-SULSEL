@@ -19,11 +19,11 @@
                                     <ul class="mb-5">
                                         <li class="mb-1">Nama PD : {{ $detail->nama_pd}}</li>
                                         <li class="mb-1">NAma Komunitas : {{ $detail->nama_komunitas}}</li>
-                                        <li class="mb-1">Luas Peta Indikatif : {{ $data->luas_indikatif}} Ha</li>
-                                        <li class="mb-1">Luas Wilayah Hasil Pemetaan : {{ $data->luas_pemetaan}} Ha</li>
-                                        <li class="mb-1">Jumlah Laki-Laki : {{ $data->jml_laki_laki}} Jiwa</li>
-                                        <li class="mb-1">Jumlah Perempuan : {{ $data->jml_perempuan}} Jiwa</li>
-                                        <li class="mb-1">Total: {{ $data->jml_perempuan + $data->jml_laki_laki}} Jiwa</li>
+                                        <li class="mb-1">Luas Peta Indikatif : {{ number_format($data->luas_indikatif )}} Ha</li>
+                                        <li class="mb-1">Luas Wilayah Hasil Pemetaan : {{ number_format($data->luas_pemetaan )}} Ha</li>
+                                        <li class="mb-1">Jumlah Laki-Laki : {{ number_format($data->jml_laki_laki) }} Jiwa</li>
+                                        <li class="mb-1">Jumlah Perempuan : {{ number_format($data->jml_perempuan) }} Jiwa</li>
+                                        <li class="mb-1">Total: {{ number_format($data->jml_perempuan + $data->jml_laki_laki) }} Jiwa</li>
                                     </ul>
 
                                     <p class="mb-5" style="white-space: pre-line">{{ $detail->deskripsi }}</p>

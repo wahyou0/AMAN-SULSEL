@@ -25,7 +25,10 @@ class Kegiatan_amanController extends Controller
     public function store(Request $request)
     {
         $model = $request->all();
-
+        
+            $a = $request->nama_kegiatan." ".$request->tahun;
+        
+        dd($a);
         kegiatan_aman::create($model);
         return redirect('/kegiatan_aman')->with('success', 'Kegiatan AMAN Berhasil diTambah');
     }

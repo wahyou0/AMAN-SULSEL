@@ -29,7 +29,7 @@
                     <h6 class="">AMAN Mamasa</h6>
 
                 @foreach ($total as $item)
-                <small><p>Total = {{ $item }} Jiwa</p></small>
+                <small><p>Total = {{ number_format($item) }} Jiwa</p></small>
                 
                 @endforeach
 
@@ -45,7 +45,7 @@
         <div class="widget widget-chart-one">
             <h6 class=""> Aralle</h6>
             @foreach ($total_aralle as $item)
-            <small><p>Total = {{ $item }} Jiwa</p></small>
+            <small><p>Total = {{ number_format($item) }} Jiwa</p></small>
             @endforeach
 
             <div class="">
@@ -58,7 +58,7 @@
             <div class="widget widget-chart-one">
                 <h6 class=""> Balla Mesalu</h6>
                 @foreach ($total_balla_messalu as $item)
-                <p>Total = {{ $item }}</p>
+                <p>Total = {{ number_format($item) }}</p>
                 @endforeach
     
                 <div class="">
@@ -72,7 +72,7 @@
                 <h6 class=""> Balla Satanetean</h6>
     
                 @foreach ($total_balla_satanetean as $item)
-                <p>Total = {{ $item }} Jiwa</p>
+                <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -86,7 +86,7 @@
                 
                 <h6 class=""> Balla Tumuka</h6>
                 @foreach ($total_balla_tumuka as $item)
-                <p>Total = {{ $item }} Jiwa</p>
+                <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -100,7 +100,7 @@
                 
                 <h6 class=""> Bambang</h6>
                 @foreach ($total_bambang as $item)
-                    <p>Total = {{ $item }} Jiwa</p>
+                    <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -113,7 +113,7 @@
                 
                 <h6 class=""> Lembangna Salulo</h6>
                 @foreach ($total_lembangna as $item)
-                <p>Total = {{ $item }} Jiwa</p>
+                <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -127,7 +127,7 @@
                 
                 <h6 class=""> Makuang</h6>
                 @foreach ($total_makuang as $item)
-                <p>Total = {{ $item }} Jiwa</p>
+                <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -141,7 +141,7 @@
                 
                 <h6 class=""> Rantebulahan</h6>
                 @foreach ($total_rantebulahan as $item)
-                <p>Total = {{ $item }} Jiwa</p>
+                <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -155,7 +155,7 @@
                 
                 <h6 class=""> Mala'bo</h6>
                 @foreach ($total_malabo as $item)
-                <p>Total = {{ $item }} Jiwa</p>
+                <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -169,7 +169,7 @@
                 
                 <h6 class=""> Mambi</h6>
                 @foreach ($total_mambi as $item)
-                <p>Total = {{ $item }} Jiwa</p>
+                <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -183,7 +183,7 @@
                 
                 <h6 class=""> Messawa</h6>
                 @foreach ($total_messawa as $item)
-                <p>Total = {{ $item }} Jiwa</p>
+                <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -197,7 +197,7 @@
                 
                 <h6 class=""> Nosu</h6>
                 @foreach ($total_nosu as $item)
-                <p>Total = {{ $item }} Jiwa</p>
+                <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -211,7 +211,7 @@
                 
                 <h6 class=""> Saloan</h6>
                 @foreach ($total_saloan as $item)
-                <p>Total = {{ $item }} Jiwa</p>
+                <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -225,7 +225,7 @@
                 
                 <h6 class=""> Orobua</h6>
                 @foreach ($total_orobua as $item)
-                    <p>Total = {{ $item }} Jiwa</p>
+                    <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -238,7 +238,7 @@
                 
                 <h6 class=""> Osango</h6>
                 @foreach ($total_osango as $item)
-                <p>Total = {{ $item }} Jiwa</p>
+                <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -252,7 +252,7 @@
                 
                 <h6 class=""> Pana'</h6>
                 @foreach ($total_pana as $item)
-                <p>Total = {{ $item }} Jiwa</p>
+                <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -266,7 +266,7 @@
                 
                 <h6 class=""> Ralle Anaq</h6>
                 @foreach ($total_ralle_anaq as $item)
-                <p>Total = {{ $item }} Jiwa</p>
+                <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -280,7 +280,7 @@
                 
                 <h6 class=""> Rambusaratu</h6>
                 @foreach ($total_rambusaratu as $item)
-                <p>Total = {{ $item }} Jiwa</p>
+                <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -294,7 +294,7 @@
                 
                 <h6 class=""> Sapan</h6>
                 @foreach ($total_sapan as $item)
-                <p>Total = {{ $item }} Jiwa</p>
+                <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -308,7 +308,7 @@
                 
                 <h6 class=""> Sepang</h6>
                 @foreach ($total_sepang as $item)
-                    <p>Total = {{ $item }} Jiwa</p>
+                    <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -321,7 +321,7 @@
                 
                 <h6 class=""> Tandu Masadi Salutahongan</h6>
                 @foreach ($total_sindaga_manik as $item)
-                <p>Total = {{ $item }} Jiwa</p>
+                <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -335,7 +335,7 @@
                 
                 <h6 class=""> Tabang</h6>
                 @foreach ($total_tabang as $item)
-                <p>Total = {{ $item }} Jiwa</p>
+                <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -349,7 +349,7 @@
                 
                 <h6 class=""> Tabulahan</h6>
                 @foreach ($total_tabulahan as $item)
-                <p>Total = {{ $item }} Jiwa</p>
+                <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">
@@ -363,7 +363,7 @@
                 
                 <h6 class=""> Tawalian</h6>
                 @foreach ($total_tawalian as $item)
-                <p>Total = {{ $item }} Jiwa</p>
+                <p>Total = {{ number_format($item) }} Jiwa</p>
                 @endforeach
     
                 <div class="">

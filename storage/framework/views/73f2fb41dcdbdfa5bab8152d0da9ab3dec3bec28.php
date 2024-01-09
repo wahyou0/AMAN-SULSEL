@@ -49,10 +49,10 @@
                                     <td><?php echo e($data->pengesahan); ?></td>
                                     <td><?php echo e($data->pengurus_daerah); ?></td>
                                     <td><?php echo e($data->komunitas); ?></td>
-                                    <td><?php echo e($data->luas_indikatif); ?></td>
-                                    <td><?php echo e($data->luas_pemetaan); ?></td>
-                                    <td><?php echo e($data->jml_laki_laki); ?></td>
-                                    <td><?php echo e($data->jml_perempuan); ?></td>
+                                    <td><?php echo e(number_format($data->luas_indikatif)); ?></td>
+                                    <td><?php echo e(number_format($data->luas_pemetaan)); ?></td>
+                                    <td><?php echo e(number_format($data->jml_laki_laki)); ?></td>
+                                    <td><?php echo e(number_format($data->jml_perempuan)); ?></td>
                                     <td>
                                         <form method="POST" action="<?php echo e(url('anggota_aman/delete/'.$data->id)); ?>">
                                             <?php echo csrf_field(); ?>
