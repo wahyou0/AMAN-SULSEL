@@ -316,20 +316,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 layout-spacing">
-            <div class="widget widget-chart-one">
-                
-                <h6 class=""> Tandu Masadi Salutahongan</h6>
-                @foreach ($total_sindaga_manik as $item)
-                <p>Total = {{ number_format($item) }} Jiwa</p>
-                @endforeach
-    
-                <div class="">
-                <canvas id="myChartSindagaManik"></canvas>
-                </div>
-            </div>
-        </div>
-
+        
         <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 col-12 layout-spacing">
             <div class="widget widget-chart-one">
                 
@@ -1020,35 +1007,6 @@
         datasets: [{
             label: 'Jumlah',
             data: [@json($laki_sepang), @json($perempuan_sepang)],
-            borderWidth: 1,
-                    backgroundColor: [
-                        'rgb(30,144,255)',
-                        'rgb(238,130,238)'
-                    ]
-        }]
-        },
-        options: {
-        scales: {
-        },
-            plugins: {
-                legend: {
-                    display: false
-                }
-            }
-        }
-    });
-</script>
-
-<script>
-    const sindaga = document.getElementById('myChartSindagaManik');
-
-    new Chart(sindaga, {
-        type: 'pie',
-        data: {
-        labels: ['Laki-laki', 'Perempuan'],
-        datasets: [{
-            label: 'Jumlah',
-            data: [@json($laki_sindaga_manik), @json($perempuan_sindaga_manik)],
             borderWidth: 1,
                     backgroundColor: [
                         'rgb(30,144,255)',
