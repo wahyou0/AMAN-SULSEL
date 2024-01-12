@@ -447,7 +447,11 @@
         datasets: [{
           label: 'laki-laki',
           data: [<?php echo json_encode($laki, 15, 512) ?>, <?php echo json_encode($wanita, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
@@ -455,6 +459,11 @@
           // y: {
           //   beginAtZero: true
           // }
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -471,11 +480,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($lakiorong, 15, 512) ?>, <?php echo json_encode($wanitaorong, 15, 512) ?>],
-          borderWidth: 2
+          borderWidth: 2,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -491,11 +509,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($laki_bambapuang, 15, 512) ?>, <?php echo json_encode($wanita_bambapuang, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -511,11 +538,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($laki_patongloan, 15, 512) ?>, <?php echo json_encode($wanita_patongloan, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -531,11 +567,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($laki_tangsa, 15, 512) ?>, <?php echo json_encode($wanita_tangsa, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -551,11 +596,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($laki_kalupini, 15, 512) ?>, <?php echo json_encode($wanita_kalupini, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -571,11 +625,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($laki_baroko, 15, 512) ?>, <?php echo json_encode($wanita_baroko, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -591,11 +654,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($laki_pana, 15, 512) ?>, <?php echo json_encode($wanita_pana, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -611,11 +683,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($laki_marena, 15, 512) ?>, <?php echo json_encode($wanita_marena, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -631,11 +712,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($laki_mundan, 15, 512) ?>, <?php echo json_encode($wanita_mundan, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -651,11 +741,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($laki_uru, 15, 512) ?>, <?php echo json_encode($wanita_uru, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -671,11 +770,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($laki_batu_noni, 15, 512) ?>, <?php echo json_encode($wanita_batu_noni, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -691,11 +799,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($laki_angge_batu, 15, 512) ?>, <?php echo json_encode($wanita_angge_batu, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -711,11 +828,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($laki_buntu_pema, 15, 512) ?>, <?php echo json_encode($wanita_buntu_pema, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -731,11 +857,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($laki_ranga, 15, 512) ?>, <?php echo json_encode($wanita_ranga, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -751,11 +886,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($laki_tallu_bamba, 15, 512) ?>, <?php echo json_encode($wanita_tallu_bamba, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -771,11 +915,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($laki_tondon, 15, 512) ?>, <?php echo json_encode($wanita_tondon, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -791,11 +944,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($laki_limbuang, 15, 512) ?>, <?php echo json_encode($wanita_limbuang, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -811,11 +973,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($laki_pasang, 15, 512) ?>, <?php echo json_encode($wanita_pasang, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -831,11 +1002,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($laki_baringin, 15, 512) ?>, <?php echo json_encode($wanita_baringin, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -851,11 +1031,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($laki_tapong, 15, 512) ?>, <?php echo json_encode($wanita_tapong, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -871,11 +1060,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($laki_matajang, 15, 512) ?>, <?php echo json_encode($wanita_matajang, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -891,11 +1089,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($laki_andulang, 15, 512) ?>, <?php echo json_encode($wanita_andulang, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });
@@ -911,11 +1118,20 @@
         datasets: [{
           label: 'Jumlah',
           data: [<?php echo json_encode($laki_malino, 15, 512) ?>, <?php echo json_encode($wanita_malino, 15, 512) ?>],
-          borderWidth: 1
+          borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
       },
       options: {
         scales: {
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
         }
       }
     });

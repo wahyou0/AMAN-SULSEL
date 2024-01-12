@@ -44,7 +44,12 @@
                                 <td>{{ $data->name}}</td>
                                 <td>{{ $data->username }}</td>
                                 <td>{{ $data->email }}</td>
-                                <td>{{ $data->level }}</td>
+                                <td>@if ($data->level == 1)
+                                     admin 
+                                @else
+                                     user
+                                @endif
+                                </td>
                                 <td>
                                     <form method="POST" action="{{ url('daftar-user/delete/'.$data->id) }}">
                                         @csrf

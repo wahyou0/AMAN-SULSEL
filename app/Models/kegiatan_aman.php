@@ -14,5 +14,6 @@ class kegiatan_aman extends Model
         'tahun',
         'pelaksana',
         'nama_kegiatan',
+        'cek_tahun_kegiatan'
     ];
 }

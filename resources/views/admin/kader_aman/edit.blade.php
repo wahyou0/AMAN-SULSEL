@@ -128,14 +128,30 @@
                                 </label>
                             </div>
                             
-                            @foreach ($cek as $x)
-                          <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="gridCheck2" name="kegiatan_diikuti[]" value="{{ $x->nama_kegiatan }} {{ $x->tahun}}" {{ in_array($x->nama_kegiatan , explode(',' , $data->kegiatan_diikuti)) ? 'checked' : ''}} >
-                            <label class="form-check-label" for="gridCheck2">
-                                {{ $x->nama_kegiatan }} {{ $x->tahun }}
-                            </label>
-                          </div>
-                          @endforeach
+                            @foreach ($kegiatan as $x)
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck2" name="kegiatan_diikuti[]" value="{{ $x->nama_kegiatan }} {{ $x->tahun}}" {{ in_array($x->cek_tahun_kegiatan , explode(',' , $data->kegiatan_diikuti)) ? 'checked' : ''}} >
+                                    <label class="form-check-label" for="gridCheck2">
+                                        {{ $x->nama_kegiatan }} {{ $x->tahun }}
+                                    </label>
+                                </div>
+                            @endforeach
+
+                            {{-- @foreach ($kegiatan as $key )
+                                @if ($data->kegiatan_diikuti == $key)
+                                    <input class="form-check-input" type="checkbox" id="gridCheck2" name="kegiatan_diikuti[]" value="{{ $key->nama_kegiatan }}" checked>
+                                    <label class="form-check-label" for="gridCheck2">
+                                        {{ $key->nama_kegiatan }} {{ $key->tahun }}
+                                    </label>
+                                @else
+                                    <input class="form-check-input" type="checkbox" id="gridCheck2" name="kegiatan_diikuti[]" value="{{ $key->nama_kegiatan }}">
+                                    <label class="form-check-label" for="gridCheck2">
+                                        {{ $key->nama_kegiatan }} {{ $key->tahun }}
+                                    </label>
+                                @endif
+                                
+                            @endforeach --}}
+                          
                         </div>
                       </div>
 

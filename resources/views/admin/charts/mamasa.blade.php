@@ -437,7 +437,11 @@
                 datasets: [{
                     label: 'laki-laki',
                     data: [@json($laki), @json($perempuan)],
-                    borderWidth: 1
+                    borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
                 }]
             },
             options: {
@@ -445,6 +449,11 @@
                     // y: {
                     //   beginAtZero: true
                     // }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
                 }
             }
         });
@@ -461,11 +470,20 @@
                 datasets: [{
                     label: 'Jumlah',
                     data: [@json($laki_aralle), @json($perempuan_aralle)],
-                    borderWidth: 2
+                    borderWidth: 2,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
                 }]
             },
             options: {
                 scales: {
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
                 }
             }
         });
@@ -481,11 +499,20 @@
                 datasets: [{
                     label: 'Jumlah',
                     data: [@json($laki_balla_messalu), @json($perempuan_balla_messalu)],
-                    borderWidth: 1
+                    borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
                 }]
             },
             options: {
                 scales: {
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
                 }
             }
         });
@@ -501,12 +528,21 @@
             datasets: [{
                 label: 'Jumlah',
                 data: [@json($laki_balla_satanetean), @json($perempuan_balla_satanetean)],
-                borderWidth: 1
+                borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
             }]
             },
             options: {
             scales: {
-            }
+            },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
             }
         });
     </script>
@@ -521,12 +557,21 @@
             datasets: [{
                 label: 'Jumlah',
                 data: [@json($laki_balla_tumuka), @json($perempuan_balla_tumuka)],
-                borderWidth: 1
+                borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
             }]
             },
             options: {
             scales: {
-            }
+            },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
             }
         });
     </script>
@@ -541,12 +586,21 @@
             datasets: [{
                 label: 'Jumlah',
                 data: [@json($laki_bambang), @json($perempuan_bambang)],
-                borderWidth: 1
+                borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
             }]
             },
             options: {
             scales: {
-            }
+            },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
             }
         });
     </script>
@@ -561,12 +615,21 @@
             datasets: [{
                 label: 'Jumlah',
                 data: [@json($laki_lembangna), @json($perempuan_lembangna)],
-                borderWidth: 1
+                borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
             }]
             },
             options: {
             scales: {
-            }
+            },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
             }
         });
     </script>
@@ -581,12 +644,21 @@
             datasets: [{
                 label: 'Jumlah',
                 data: [@json($laki_makuang), @json($perempuan_makuang)],
-                borderWidth: 1
+                borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
             }]
             },
             options: {
             scales: {
-            }
+            },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
             }
         });
     </script>
@@ -601,12 +673,21 @@
             datasets: [{
                 label: 'Jumlah',
                 data: [@json($laki_rantebulahan), @json($perempuan_rantebulahan)],
-                borderWidth: 1
+                borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
             }]
             },
             options: {
             scales: {
-            }
+            },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
             }
         });
     </script>
@@ -621,12 +702,21 @@
             datasets: [{
                 label: 'Jumlah',
                 data: [@json($laki_malabo), @json($perempuan_malabo)],
-                borderWidth: 1
+                borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
             }]
             },
             options: {
             scales: {
-            }
+            },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
             }
         });
     </script>
@@ -640,12 +730,21 @@
             datasets: [{
                 label: 'Jumlah',
                 data: [@json($laki_mambi), @json($perempuan_mambi)],
-                borderWidth: 1
+                borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
             }]
             },
             options: {
             scales: {
-            }
+            },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
             }
         });
     </script>
@@ -660,12 +759,21 @@
             datasets: [{
                 label: 'Jumlah',
                 data: [@json($laki_messawa), @json($perempuan_messawa)],
-                borderWidth: 1
+                borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
             }]
             },
             options: {
             scales: {
-            }
+            },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
             }
         });
     </script>
@@ -680,12 +788,21 @@
             datasets: [{
                 label: 'Jumlah',
                 data: [@json($laki_nosu), @json($perempuan_nosu)],
-                borderWidth: 1
+                borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
             }]
             },
             options: {
             scales: {
-            }
+            },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
             }
         });
     </script>
@@ -700,12 +817,21 @@
             datasets: [{
                 label: 'Jumlah',
                 data: [@json($laki_saloan), @json($perempuan_saloan)],
-                borderWidth: 1
+                borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
             }]
             },
             options: {
             scales: {
-            }
+            },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
             }
         });
     </script>
@@ -720,12 +846,21 @@
             datasets: [{
                 label: 'Jumlah',
                 data: [@json($laki_orobua), @json($perempuan_orobua)],
-                borderWidth: 1
+                borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
             }]
             },
             options: {
             scales: {
-            }
+            },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
             }
         });
     </script>
@@ -740,12 +875,21 @@
             datasets: [{
                 label: 'Jumlah',
                 data: [@json($laki_osango), @json($perempuan_osango)],
-                borderWidth: 1
+                borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
             }]
             },
             options: {
             scales: {
-            }
+            },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
             }
         });
     </script>
@@ -760,12 +904,21 @@
             datasets: [{
                 label: 'Jumlah',
                 data: [@json($laki_pana), @json($perempuan_pana)],
-                borderWidth: 1
+                borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
             }]
             },
             options: {
             scales: {
-            }
+            },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
             }
         });
     </script>
@@ -780,12 +933,21 @@
             datasets: [{
                 label: 'Jumlah',
                 data: [@json($laki_ralle_anaq), @json($perempuan_ralle_anaq)],
-                borderWidth: 1
+                borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
             }]
             },
             options: {
             scales: {
-            }
+            },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
             }
         });
     </script>
@@ -800,12 +962,21 @@
             datasets: [{
                 label: 'Jumlah',
                 data: [@json($laki_rambusaratu), @json($perempuan_rambusaratu)],
-                borderWidth: 1
+                borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
             }]
             },
             options: {
             scales: {
-            }
+            },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
             }
         });
     </script>
@@ -820,12 +991,21 @@
         datasets: [{
             label: 'Jumlah',
             data: [@json($laki_sapan), @json($perempuan_sapan)],
-            borderWidth: 1
+            borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
         },
         options: {
         scales: {
-        }
+        },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
         }
     });
 </script>
@@ -840,12 +1020,21 @@
         datasets: [{
             label: 'Jumlah',
             data: [@json($laki_sepang), @json($perempuan_sepang)],
-            borderWidth: 1
+            borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
         },
         options: {
         scales: {
-        }
+        },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
         }
     });
 </script>
@@ -860,12 +1049,21 @@
         datasets: [{
             label: 'Jumlah',
             data: [@json($laki_sindaga_manik), @json($perempuan_sindaga_manik)],
-            borderWidth: 1
+            borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
         },
         options: {
         scales: {
-        }
+        },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
         }
     });
 </script>
@@ -880,12 +1078,21 @@
         datasets: [{
             label: 'Jumlah',
             data: [@json($laki_tabang), @json($perempuan_tabang)],
-            borderWidth: 1
+            borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
         },
         options: {
         scales: {
-        }
+        },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
         }
     });
 </script>
@@ -900,12 +1107,21 @@
         datasets: [{
             label: 'Jumlah',
             data: [@json($laki_tabulahan), @json($perempuan_tabulahan)],
-            borderWidth: 1
+            borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
         },
         options: {
         scales: {
-        }
+        },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
         }
     });
 </script>
@@ -920,12 +1136,21 @@
         datasets: [{
             label: 'Jumlah',
             data: [@json($laki_tawalian), @json($perempuan_tawalian)],
-            borderWidth: 1
+            borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
         }]
         },
         options: {
         scales: {
-        }
+        },
+            plugins: {
+                legend: {
+                    display: false
+                }
+            }
         }
     });
 </script>

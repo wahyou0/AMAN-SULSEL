@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('tahun');
             $table->string('pelaksana');
             $table->string('nama_kegiatan');
+            $table->string('cek_tahun_kegiatan');
             $table->timestamps();
         });
     }

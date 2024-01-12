@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <title>LogIn | AMAN Wilayah SULAWESI SELATAN </title>
-    <link rel="icon" type="image/x-icon" href="../src/assets/img/favicon.ico"/>
+    <link rel="icon" type="image/x-icon" href="<?php echo e(asset('logo/logo-aman.jpg')); ?>"/>
     <link href="<?php echo e(asset('cork-v3/layouts/vertical-light-menu/css/light/loader.css')); ?>" rel="stylesheet" type="text/css" />
     <link href="<?php echo e(asset('cork-v3/layouts/vertical-light-menu/css/dark/loader.css')); ?>" rel="stylesheet" type="text/css" />
     <script src="<?php echo e(asset('cork-v3/layouts/vertical-light-menu/loader.js')); ?>"></script>

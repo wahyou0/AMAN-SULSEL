@@ -24,13 +24,26 @@ class Kegiatan_amanController extends Controller
    
     public function store(Request $request)
     {
-        $model = $request->all();
-        
-            $a = $request->nama_kegiatan." ".$request->tahun;
-        
-        dd($a);
-        kegiatan_aman::create($model);
-        return redirect('/kegiatan_aman')->with('success', 'Kegiatan AMAN Berhasil diTambah');
+        $tempat = $request->tempat;
+        $tahun = $request->tahun;
+        $pelaksana = $request->pelaksana;
+        $nama_kegiatan = $request->nama_kegiatan;
+        $cek_tahun_kegiatan = $request->nama_kegiatan." ".$request->tahun;
+
+        $data = new kegiatan_aman();
+        $data->tempat = $tempat;
+        $data->tahun = $tahun;
+        $data->pelaksana = $pelaksana;
+        $data->nama_kegiatan = $nama_kegiatan;
+        $data->cek_tahun_kegiatan = $cek_tahun_kegiatan;
+        $data->save();
+
+        if ($data->save()){
+            return redirect('/kegiatan_aman')->with('success', 'Kegiatan AMAN Berhasil diambah');
+        }
+        else{
+            return Redirect('/kegiatan_aman')->with('gagal', 'Edit Data Gagal');
+        }
     }
 
    
@@ -50,13 +63,26 @@ class Kegiatan_amanController extends Controller
    
     public function update(Request $request)
     {
-        $input = $request->all();
 
-        if (kegiatan_aman::find($input['id'])->update($input)){
-            return Redirect('/kegiatan_aman')->with('success', 'Edit Data Berhasil');
+        $tempat = $request->tempat;
+        $tahun = $request->tahun;
+        $pelaksana = $request->pelaksana;
+        $nama_kegiatan = $request->nama_kegiatan;
+        $cek_tahun_kegiatan = $request->nama_kegiatan." ".$request->tahun;
+
+        $data = kegiatan_aman::find($request['id']);
+        $data->tempat = $tempat;
+        $data->tahun = $tahun;
+        $data->pelaksana = $pelaksana;
+        $data->nama_kegiatan = $nama_kegiatan;
+        $data->cek_tahun_kegiatan = $cek_tahun_kegiatan;
+        $data->save();
+
+        if ($data->save()){
+            return redirect('/kegiatan_aman')->with('success', 'Data berhasil Diubah');
         }
         else{
-            return Redirect('/kegiatan_aman')->with('gagal', 'Edit Data Gagal');
+            return Redirect('/kegiatan_aman')->with('gagal', 'Data gagal Diubah');
         }
     }
 

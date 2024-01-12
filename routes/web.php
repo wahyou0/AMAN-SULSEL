@@ -20,6 +20,7 @@ use App\Http\Controllers\chart\ChartMaros;
 use App\Http\Controllers\chart\ChartSidrap;
 use App\Http\Controllers\chart\ChartSinjai;
 use App\Http\Controllers\chart\ChartToraya;
+use App\Http\Controllers\User\HomeController;
 
 Route::get('/', function () {
     return view('login');
@@ -32,12 +33,15 @@ Route::controller(LoginController::class)->group(function (){
     Route::get('login', 'index')->name('login');
     Route::post('login/proseslogin', 'proseslogin');
     Route::get('logout', 'logout');
-    Route::get('register', 'register');
-    Route::post('login/create', 'create');
+    Route::get('register-user', 'register_user');
+    Route::post('create-user', 'create_user');
 });
 
 Route::group(['middleware' => ['auth']], function () {
     Route::group(['middleware' => ['cekUserLogin:1']], function () {
+
+        Route::get('register', [LoginController::class, 'register']);
+        Route::post('login/create', [LoginController::class, 'create']);
 
         Route::get('home', [DashboardController::class, 'index']);
 
@@ -78,7 +82,7 @@ Route::group(['middleware' => ['auth']], function () {
         Route::delete('kader_aman/delete/{id}', [Kader_amanController::class, 'destroy']);
         Route::get('kader_aman/view/{id}', [Kader_amanController::class, 'view']);
 
-
+        // chart
         Route::get('orong', [DashboardController::class, 'orong']);
         Route::get('chart', [KomChartController::class, 'index']);
         Route::get('AMAN-Massenrempulu', [ChartMassenrempulu::class, 'massenrempulu']);
@@ -114,6 +118,30 @@ Route::group(['middleware' => ['auth']], function () {
         Route::delete('daftar-user/delete/{id}', [LoginController::class, 'destroy']);
 
     });
+    Route::group(['middleware' => ['cekUserLogin:2']], function () {
+
+        Route::get('dashboard', [HomeController::class, 'peta_wilayah']);
+        Route::get('detail-wilayah/{id}', [MapsController::class, 'detail']);
+
+        Route::get('orong', [DashboardController::class, 'orong']);
+        Route::get('chart', [KomChartController::class, 'index']);
+        Route::get('Massenrempulu', [ChartMassenrempulu::class, 'massenrempulu']);
+        Route::get('aman-gowa', [ChartGowa::class, 'gowa']);
+        Route::get('majene', [ChartMajene::class, 'majene']);
+        Route::get('mamasa', [ChartMamasa::class, 'mamasa']);
+        Route::get('maros', [ChartMaros::class, 'maros']);
+        Route::get('sidrap', [ChartSidrap::class, 'sidrap']);
+        Route::get('sinjai', [ChartSinjai::class, 'sinjai']);
+        Route::get('toraya', [ChartToraya::class, 'toraya']);
+
+        Route::get('data-kader-aman', [HomeController::class, 'kader']);
+        Route::get('data-kader-aman/view/{id}', [Kader_amanController::class, 'view']);
+
+        Route::get('daftar-kegiatan-aman', [HomeController::class, 'kegiatan']);
+
+
+    });
+
 });
 
 

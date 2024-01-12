@@ -15,7 +15,7 @@ class LoginController extends Controller
             if ($user->level == '1') {
                 return redirect()->intended('map');
             } elseif ($user->level == '2') {
-                return redirect()->intended('kegiatan');
+                return redirect()->intended('dashboard');
             }
         }
 
@@ -42,7 +42,7 @@ class LoginController extends Controller
             if ($user->level == '1') {
                 return redirect()->intended('map');
             } elseif ($user->level == '2') {
-                return redirect()->intended('kegiatan');
+                return redirect()->intended('dashboard');
             }
 
             return redirect()->intended('/');
@@ -101,7 +101,7 @@ class LoginController extends Controller
             if ($user->level == '1') {
                 return redirect()->intended('map');
             } elseif ($user->level == '2') {
-                return redirect()->intended('kegiatan');
+                return redirect()->intended('dashboard');
             }
 
             return redirect()->intended('/');
@@ -127,6 +127,57 @@ class LoginController extends Controller
         } else {
             return back()->with(['Gagal', 'hapus User gagal']);
         }
+    }
+
+    public function register_user()
+    {
+        return view('register_user');
+    }
+
+    public function create_user(Request $request)
+    {
+        $request->validate([
+            'name' => 'required',
+            'username' => 'required|unique:users,username',
+            'email' => 'required|email',
+            'password' => 'required|min:6',
+        ],
+            [
+                'username.required' => 'Username tidak boleh kosong',
+                'username.unique' => 'Username sudah terdaftar gunakan username yang lain',  
+                'email.required' => 'email tidak boleh kosong',  
+                'email.email' => 'format salah, tambahkan @, contoh@exsample.com',
+                'password.required' => 'password tidak boleh kosong',
+                'password.min' => 'password minimal 6 karakter',
+                
+            ],  
+        );
+
+        User::create([
+            'name' => $request['name'],
+            'username' => $request['username'],
+            'email' => $request['email'],
+            'password' => Hash::make($request['password']),
+            'level' => $request['level'],
+        ]);
+
+        $kredensial = $request->only('username','password');
+
+        if(Auth::attempt($kredensial)) {
+            $request->session()->regenerate();
+            $user = Auth::user();
+            if ($user->level == '1') {
+                return redirect()->intended('map');
+            } elseif ($user->level == '2') {
+                return redirect()->intended('dashboard');
+            }
+
+            return redirect()->intended('/');
+        }
+
+        return back()->withErrors([
+            'username' => 'username atau password anda salah',
+        ])->onlyInput('username');
     }
 
 }

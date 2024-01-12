@@ -146,7 +146,11 @@
                 datasets: [{
                     label: 'laki-laki',
                     data: [@json($laki), @json($perempuan)],
-                    borderWidth: 1
+                    borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
                 }]
             },
             options: {
@@ -154,6 +158,11 @@
                     // y: {
                     //   beginAtZero: true
                     // }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
                 }
             }
         });
@@ -170,11 +179,20 @@
                 datasets: [{
                     label: 'Jumlah',
                     data: [@json($laki_cenreangin), @json($perempuan_cenreangin)],
-                    borderWidth: 2
+                    borderWidth: 2,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
                 }]
             },
             options: {
                 scales: {
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
                 }
             }
         });
@@ -190,11 +208,20 @@
                 datasets: [{
                     label: 'Jumlah',
                     data: [@json($laki_sando_batu), @json($perempuan_sando_batu)],
-                    borderWidth: 1
+                    borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
                 }]
             },
             options: {
                 scales: {
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
                 }
             }
         });
@@ -210,12 +237,21 @@
             datasets: [{
                 label: 'Jumlah',
                 data: [@json($laki_tolotang), @json($perempuan_tolotang)],
-                borderWidth: 1
+                borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
             }]
             },
             options: {
             scales: {
-            }
+            },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
             }
         });
     </script>

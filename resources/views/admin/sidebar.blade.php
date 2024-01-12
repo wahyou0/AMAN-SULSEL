@@ -19,6 +19,12 @@
                 </div> --}}
                 <div class="shadow-bottom"></div>
                 <ul class="list-unstyled menu-categories" id="accordionExample">
+
+                    @php
+                        $a = Auth::user()->level ;
+                    @endphp
+                    @if ( $a == '1' )
+
                     <li class="menu active">
                         <a href="#dashboard" data-bs-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
                             <div class="">
@@ -179,8 +185,100 @@
                             <li>
                                 <a href="{{ url('register')}}">Registrasi Admin</a>
                             </li>
+                            <li>
+                                <a href="{{ url('register-user') }}">Registrasi User</a>
+                            </li>
                         </ul>
                     </li>
+
+                    @elseif ($a == '2')
+
+                        <li class="menu active">
+                            <a href="#dashboard" data-bs-toggle="collapse" aria-expanded="true" class="dropdown-toggle">
+                                <div class="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                                    <span>Dashboard</span>
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </div>
+                            </a>
+                            <ul class="collapse submenu list-unstyled" id="dashboard" data-bs-parent="#accordionExample">
+                                <li>
+                                    <a href="{{ url('dashboard')}}"> Peta </a>
+                                </li>
+
+
+                                {{-- <li>
+                                    <a href="{{ url('chart')}}"> CHARTS </a>
+                                </li> --}}
+                            </ul>
+                        </li>
+
+                        <li class="menu">
+                            <a href="#diagram" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <div class="icon_container">
+                                    <i data-feather="trending-up"></i>
+                                     <span>Diagram</span>
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </div>
+                            </a>
+                            <ul class="collapse submenu list-unstyled" id="diagram" data-bs-parent="#accordionExample">
+                                <li>
+                                    <a href="{{ url('aman-gowa')}}">Gowa</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('majene') }}"> Majene </a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('mamasa') }}">Mamasa</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('maros') }}">Maros</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('sidrap') }}">Sidrap</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('sinjai') }}">Sinjai</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('toraya') }}">Toraya</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('Massenrempulu')}}">Massenrempulu</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="menu">
+                            <a href="#forms" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <div class="">
+                                    <i data-feather="users"></i>
+                                    <span>Kader</span>
+                                </div>
+                                <div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                                </div>
+                            </a>
+                            <ul class="collapse submenu list-unstyled" id="forms" data-bs-parent="#accordionExample">
+                                <li>
+                                    <a href="{{ url('/data-kader-aman') }}"> Kader AMAN</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="menu">
+                            <a href="{{ url('/daftar-kegiatan-aman')}}" aria-expanded="false" class="dropdown-toggle">
+                                <div class="">
+                                    <i data-feather="clipboard"></i>
+                                    <span>Kegiatan AMAN</span>
+                                </div>
+                            </a>
+                        </li>
+                    @endif
 
                 </ul>
                 
