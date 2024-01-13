@@ -4,7 +4,6 @@ namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\kegiatan;
-use App\Models\tabel_anggota;
 use App\Models\kader_aman;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -17,7 +16,6 @@ class KegiatanController extends Controller
     
     public function index()
     {
-        $data = tabel_anggota::all();
         $kegiatan = kegiatan::all();
 
         $kader = DB::table('kegiatans')->select('kegiatan')->get();

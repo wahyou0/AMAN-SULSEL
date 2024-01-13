@@ -38,9 +38,9 @@ class ChartMajene extends Controller
         $perempuan_limboro_rambu = anggota_aman::select(DB::raw("SUM(jml_perempuan) as perempuan_limboro_rambu"))->where('komunitas','Limboro Rambu-Rambu')->pluck('perempuan_limboro_rambu');
         $total_limboro_rambu = anggota_aman::select(DB::raw("SUM(jml_perempuan + jml_laki_laki) as total_limboro_rambu"))->where('komunitas','Limboro Rambu-Rambu')->pluck('total_limboro_rambu');
         
-        $laki_mekkatta = anggota_aman::select(DB::raw("SUM(jml_laki_laki) as laki_mekkatta"))->where('komunitas','Mekkatta')->pluck('laki_mekkatta');
-        $perempuan_mekkatta = anggota_aman::select(DB::raw("SUM(jml_perempuan) as perempuan_mekkatta"))->where('komunitas','Mekkatta')->pluck('perempuan_mekkatta');
-        $total_mekkatta = anggota_aman::select(DB::raw("SUM(jml_perempuan + jml_laki_laki) as total_mekkatta"))->where('komunitas','Mekkatta')->pluck('total_mekkatta');
+        $laki_mekkatta = anggota_aman::select(DB::raw("SUM(jml_laki_laki) as laki_mekkatta"))->where('komunitas','Mekkatta/Lombong Mekkatta')->pluck('laki_mekkatta');
+        $perempuan_mekkatta = anggota_aman::select(DB::raw("SUM(jml_perempuan) as perempuan_mekkatta"))->where('komunitas','Mekkatta/Lombong Mekkatta')->pluck('perempuan_mekkatta');
+        $total_mekkatta = anggota_aman::select(DB::raw("SUM(jml_perempuan + jml_laki_laki) as total_mekkatta"))->where('komunitas','Mekkatta/Lombong Mekkatta')->pluck('total_mekkatta');
         
         $laki_pamboang = anggota_aman::select(DB::raw("SUM(jml_laki_laki) as laki_pamboang"))->where('komunitas','Pamboang')->pluck('laki_pamboang');
         $perempuan_pamboang = anggota_aman::select(DB::raw("SUM(jml_perempuan) as perempuan_pamboang"))->where('komunitas','Pamboang')->pluck('perempuan_pamboang');
@@ -50,9 +50,9 @@ class ChartMajene extends Controller
         $perempuan_paminggalan = anggota_aman::select(DB::raw("SUM(jml_perempuan) as perempuan_paminggalan"))->where('komunitas','Paminggalan')->pluck('perempuan_paminggalan');
         $total_paminggalan = anggota_aman::select(DB::raw("SUM(jml_perempuan + jml_laki_laki) as total_paminggalan"))->where('komunitas','Paminggalan')->pluck('total_paminggalan');
         
-        $laki_panggalo = anggota_aman::select(DB::raw("SUM(jml_laki_laki) as laki_panggalo"))->where('komunitas','Panggalo')->pluck('laki_panggalo');
-        $perempuan_panggalo = anggota_aman::select(DB::raw("SUM(jml_perempuan) as perempuan_panggalo"))->where('komunitas','Panggalo')->pluck('perempuan_panggalo');
-        $total_panggalo = anggota_aman::select(DB::raw("SUM(jml_perempuan + jml_laki_laki) as total_panggalo"))->where('komunitas','Panggalo')->pluck('total_panggalo');
+        $laki_panggalo = anggota_aman::select(DB::raw("SUM(jml_laki_laki) as laki_panggalo"))->where('komunitas','Panggalo/pangalo')->pluck('laki_panggalo');
+        $perempuan_panggalo = anggota_aman::select(DB::raw("SUM(jml_perempuan) as perempuan_panggalo"))->where('komunitas','Panggalo/pangalo')->pluck('perempuan_panggalo');
+        $total_panggalo = anggota_aman::select(DB::raw("SUM(jml_perempuan + jml_laki_laki) as total_panggalo"))->where('komunitas','Panggalo/pangalo')->pluck('total_panggalo');
         
         $laki_popenga = anggota_aman::select(DB::raw("SUM(jml_laki_laki) as laki_popenga"))->where('komunitas','Popenga')->pluck('laki_popenga');
         $perempuan_popenga = anggota_aman::select(DB::raw("SUM(jml_perempuan) as perempuan_popenga"))->where('komunitas','Popenga')->pluck('perempuan_popenga');

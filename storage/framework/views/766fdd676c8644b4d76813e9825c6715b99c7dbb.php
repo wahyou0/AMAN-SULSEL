@@ -61,7 +61,7 @@
                             <div class="row">
                                 <div class="col-md-12 mb-3">
                                     
-                                    <h2>Daftar User</h2>
+                                    <h2>Daftar Super Admin</h2>
                                     <p>Silahkan Isi Form Pendaftaran dibawah ini</p>
                                     
                                 </div>
@@ -164,7 +164,7 @@ unset($__errorArgs, $__bag); ?>
                                     
                                     <div class="col-12">
                                         <div class="mb-4">
-                                            <button class="btn btn-secondary w-100">SIGN UP</button>
+                                            <button class="btn btn-secondary w-100" style="background-color: #FF6600">SIGN UP</button>
                                         </div>
                                     </div>
                                 </form>

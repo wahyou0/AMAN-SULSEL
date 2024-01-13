@@ -119,7 +119,7 @@
                                     
                                     <div class="col-12">
                                         <div class="mb-4">
-                                            <button class="btn btn-secondary w-100">SIGN UP</button>
+                                            <button class="btn btn-secondary w-100" style="background-color: #FF6600">SIGN UP</button>
                                         </div>
                                     </div>
                                 </form>

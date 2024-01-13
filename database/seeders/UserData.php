@@ -22,7 +22,7 @@ class UserData extends Seeder
                 'email' => 'admin@gmail.com',
                 'password' => bcrypt('admin'),
                 'level' => '1'
-            ],
+            ]
         ];
 
         foreach($user as $key => $value){
