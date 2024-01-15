@@ -56,9 +56,9 @@
                                         {{-- <a class="btn btn-outline-success btn-icon mb-2 me-2" href="{{ url('kegiatan/view/'.$data->id) }}">
                                             <i data-feather="eye"></i>
                                         </a> --}}
-                                        <a class="btn btn-outline-success btn-icon mb-2 me-2 bs-popover rounded" href="{{ url('marker/edit/'.$data->id) }}"  data-bs-container="body" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Edit">
+                                        {{-- <a class="btn btn-outline-success btn-icon mb-2 me-2 bs-popover rounded" href="{{ url('marker/edit/'.$data->id) }}"  data-bs-container="body" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Edit">
                                                 <i data-feather="edit"></i>
-                                        </a>
+                                        </a> --}}
                                         <input type="hidden" name="_method" value="DELETE">
                                         <button class="btn btn-outline-danger btn-icon mb-2 me-2 bs-popover rounded show-confirm" data-bs-container="body" data-bs-placement="top" data-bs-trigger="hover" data-bs-content="Hapus">
                                             <i data-feather="trash-2"></i>
