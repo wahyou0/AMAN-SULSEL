@@ -4,7 +4,7 @@
     <div class="row layout-spacing ">
         
         <!-- Content -->
-        <div class="col-xl-5 col-lg-12 col-md-12 col-sm-12 layout-top-spacing">
+        <div class="col-xl-9 col-lg-12 col-md-12 col-sm-12 layout-top-spacing">
             <div class="user-profile">
                 <div class="widget-content widget-content-area">
                     <div class="d-flex justify-content-between">
@@ -12,48 +12,48 @@
                         {{-- <a href="./user-account-settings.html" class="mt-2 edit-profile"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-3"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg></a> --}}
                     </div>
                     <div class="text-center user-info">
-                        <img src="{{ asset('storage/'.$data->image) }}" alt="avatar" style="width: 8cm">
-                        <p class="">{{ $data->nama_lengkap }}</p>
+                        <img src="{{ asset('storage/'.$data->image) }}" alt="avatar" style="width: 9cm">
+                        <p class="" style="font-size: 18pt;">{{ $data->nama_lengkap }}</p>
                     </div>
                     <div class="user-info-list">
 
                         <div class="">
-                            <ul class="contacts-block list-unstyled">
-                                <li class="contacts-block__item">
+                            <ul class="list-unstyled">
+                                <li class="contacts-block__item" style="font-size: 12pt;">
                                     <i data-feather="user"></i> {{ $data->nama_panggilan }}
                                 </li>
-                                <li class="contacts-block__item">
+                                <li class="contacts-block__item" style="font-size: 12pt;">
                                     <i data-feather="home"></i> {{ $data->tempat_lahir }}
                                 </li>
-                                <li class="contacts-block__item">
+                                <li class="contacts-block__item" style="font-size: 12pt;">
                                     <i data-feather="calendar"></i> {{ $data->tgl_lahir }}
                                 </li>
-                                <li class="contacts-block__item">
+                                <li class="contacts-block__item" style="font-size: 12pt;">
                                     <i data-feather="user"></i> {{ $data->jenis_kelamin }}
                                 </li>
-                                <li class="contacts-block__item">
+                                <li class="contacts-block__item" style="font-size: 12pt;">
                                     <i data-feather="map"></i> {{ $data->nama_komunitas }}
                                 </li>
-                                <li class="contacts-block__item">
+                                <li class="contacts-block__item" style="font-size: 12pt;">
                                     <i data-feather="map-pin"></i> {{ $data->alamat }}
                                 </li>
-                                <li class="contacts-block__item">
+                                <li class="contacts-block__item" style="font-size: 12pt;">
                                     <i data-feather="tablet"></i> {{ $data->no_hp }}
                                 </li>
-                                <li class="contacts-block__item">
+                                <li class="contacts-block__item" style="font-size: 12pt;">
                                     <i data-feather="mail"></i> {{ $data->email }}
                                 </li>
-                                <li class="contacts-block__item">
+                                <li class="contacts-block__item" style="font-size: 12pt;">
                                     <i data-feather="clipboard"></i> {{ $data->status_kader }}
                                 </li>
-                                <li class="contacts-block__item">
+                                <li class="contacts-block__item" style="font-size: 12pt;">
                                     <i data-feather="file-text"></i> {{ $data->keterangan }}
                                 </li>
-                                <li class="contacts-block__item">
+                                <li class="contacts-block__item" style="font-size: 12pt;">
                                     <i data-feather="file-text"></i>Pelatihan Yang Telah Diikuti :
                                 </li>
                                 @foreach( $keg as $a => $value )
-                                <li class="contacts-block__item">
+                                <li class="contacts-block__item" style="font-size: 12pt;">
                                     {{ $value }}
                                 </li>
                                 @endforeach

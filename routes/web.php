@@ -9,6 +9,7 @@ Use App\Http\Controllers\DashboardController;
 Use App\Http\Controllers\admin\Kader_amanController;
 use App\Http\Controllers\admin\MapsController;
 use App\Http\Controllers\admin\PolygonController;
+use App\Http\Controllers\app\AppController;
 use App\Http\Controllers\chart\ChartMassenrempulu;
 use App\Http\Controllers\KomChartController;
 use App\Http\Controllers\chart\ChartGowa;
@@ -20,11 +21,11 @@ use App\Http\Controllers\chart\ChartSinjai;
 use App\Http\Controllers\chart\ChartToraya;
 use App\Http\Controllers\User\HomeController;
 
-Route::get('/', function () {
-    return view('login');
-});
+// Route::get('/', function () {
+//     return view('login');
+// });
 
-
+Route::get('/', [AppController::class, 'index']);
 
 // Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::controller(LoginController::class)->group(function (){

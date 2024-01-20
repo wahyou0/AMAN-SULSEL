@@ -16,7 +16,19 @@ class anggota_aman extends Model
         'komunitas',
         'luas_indikatif',
         'luas_pemetaan',
+        'hutan_adat',
         'jml_laki_laki',
         'jml_perempuan',
+        'status_brwa',
+        'profil',
+        'perda',
+        'sk_bupati',
+        'perbub',
+        'perempuan_aman',
+        'kader_pemula',
+        'kader_penggerak',
+        'kader_pemimpin',
+        'bpan_laki_laki',
+        'bpan_perempuan'
     ];
 }

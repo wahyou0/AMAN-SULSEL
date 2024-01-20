@@ -61,6 +61,12 @@
                         </div>
                     </div>
                     <div class="row mb-3">
+                        <label class="col-sm-4 col-form-label">Luas Hutan Adat</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" name="hutan_adat">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
                         <label class="col-sm-4 col-form-label">Jumlah Laki-Laki</label>
                         <div class="col-sm-8">
                             <input type="number" class="form-control" name="jml_laki_laki">
@@ -72,21 +78,141 @@
                             <input type="number" class="form-control" name="jml_perempuan">
                         </div>
                     </div>
-                    <br><br>
+                    <fieldset class="row mb-3">
+                        <label class="col-sm-4 col-form-label">Status BRWA</label>
+                        <div class="col-sm-8">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="status_brwa" id="gridRadios1" value="Belum Teregistrasi">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Belum Teregistrasi
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="status_brwa" id="gridRadios2" value="Teregistrasi">
+                                <label class="form-check-label" for="gridRadios1">
+                                    Teregistrasi
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="status_brwa" id="gridRadios3" value="Terverifikasi">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Terverifikasi
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="status_brwa" id="gridRadios4" value="Tersertifikasi">
+                                <label class="form-check-label" for="gridRadios1">
+                                    Tersertifikasi
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="row mb-3">
+                        <label class="col-sm-4 col-form-label">Profil</label>
+                        <div class="col-sm-8">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="profil" id="gridRadios5" value="Lengkap">
+                                <label class="form-check-label" for="gridRadios1">
+                                    Lengkap
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="profil" id="gridRadios6" value="Belum Lengkap">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Belum Lengkap
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="row mb-3">
+                        <label class="col-sm-4 col-form-label">PERDA</label>
+                        <div class="col-sm-8">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="perda" id="gridRadios7" value="Sudah Ada">
+                                <label class="form-check-label" for="gridRadios1">
+                                    Sudah Ada
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="perda" id="gridRadios8" value="Belum Ada">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Belum Ada
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="row mb-3">
+                        <label class="col-sm-4 col-form-label">SK Bupati</label>
+                        <div class="col-sm-8">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sk_bupati" id="gridRadios9" value="Sudah Ada">
+                                <label class="form-check-label" for="gridRadios1">
+                                    Sudah Ada
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="sk_bupati" id="gridRadios10" value="Belum Ada">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Belum Ada
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="row mb-3">
+                        <label class="col-sm-4 col-form-label">PERBUB</label>
+                        <div class="col-sm-8">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="perbub" id="gridRadios11" value="Sudah Ada">
+                                <label class="form-check-label" for="gridRadios1">
+                                    Sudah Ada
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="perbub" id="gridRadios12" value="Belum Ada">
+                                <label class="form-check-label" for="gridRadios2">
+                                    Belum Ada
+                                </label>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="row mb-3">
+                        <label class="col-sm-4 col-form-label">Jumlah Perempuan AMAN</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" name="perempuan_aman">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-4 col-form-label">Jumlah Kader Pemula</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" name="kader_pemula">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-4 col-form-label">Jumlah Kader Penggerak</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" name="kader_penggerak">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-4 col-form-label">Jumlah Kader Pemimpin</label>
+                        <div class="col-sm-8">
+                            <input type="number" class="form-control" name="kader_pemimpin">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label class="form-label">BPAN Laki-Laki</label>
+                            <input type="number" class="form-control" name="bpan_laki_laki" placeholder="Jumlah Laki-laki">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">BPAN Perempuan</label>
+                            <input type="number" class="form-control" name="bpan_perempuan" placeholder="Jumlah Perempuan">
+                        </div>
+                    </div>
                     <button type="submit" class="btn btn-primary">simpan</button>
                 </form>
             </div>
         </div>
     </div>
-
-    <script>
-        new TomSelect("#select-beast",{
-            create: true,
-            sortField: {
-                field: "text",
-                direction: "asc"
-            }
-        });
-    </script>
 
 @endsection    

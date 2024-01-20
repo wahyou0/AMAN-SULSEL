@@ -33,7 +33,7 @@
                                         <th>Nama Komunitas</th>
                                         <th>Alamat</th>
                                         <th>Nomor handphone</th>
-                                        <th>Email</th>
+                                        <th>Pelatihan Yang Telah Diikuti</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -42,6 +42,9 @@
                                     $no=1;
                                     ?>
                                     <?php $__currentLoopData = $kader; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <?php
+                                        $keg = explode(',' , $data->kegiatan_diikuti);
+                                    ?>
                                     <tr>
                                         <td><?php echo e($no++); ?></td>
                                         <td><img src="<?php echo e(asset('storage/'.$data->image)); ?>" alt="" style="width: 2cm"></td>
@@ -53,7 +56,11 @@
                                         <td><?php echo e($data->nama_komunitas); ?></td>
                                         <td><?php echo e($data->alamat); ?></td>
                                         <td><?php echo e($data->no_hp); ?></td>
-                                        <td><?php echo e($data->email); ?></td>
+                                        <td>
+                                            <?php $__currentLoopData = $keg; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $a => $value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                                <?php echo e($value); ?> <br>
+                                            <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                                        </td>
                                         <td>
                                             <form method="POST" action="<?php echo e(url('kader_aman/delete/'.$data->id)); ?>">
                                                 <?php echo csrf_field(); ?>

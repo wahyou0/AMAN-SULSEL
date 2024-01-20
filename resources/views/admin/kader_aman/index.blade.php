@@ -33,7 +33,7 @@
                                         <th>Nama Komunitas</th>
                                         <th>Alamat</th>
                                         <th>Nomor handphone</th>
-                                        <th>Email</th>
+                                        <th>Pelatihan Yang Telah Diikuti</th>
                                         <th>Aksi</th>
                                     </tr>
                                 </thead>
@@ -42,6 +42,9 @@
                                     $no=1;
                                     @endphp
                                     @foreach ($kader as $data)
+                                    @php
+                                        $keg = explode(',' , $data->kegiatan_diikuti);
+                                    @endphp
                                     <tr>
                                         <td>{{ $no++ }}</td>
                                         <td><img src="{{ asset('storage/'.$data->image)}}" alt="" style="width: 2cm"></td>
@@ -53,7 +56,11 @@
                                         <td>{{ $data->nama_komunitas }}</td>
                                         <td>{{ $data->alamat }}</td>
                                         <td>{{ $data->no_hp }}</td>
-                                        <td>{{ $data->email }}</td>
+                                        <td>
+                                            @foreach ( $keg as $a => $value )
+                                                {{  $value }} <br>
+                                            @endforeach
+                                        </td>
                                         <td>
                                             <form method="POST" action="{{ url('kader_aman/delete/'.$data->id) }}">
                                                 @csrf

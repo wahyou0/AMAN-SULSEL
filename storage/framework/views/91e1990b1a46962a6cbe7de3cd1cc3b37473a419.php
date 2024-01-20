@@ -99,14 +99,28 @@ unset($__errorArgs, $__bag); ?>
                             </select>
                         </div>
                     </div>
+
                     <div class="row mb-3">
-                        <label class="col-sm-2 col-form-label">Asal Komunitas</label>
+                        <label class="col-sm-2 col-form-label">PD</label>
                         <div class="col-sm-10">
-                            <select id="select-beast" class="form-control" placeholder="Select a person..." autocomplete="off" name="nama_komunitas">
-                                <option hidden value="">Pilih Komunitas ...</option>
-                                <?php $__currentLoopData = $anggota; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $a): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                                <option value="<?php echo e($a->komunitas); ?>"><?php echo e($a->komunitas); ?></option>
-                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                            <select id="daerah" class="form-control" placeholder="Select..." autocomplete="off" name="nama_pd">
+                                <option hidden value="">Pilih PD ...</option>
+                                <option value="AMAN Gowa">AMAN Gowa</option>
+                                <option value="AMAN Majene">AMAN Majene</option>
+                                <option value="AMAN Mamasa">AMAN Mamasa</option>
+                                <option value="AMAN Maros">AMAN Maros</option>
+                                <option value="AMAN Massenrempulu">AMAN Massenrempulu</option>
+                                <option value="AMAN Sidrap">AMAN Sidrap</option>
+                                <option value="AMAN Sinjai">AMAN Sinjai</option>
+                                <option value="AMAN Toraya">AMAN Toraya</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label">Nama Komunitas</label>
+                        <div class="col-sm-10">
+                            <select class="form-control" name="nama_komunitas" id="komunitas" required>
+                                           
                             </select>
                         </div>
                     </div>
@@ -180,13 +194,43 @@ unset($__errorArgs, $__bag); ?>
         </div>
     </div>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script>
-        new TomSelect("#select-beast",{
-            create: true,
-            sortField: {
-                field: "text",
-                direction: "asc"
-            }
+        $(document).ready(function(){
+            $('#daerah').on('change', function(){
+                var pd = $(this).val();
+                console.log(pd);
+                if (pd) {
+                    $.ajax({
+                        url: '/pd/' + pd,
+                        type: 'GET',
+                        data: {
+                            '_token': '<?php echo e(csrf_token()); ?>'
+                        },
+                        dataType: 'json',
+                        success: function(data){
+                            // console.log(data);
+                            if (data) {
+                                $('#komunitas').empty();
+                                $('#komunitas').append('<option value="">--pilih--</option>');
+                                $.each(data,function(key, kom){
+                                    $('select[name="nama_komunitas"]').append(
+                                        '<option value="' + kom.komunitas + '">' +
+                                            kom.komunitas + '</option>'
+                                    );
+
+                                });
+                            } 
+                            else {
+                                $('#komunitas').empty();
+                            }
+                        }
+                    });
+                } 
+                else {
+                    $('#PD').empty();
+                }
+            });
         });
     </script>
 

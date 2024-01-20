@@ -16,7 +16,7 @@ class Kader_amanController extends Controller
     public function index()
     {
         $kader = kader_aman::all();
-
+        
         return view('admin.kader_aman.index', compact('kader'));
     }
 
@@ -130,8 +130,10 @@ class Kader_amanController extends Controller
     {
         $data = kader_aman::find($id);
 
-        $anggota = anggota_aman::all();
+        // $anggota = anggota_aman::all();
         $kegiatan = kegiatan_aman::all();
+        
+        $anggota = anggota_aman::select(DB::raw("komunitas as anggota"))->pluck('anggota');
 
         $keg = explode(',' , $data->kegiatan_diikuti);
         $cek = DB::select('select nama_kegiatan,tahun from kegiatan_aman');
@@ -139,9 +141,8 @@ class Kader_amanController extends Controller
             $a[] = $value->nama_kegiatan." ".$value->tahun;
         }
         
-        // dd($a);
         
-        return view('admin.kader_aman.edit', compact('data','anggota','kegiatan','keg','cek','a'));
+        return view('admin.kader_aman.edit', compact('data','anggota','kegiatan','keg','cek'));
     }
 
     
