@@ -20,7 +20,8 @@ return new class extends Migration
             $table->string('pengurus_daerah')->nullable();
             $table->string('komunitas')->nullable();
             $table->integer('luas_indikatif')->nullable();
-            $table->integer('luas_pemetaan')->nullable();
+            $table->integer('luas_pemetaan')->nullable(); 
+            $table->integer('hutan_adat')->nullable();
             $table->integer('jml_laki_laki')->nullable();
             $table->integer('jml_perempuan')->nullable();
             $table->string('status_brwa')->nullable();

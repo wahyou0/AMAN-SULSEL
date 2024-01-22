@@ -19,44 +19,106 @@
 
     <div class="content-wrap">
 
-            <div class="container bottommargin-lg clearfix">
-                <div class="row topmargin-sm clearfix common-height">
-                    <div class="col-md-3 col-sm-4 dark center col-padding" style="background-color: #dd5e04;">
-                        <div>
-                            
-                            <h5>Laki-laki dan Perempuan </h5>
-                            <canvas id="mytotalpopulasi"></canvas>
-                            @foreach ($totalpopulasi as $val)
-                                <h4>Total : {{ number_format($val) }} Jiwa</h4>
-                            @endforeach
-                        </div>
-                    </div>
 
-                    <div class="col-md-3 col-sm-4 dark center col-padding" style="background-color: #ff933b;">
-                        <div>
-                            <h5>Luas Wilayah</h5>
-                            <canvas id="mytotalwilayah"></canvas>
-                            
-                        </div>
-                    </div>
+        <div class="container clearfix ">
 
-                    <div class="col-md-3 col-sm-4 dark center col-padding" style="background-color: #ffac5f;">
-                        <div>
-                            <i class="i-plain i-xlarge divcenter icon-line2-layers"></i>
-                            <div class="counter counter-lined"><span data-from="1" data-to="{{$komunitas}}" data-refresh-interval="25" data-speed="3500"></span></div>
-                            <h5>Total Komunitas Adat</h5>
-                        </div>
+            <div class="col_one_fourth nobottommargin">
+                @foreach ($totalpopulasi as $val)
+                <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
+                    <h2>Populasi</h2>
+                    <div class="fbox-icon">
+                        <canvas id="mytotalpopulasi"></canvas>
                     </div>
+                    <h4>Total : <span class="subtitle">{{ number_format($val) }} </span>Jiwa</h4>
+                </div>
+                @endforeach
+            </div>
 
-                    <div class="col-md-3 col-sm-4 dark center col-padding" style="background-color: #ffc89d;">
-                        <div>
-                            <i class="i-plain i-xlarge divcenter icon-line2-list"></i>
-                            <div class="counter counter-lined"><span data-from="0" data-to="9" data-refresh-interval="30" data-speed="2700"></span></div>
-                            <h5>Total Pengurus Daerah</h5>
-                        </div>
+            <div class="col_one_fourth nobottommargin">
+                @foreach ($total_wilayah as $val)
+                <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
+                    <h2>Luas Wilayah</h2>
+                    <div class="fbox-icon">
+                        <canvas id="mytotalwilayah"></canvas>
                     </div>
+                    <h4>Total : <span class="subtitle">{{ number_format($val) }} </span>ha</h4>
+                </div>
+                @endforeach
+            </div>
+
+            <div class="col_one_fourth nobottommargin">
+                <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
+                    <h2>produk hukum</h2>
+                    <div class="fbox-icon">
+                        <canvas id="mytotalprodukhukum"></canvas>
+                    </div>
+                    <h4>Total : <span class="subtitle">{{ number_format($total_produkhukum) }} </span></h4>
                 </div>
             </div>
+            
+            <div class="col_one_fourth nobottommargin col_last">
+                <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
+                    <h2>Status BRWA</h2>
+                    <div class="fbox-icon">
+                        <canvas id="mytotalstatus"></canvas>
+                    </div>
+                    <h4>Total : <span class="subtitle">{{ number_format($total_status) }} </span></h4>
+                </div>
+            </div>
+
+            <div class="col_one_fourth nobottommargin">
+                <div class="feature-box fbox-center fbox-effect nobottomborder">
+                    <h2>Komunitas Adat</h2>
+                    <div class="fbox-icon">
+                        <a><i class="icon-stack i-alt"></i></a>
+                    </div>
+                    <h4>Total : <span class="subtitle">{{ number_format($komunitas) }} </span></h4>
+                </div>
+            </div>
+
+            <div class="col_one_fourth nobottommargin">
+                @foreach ($total_bpan as $val)
+                <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
+                    <h2> BPAN</h2>
+                    <div class="fbox-icon">
+                        
+                        <canvas id="mytotalbpan"></canvas>
+                    </div>
+                    <h4>Total : <span class="subtitle">{{ number_format($val) }} </span></h4>
+                </div>
+                @endforeach
+            </div>
+
+            <div class="col_one_fourth nobottommargin">
+                @foreach ($perempuan_aman as $val)
+                <div class="feature-box fbox-center fbox-effect fbox-light nobottomborder">
+                    <h3 style="font-size: 18pt;">Perempuan AMAN</h3>
+                    <div class="fbox-icon">
+                        <a><img src="{{ asset('logo/logo-perempuan-aman.png')}}" alt="" style="margin-top: 1cm;"></a>
+                    </div>
+                    <h4>Total : <span class="subtitle">{{ number_format($val) }} </span></h4>
+                </div>
+                @endforeach
+            </div>
+
+            <div class="col_one_fourth nobottommargin col_last">
+                @foreach ($total_kader as $val)
+                <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
+                    <h2> Kader</h2>
+                    <div class="fbox-icon">
+                        
+                        <canvas id="mytotalkader"></canvas>
+                    </div>
+                    <h4>Total : <span class="subtitle">{{ number_format($val) }} </span></h4>
+                </div>
+                @endforeach
+            </div>
+
+            {{-- <div class="clear"></div><div class="line bottommargin-lg"></div> --}}
+
+            <div class="clear"></div>
+
+        </div>
 
         {{-- <div class="container clearfix">
 
@@ -223,6 +285,7 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script>
+        let delayed;
         const populasi = document.getElementById('mytotalpopulasi');
 
         new Chart(populasi, {
@@ -239,7 +302,18 @@
                     ]
                 }]
             },
-            options: {
+            options: {animation: {
+                onComplete: () => {
+                    delayed = true;
+                },
+                delay: (context) => {
+                    let delay = 0;
+                    if (context.type === 'data' && context.mode === 'default' && !delayed) {
+                    delay = context.dataIndex * 700 + context.datasetIndex * 300;
+                    }
+                    return delay;
+                },
+                },
                 scales: {
 
                 },
@@ -253,23 +327,37 @@
     </script>
 
     <script>
+        let wil;
         const wilayah = document.getElementById('mytotalwilayah');
 
         new Chart(wilayah, {
             type: 'pie',
             data: {
-                labels: ['indikatif', 'pemetaan'],
+                labels: ['indikatif', 'pemetaan','hutan adat'],
                 datasets: [{
                     label: 'total',
-                    data: [@json($indikatif), @json($pemetaan)],
+                    data: [@json($indikatif), @json($pemetaan), @json($hutan_adat)],
                     borderWidth: 1,
                     backgroundColor: [
                         'rgb(30,144,255)',
-                        'rgb(60 179 113)'
+                        'rgb(60 179 113)',
+                        'rgb(238,130,238)'
                     ]
                 }]
             },
             options: {
+                animation: {
+                onComplete: () => {
+                    wil = true;
+                },
+                delay: (context) => {
+                    let delay = 0;
+                    if (context.type === 'data' && context.mode === 'default' && !wil) {
+                    delay = context.dataIndex * 700 + context.datasetIndex * 300;
+                    }
+                    return delay;
+                },
+                },
                 scales: {
 
                 },
@@ -281,6 +369,220 @@
             }
         });
     </script>
+
+    <script>
+        let hukum;
+        const produkhukum = document.getElementById('mytotalprodukhukum');
+
+        new Chart(produkhukum, {
+            type: 'pie',
+            data: {
+                labels: ['Perda', 'SK Bupati','Perbub'],
+                datasets: [{
+                    label: 'total',
+                    data: [@json($perda), @json($sk_bupati), @json($perbub)],
+                    borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(60 179 113)',
+                        'rgb(238,130,238)'
+                    ]
+                }]
+            },
+            options: {
+                animation: {
+                onComplete: () => {
+                    hukum = true;
+                },
+                delay: (context) => {
+                    let delay = 0;
+                    if (context.type === 'data' && context.mode === 'default' && !hukum) {
+                    delay = context.dataIndex * 700 + context.datasetIndex * 300;
+                    }
+                    return delay;
+                },
+                },
+                scales: {
+
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+    
+    <script>
+        let status;
+        const totalbpan = document.getElementById('mytotalstatus');
+
+        new Chart(totalbpan, {
+            type: 'pie',
+            data: {
+                labels: ['Teregistrasi', 'Terverifikasi','Tersertifikasi'],
+                datasets: [{
+                    label: 'total',
+                    data: [@json($registrasi), @json($verifikasi), @json($sertifikasi)],
+                    borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(60 179 113)',
+                        'rgb(238,130,238)'
+                    ]
+                }]
+            },
+            options: {
+                animation: {
+                onComplete: () => {
+                    status = true;
+                },
+                delay: (context) => {
+                    let delay = 0;
+                    if (context.type === 'data' && context.mode === 'default' && !status) {
+                    delay = context.dataIndex * 700 + context.datasetIndex * 300;
+                    }
+                    return delay;
+                },
+                },
+                scales: {
+
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+
+    <script>
+        let bpan;
+        const totbpan = document.getElementById('mytotalbpan');
+
+        new Chart(totbpan, {
+            type: 'pie',
+            data: {
+                labels: ['Laki-laki', 'Perempuan'],
+                datasets: [{
+                    label: 'total',
+                    data: [@json($bpan_laki_laki), @json($bpan_perempuan)],
+                    borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(238,130,238)'
+                    ]
+                }]
+            },
+            options: {
+                animation: {
+                onComplete: () => {
+                    bpan = true;
+                },
+                delay: (context) => {
+                    let delay = 0;
+                    if (context.type === 'data' && context.mode === 'default' && !bpan) {
+                    delay = context.dataIndex * 700 + context.datasetIndex * 300;
+                    }
+                    return delay;
+                },
+                },
+                scales: {
+
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+
+    <script>
+        let kader;
+        const totkader = document.getElementById('mytotalkader');
+
+        new Chart(totkader, {
+            type: 'pie',
+            data: {
+                labels: ['Pemula', 'Penggerak','Pemimpin'],
+                datasets: [{
+                    label: 'total',
+                    data: [@json($kader_pemula), @json($kader_penggerak), @json($kader_pemimpin)],
+                    borderWidth: 1,
+                    backgroundColor: [
+                        'rgb(30,144,255)',
+                        'rgb(60 179 113)',
+                        'rgb(238,130,238)'
+                    ]
+                }]
+            },
+            options: {
+                animation: {
+                onComplete: () => {
+                    kader = true;
+                },
+                delay: (context) => {
+                    let delay = 0;
+                    if (context.type === 'data' && context.mode === 'default' && !kader) {
+                    delay = context.dataIndex * 700 + context.datasetIndex * 300;
+                    }
+                    return delay;
+                },
+                },
+                scales: {
+
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+
+    {{-- <script>
+        let mych;
+        const del = document.getElementById('mytotalprodukhukum');
+
+        new Chart(del, {
+            type: 'bar',
+            data: {
+                labels: ['indikatif', 'pemetaan','hutan adat'],
+                datasets: [{
+                    label: 'total',
+                    data: [@json($perda), @json($sk_bupati), @json($perbub)],
+                    borderWidth: 1,
+                }]
+            },
+            options: {
+                animation: {
+                onComplete: () => {
+                    mych = true;
+                },
+                delay: (context) => {
+                    let delay = 0;
+                    if (context.type === 'data' && context.mode === 'default' && !mych) {
+                    delay = context.dataIndex * 300 + context.datasetIndex * 100;
+                    }
+                    return delay;
+                },
+                },
+                scales: {
+                   
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script> --}}
 
 
 
