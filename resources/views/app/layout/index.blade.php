@@ -25,7 +25,7 @@
             <div class="col_one_fourth nobottommargin">
                 @foreach ($totalpopulasi as $val)
                 <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
-                    <h2>Populasi</h2>
+                    <h3>Populasi</h3>
                     <div class="fbox-icon">
                         <canvas id="mytotalpopulasi"></canvas>
                     </div>
@@ -37,7 +37,7 @@
             <div class="col_one_fourth nobottommargin">
                 @foreach ($total_wilayah as $val)
                 <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
-                    <h2>Luas Wilayah</h2>
+                    <h3>Luas Wilayah</h3>
                     <div class="fbox-icon">
                         <canvas id="mytotalwilayah"></canvas>
                     </div>
@@ -48,7 +48,7 @@
 
             <div class="col_one_fourth nobottommargin">
                 <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
-                    <h2>produk hukum</h2>
+                    <h3>produk hukum</h3>
                     <div class="fbox-icon">
                         <canvas id="mytotalprodukhukum"></canvas>
                     </div>
@@ -58,7 +58,7 @@
             
             <div class="col_one_fourth nobottommargin col_last">
                 <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
-                    <h2>Status BRWA</h2>
+                    <h3>Status BRWA</h3>
                     <div class="fbox-icon">
                         <canvas id="mytotalstatus"></canvas>
                     </div>
@@ -68,7 +68,7 @@
 
             <div class="col_one_fourth nobottommargin">
                 <div class="feature-box fbox-center fbox-effect nobottomborder">
-                    <h2>Komunitas Adat</h2>
+                    <h3>Komunitas Adat</h3>
                     <div class="fbox-icon">
                         <a><i class="icon-stack i-alt"></i></a>
                     </div>
@@ -79,7 +79,7 @@
             <div class="col_one_fourth nobottommargin">
                 @foreach ($total_bpan as $val)
                 <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
-                    <h2> BPAN</h2>
+                    <h3> BPAN</h3>
                     <div class="fbox-icon">
                         
                         <canvas id="mytotalbpan"></canvas>
@@ -92,7 +92,7 @@
             <div class="col_one_fourth nobottommargin">
                 @foreach ($perempuan_aman as $val)
                 <div class="feature-box fbox-center fbox-effect fbox-light nobottomborder">
-                    <h3 style="font-size: 18pt;">Perempuan AMAN</h3>
+                    <h3>Perempuan AMAN</h3>
                     <div class="fbox-icon">
                         <a><img src="{{ asset('logo/logo-perempuan-aman.png')}}" alt="" style="margin-top: 1cm;"></a>
                     </div>
@@ -104,7 +104,7 @@
             <div class="col_one_fourth nobottommargin col_last">
                 @foreach ($total_kader as $val)
                 <div class="feature-box fbox-center fbox-light fbox-effect nobottomborder">
-                    <h2> Kader</h2>
+                    <h3> Kader</h3>
                     <div class="fbox-icon">
                         
                         <canvas id="mytotalkader"></canvas>

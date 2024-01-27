@@ -49,6 +49,7 @@ class Anggota_amanController extends Controller
     public function update(Request $request)
     {
         $input = $request->all();
+        // dd($input);
 
         if (anggota_aman::find($input['id'])->update($input)){
             return Redirect('/anggota_aman')->with('success', 'Edit Data Berhasil');

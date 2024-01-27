@@ -64,7 +64,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-4 col-form-label">Luas Hutan Adat</label>
                         <div class="col-sm-8">
-                            <input type="number" class="form-control" name="luas_pemetaan" value="<?php echo e($data->hutan_adat); ?>">
+                            <input type="number" class="form-control" name="hutan_adat" value="<?php echo e($data->hutan_adat); ?>">
                         </div>
                     </div>
                     <div class="row mb-3">
