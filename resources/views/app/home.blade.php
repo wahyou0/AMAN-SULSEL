@@ -16,6 +16,9 @@
 	<link rel="stylesheet" href="{{ asset('tema/css/animate.css') }}" type="text/css" />
 	<link rel="stylesheet" href="{{ asset('tema/css/magnific-popup.css') }}" type="text/css" />
 
+	<!-- Bootstrap Data Table Plugin -->
+	<link rel="stylesheet" href="{{ asset('tema/css/components/bs-datatable.css') }}" type="text/css" />
+
 	<link rel="stylesheet" href="{{ asset('tema/css/responsive.css') }}" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<!--[if lt IE 9]>
@@ -26,6 +29,10 @@
 	============================================= -->
 	<title>AMAN SULAWESI SELATAN</title>
     <link rel="icon" type="image/X-icon" href="{{ asset('logo/aman.png') }}"/>
+
+	{{-- apexcharts --}}
+    <script src="{{ asset('apxcharts/dist/apexcharts.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('apxcharts/dist/apexcharts.css') }}">
 
 </head>
 
@@ -42,37 +49,7 @@
 
 		<!-- #header end -->
 
-		<section id="slider" class="slider-parallax swiper_wrapper clearfix" style="height: 15cm;">
-
-			<div class="slider-parallax-inner">
-
-				<div class="swiper-container swiper-parent">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide dark" style="background-image: url( {{ asset('logo/sahkanruu.png') }} );">
-							<div class="container clearfix">
-								<div class="slider-caption slider-caption-center">
-									<h2 data-caption-animate="fadeInUp">AMAN</h2>
-									<p data-caption-animate="fadeInUp" data-caption-delay="200">Aliansi Masyarakat Adat Nusantara (AMAN) adalah organisasi kemasyarakatan independen dengan visi untuk mewujudkan kehidupan yang adil dan sejahtera bagi semua Masyarakat Adat di Indonesia.</p>
-								</div>
-							</div>
-						</div>
-						<div class="swiper-slide" style="background-image: url({{ asset('logo/bendera.jpg') }});">
-							<div class="container clearfix">
-								<div class="slider-caption">
-									<h2 data-caption-animate="fadeInUp">Great Performance</h2>
-									<p data-caption-animate="fadeInUp" data-caption-delay="200">You'll be surprised to see the Final Results of your Creation &amp; would crave for more.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="slider-arrow-left"><i class="icon-angle-left"></i></div>
-					<div id="slider-arrow-right"><i class="icon-angle-right"></i></div>
-					<div id="slide-number"><div id="slide-number-current"></div><span>/</span><div id="slide-number-total"></div></div>
-				</div>
-
-			</div>
-
-		</section>
+		{{-- slider --}}
 
 		<!-- Content
 		============================================= -->
@@ -99,9 +76,21 @@
 	<script type="text/javascript" src="{{ asset('tema/js/jquery.js') }}"></script>
 	<script type="text/javascript" src="{{ asset('tema/js/plugins.js') }}"></script>
 
+	
+	<!-- Bootstrap Data Table Plugin -->
+	<script type="text/javascript" src="{{ asset('tema/js/components/bs-datatable.js') }}"></script>
+
 	<!-- Footer Scripts
 	============================================= -->
 	<script type="text/javascript" src="{{ asset('tema/js/functions.js') }}"></script>
+
+	<script>
+
+		$(document).ready(function() {
+			$('#datatable1').DataTable();
+		});
+
+	</script>
 
 </body>
 </html>

@@ -28,7 +28,7 @@ class Kegiatan_amanController extends Controller
         $tahun = $request->tahun;
         $pelaksana = $request->pelaksana;
         $nama_kegiatan = $request->nama_kegiatan;
-        $cek_tahun_kegiatan = $request->nama_kegiatan." ".$request->tahun;
+        $cek_tahun_kegiatan = $request->nama_kegiatan." ".$request->pelaksana." ".$request->tahun;
 
         $data = new kegiatan_aman();
         $data->tempat = $tempat;
@@ -68,7 +68,7 @@ class Kegiatan_amanController extends Controller
         $tahun = $request->tahun;
         $pelaksana = $request->pelaksana;
         $nama_kegiatan = $request->nama_kegiatan;
-        $cek_tahun_kegiatan = $request->nama_kegiatan." ".$request->tahun;
+        $cek_tahun_kegiatan = $request->nama_kegiatan." ".$request->pelaksana." ".$request->tahun;
 
         $data = kegiatan_aman::find($request['id']);
         $data->tempat = $tempat;

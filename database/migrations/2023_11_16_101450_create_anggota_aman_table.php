@@ -36,6 +36,8 @@ return new class extends Migration
             $table->integer('bpan_laki_laki')->nullable();
             $table->integer('bpan_perempuan')->nullable();
             $table->timestamps();
+
+            // $table->float('amount');
         });
     }
 

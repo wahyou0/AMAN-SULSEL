@@ -146,9 +146,9 @@
                             </div>
                             @foreach ($kegiatan as $x)
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck2" name="kegiatan_diikuti[]" value="{{ $x->nama_kegiatan }} {{ $x->tahun }}">
+                                <input class="form-check-input" type="checkbox" id="gridCheck2" name="kegiatan_diikuti[]" value="{{ $x->nama_kegiatan }} {{ $x->pelaksana }} {{ $x->tahun }}">
                                 <label class="form-check-label" for="gridCheck2">
-                                    {{ $x->nama_kegiatan }} {{ $x->tahun }}
+                                    {{ $x->nama_kegiatan }} {{ $x->pelaksana }} {{ $x->tahun }}
                                 </label>
                             </div>
                           @endforeach

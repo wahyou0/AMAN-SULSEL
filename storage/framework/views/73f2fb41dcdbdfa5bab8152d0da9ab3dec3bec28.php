@@ -35,6 +35,16 @@
                                     <th>Luas Wilayah Pemetaan</th>
                                     <th>Jumlah Laki-Laki</th>
                                     <th>Jumlah Perempuan</th>
+                                    <th>Status BRWA</th>
+                                    <th>Profil</th>
+                                    <th>PERDA</th>
+                                    <th>SK Bupati</th>
+                                    <th>PEREMPUAN AMAN</th>
+                                    <th>Kader Pemula</th>
+                                    <th>Kader Penggerak</th>
+                                    <th>Kader Pemimpin</th>
+                                    <th>BPAN Laki-laki</th>
+                                    <th>BPAN Perempuan</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -53,6 +63,16 @@
                                     <td><?php echo e(number_format($data->luas_pemetaan)); ?></td>
                                     <td><?php echo e(number_format($data->jml_laki_laki)); ?></td>
                                     <td><?php echo e(number_format($data->jml_perempuan)); ?></td>
+                                    <td><?php echo e($data->status_brwa); ?></td>
+                                    <td><?php echo e($data->profil); ?></td>
+                                    <td><?php echo e($data->perda); ?></td>
+                                    <td><?php echo e($data->sk_bupati); ?></td>
+                                    <td><?php echo e($data->perempuan_aman); ?></td>
+                                    <td><?php echo e($data->kader_pemula); ?></td>
+                                    <td><?php echo e($data->kader_penggerak); ?></td>
+                                    <td><?php echo e($data->kader_pemimpin); ?></td>
+                                    <td><?php echo e($data->bpan_laki_laki); ?></td>
+                                    <td><?php echo e($data->bpan_perempuan); ?></td>
                                     <td>
                                         <form method="POST" action="<?php echo e(url('anggota_aman/delete/'.$data->id)); ?>">
                                             <?php echo csrf_field(); ?>
@@ -80,6 +100,16 @@
                                     <th>Luas Wilayah Pemetaan</th>
                                     <th>Jumlah Laki-Laki</th>
                                     <th>Jumlah Perempuan</th>
+                                    <th>Status BRWA</th>
+                                    <th>Profil</th>
+                                    <th>PERDA</th>
+                                    <th>SK Bupati</th>
+                                    <th>PEREMPUAN AMAN</th>
+                                    <th>Kader Pemula</th>
+                                    <th>Kader Penggerak</th>
+                                    <th>Kader Pemimpin</th>
+                                    <th>BPAN Laki-laki</th>
+                                    <th>BPAN Perempuan</th>
                                     <th>Aksi</th>
                                 </tr>
                             </tfoot>

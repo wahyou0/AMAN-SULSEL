@@ -35,6 +35,16 @@
                                     <th>Luas Wilayah Pemetaan</th>
                                     <th>Jumlah Laki-Laki</th>
                                     <th>Jumlah Perempuan</th>
+                                    <th>Status BRWA</th>
+                                    <th>Profil</th>
+                                    <th>PERDA</th>
+                                    <th>SK Bupati</th>
+                                    <th>PEREMPUAN AMAN</th>
+                                    <th>Kader Pemula</th>
+                                    <th>Kader Penggerak</th>
+                                    <th>Kader Pemimpin</th>
+                                    <th>BPAN Laki-laki</th>
+                                    <th>BPAN Perempuan</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -53,6 +63,16 @@
                                     <td>{{ number_format($data->luas_pemetaan) }}</td>
                                     <td>{{ number_format($data->jml_laki_laki) }}</td>
                                     <td>{{ number_format($data->jml_perempuan) }}</td>
+                                    <td>{{ $data->status_brwa }}</td>
+                                    <td>{{ $data->profil }}</td>
+                                    <td>{{ $data->perda }}</td>
+                                    <td>{{ $data->sk_bupati }}</td>
+                                    <td>{{ $data->perempuan_aman }}</td>
+                                    <td>{{ $data->kader_pemula }}</td>
+                                    <td>{{ $data->kader_penggerak }}</td>
+                                    <td>{{ $data->kader_pemimpin }}</td>
+                                    <td>{{ $data->bpan_laki_laki }}</td>
+                                    <td>{{ $data->bpan_perempuan }}</td>
                                     <td>
                                         <form method="POST" action="{{ url('anggota_aman/delete/'.$data->id) }}">
                                             @csrf
@@ -80,6 +100,16 @@
                                     <th>Luas Wilayah Pemetaan</th>
                                     <th>Jumlah Laki-Laki</th>
                                     <th>Jumlah Perempuan</th>
+                                    <th>Status BRWA</th>
+                                    <th>Profil</th>
+                                    <th>PERDA</th>
+                                    <th>SK Bupati</th>
+                                    <th>PEREMPUAN AMAN</th>
+                                    <th>Kader Pemula</th>
+                                    <th>Kader Penggerak</th>
+                                    <th>Kader Pemimpin</th>
+                                    <th>BPAN Laki-laki</th>
+                                    <th>BPAN Perempuan</th>
                                     <th>Aksi</th>
                                 </tr>
                             </tfoot>

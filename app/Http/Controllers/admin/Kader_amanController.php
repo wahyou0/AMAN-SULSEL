@@ -16,8 +16,9 @@ class Kader_amanController extends Controller
     public function index()
     {
         $kader = kader_aman::all();
+        $pelatihan = kegiatan_aman::all();
         
-        return view('admin.kader_aman.index', compact('kader'));
+        return view('admin.kader_aman.index', compact('kader','pelatihan'));
     }
 
     

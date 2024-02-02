@@ -20,12 +20,24 @@ use App\Http\Controllers\chart\ChartSidrap;
 use App\Http\Controllers\chart\ChartSinjai;
 use App\Http\Controllers\chart\ChartToraya;
 use App\Http\Controllers\User\HomeController;
+use Illuminate\Support\Facades\App;
 
 // Route::get('/', function () {
 //     return view('login');
 // });
 
 Route::get('/', [AppController::class, 'index']);
+Route::get('selengkapnya', [AppController::class, 'detailKegiatan']);
+Route::get('wilayah-adat', [AppController::class, 'petaWilayah']);
+
+Route::get('pd-gowa', [AppController::class, 'gowa']);
+Route::get('pd-maros', [AppController::class, 'maros']);
+Route::get('pd-majene', [AppController::class, 'majene']);
+Route::get('pd-mamasa', [AppController::class, 'mamasa']);
+Route::get('pd-massenrempulu', [AppController::class, 'massenrempulu']);
+Route::get('pd-sidrap', [AppController::class, 'sidrap']);
+Route::get('pd-sinjai', [AppController::class, 'sinjai']);
+Route::get('pd-toraya', [AppController::class, 'toraya']);
 
 // Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::controller(LoginController::class)->group(function (){
