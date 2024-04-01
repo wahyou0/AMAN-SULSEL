@@ -282,7 +282,9 @@
                     <div class="widget clearfix">
 
                         <h4>Flickr Photostream</h4>
-                        <div id="flickr-widget" class="flickr-feed masonry-thumbs col-5" data-id="613394@N22" data-count="15" data-type="group" data-lightbox="gallery"></div>
+                        <div id="flickr-widget" class="flickr-feed masonry-thumbs col-5" data-id="613394@N22" data-count="15" data-type="group" data-lightbox="gallery">
+                            
+                        </div>
 
                     </div>
 
