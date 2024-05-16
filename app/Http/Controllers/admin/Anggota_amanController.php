@@ -28,7 +28,7 @@ class Anggota_amanController extends Controller
         $model = $request->all();
 
         anggota_aman::create($model);
-        return redirect('/anggota_aman')->with('success', 'Anggota AMAN Berhasil diTambah');
+        return redirect('/anggota_aman')->with('success', 'Anggota AMAN Berhasil Ditambah');
     }
 
     

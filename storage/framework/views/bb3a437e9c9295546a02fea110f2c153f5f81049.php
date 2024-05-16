@@ -157,6 +157,15 @@
                         </ul>
                     </li>
 
+                    <li class="menu">
+                        <a href="<?php echo e(url('/berita')); ?>" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <i data-feather="clipboard"></i>
+                                <span>Berita AMAN</span>
+                            </div>
+                        </a>
+                    </li>
+
                     <?php elseif($a == '2'): ?>
 
                         <li class="menu active">

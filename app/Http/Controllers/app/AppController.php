@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\anggota_aman;
 use App\Models\kordinat;
 use App\Models\peta_wilayah;
+use App\Models\kegiatan_aman;
+use App\Models\berita;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -54,6 +56,9 @@ class AppController extends Controller
         $nama_mark = kordinat::all();
         $draw = peta_wilayah::select(DB::raw("polygon as draw"))->pluck('draw');
 
+        $latest = berita::latest()->get()->take(6);
+        $terbaru = berita::get()->first();
+
         return view('app.layout.index', compact('laki',
                                                 'perempuan',
                                                 'indikatif',
@@ -81,12 +86,17 @@ class AppController extends Controller
                                                 'sertifikasi',
                                                 'total_produkhukum',
                                                 'total_status',
+                                                'latest',
+                                                'terbaru',
                                                 'draw'));
     }
 
-    public function detailKegiatan()
+    public function detailKegiatan($id)
     {
-        return view('app.layout.detail_kegiatan');
+        $data = berita::find($id);
+        $recent = berita::latest()->get()->take(6);
+
+        return view('app.layout.detail_kegiatan', compact('data','recent'));
     }
 
     public function petaWilayah()
@@ -178,6 +188,14 @@ class AppController extends Controller
         $kom = anggota_aman::select(DB::raw("komunitas as kom"))->where('pengurus_daerah','AMAN Toraya')->pluck('kom');
 
         return view('app.pd.toraya', compact('toraya','indikatif','peta','kom'));
+    }
+
+
+    public function SemuaBerita()
+    {
+        $berita = berita::orderBy('created_at', 'desc')->paginate(2);
+
+        return view('app/layout.semua_berita', compact('berita'));
     }
     
 }

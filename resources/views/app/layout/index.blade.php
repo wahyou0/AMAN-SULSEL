@@ -57,62 +57,39 @@
 
             <div class="postcontent nobottommargin">
 
-                <div class="col_full bottommargin-lg clearfix">
-
-                    <div class="fancy-title title-border">
-                        <h3>Profil AMAN</h3>
-                    </div>
-
-                    <div class="col_one_third bottommargin-sm center">
-                        <img data-animate="fadeInLeft" src="{{asset('logo/aman.png')}}" alt="Iphone">
-                    </div>
-        
-                    <div class="col_two_third bottommargin-sm col_last">
-        
-                        <p>Aliansi Masyarakat Adat Nusantara (AMAN) adalah organisasi kemasyarakatan (ORMAS)  independen yang anggotanya terdiri dari komunitas-komunitas Masyarakat Adat dari berbagai pelosok Nusantara. AMAN terdaftar secara resmi di Departemen Kehakiman dan Hak Azasi Manusia
-                            sebagai Organisasi Persekutuan melalui Akta Notaris No.26, H. Abu Yusuf, SH dan Akta Pendirian tanggal 24 April 2001. Selanjutnya, kemudian diperbaharui melalui Keputusan Menteri Hukum dan HAM Nomor: AHU-0000340.AH.01.08. Tahun 2017 melalui Akta Notaris & PPAT No. 2, Ellyza, SH., M.Kn dengan Nomor NPWP 02.072.633.7-015.000.</p>
-        
-                        <p>AMAN dideklarasikan berdasarkan bangunan sejarah pergerakan Masyarakat Adat yang panjang di Indonesia. Sejak pertengahan tahun 1980-an telah muncul kesadaran baru di kalangan organisasi non pemerintah (ORNOP) dan para ilmuwan sosial tentang dampak negatif pembangunan yang sangat luas terhadap berbagai kelompok masyarakat di Indonesia. Masyarakat Adat adalah salah satu kelompok utama dan terbesar jumlahnya yang paling banyak dirugikan oleh (dan menjadi korban) politik pembangunan selama tiga dasawarsa terakhir ini. Penindasan terhadap Masyarakat Adat ini terjadi baik di bidang ekonomi, politik, hukum, maupun di bidang sosial dan budaya lainnya.</p>
-
-                        <p>Sejak pertengahan tahun 1980-an perlawanan Masyarakat Adat terhadap berbagai kebijakan pemerintah mulai bermunculan secara sporadis. Situasi ini menggugah keprihatinan banyak aktivis gerakan sosial dan akademisi atas kondisi yang dihadapi oleh Masyarakat Adat di berbagai kampung di tanah air sejak tahun 1990-an. Akhirnya pada tahun 1993 di Toraja-Sulawesi Selatan disepakati pembentukan sebuah wadah yang diberi nama Jaringan Pembela Hak-hak Masyarakat Adat (JAPHAMA) yang dipelopori para tokoh adat, akademisi, pendamping hukum dan aktivis gerakan sosial. Kehadiran JAPHAMA juga sebagai tanggapan atas menguatnya gerakan perjuangan Masyarakat Adat di tingkat global.</p>
-
-                        <p>Dalam pertemuan JAPHAMA tersebut, juga dibicarakan dan disepakati mengenai istilah Indigenous Peoples dalam konteks Indonesia sebagai “Masyarakat Adat”. Penggunaan istilah tersebut merupakan bentuk perlawanan terhadap istilah yang dilekatkan kepada Masyarakat Adat yang
-                            melecehkan, seperti suku terasing, masyarakat perambah hutan, peladang liar, masyarakat primitive, penghambat pembangunan, dan sebagainya yang melanggar hak konstitusional Masyarakat Adat sebagai manusia bermartabat, untuk diperlakukan layaknya warga negara Indonesia. Melalui JAPHAMA, tokoh-tokoh adat dan berbagai elemen lainnya melakukan konsolidasi atas gagasan mengenai Masyarakat Adat dan identifikasi cita-cita bersama. Para pemimpin/ tokoh-tokoh adat pun kemudian mendapatkan dukungan dari berbagai aktivis dan ORNOP dengan berbagai latar belakang yakni lingkungan hidup, anti globalisasi, pembaruan agraria, pendamping hukum, aktivis kebudayaan dan lain-lain untuk bersama-sama mewujudkan
-                            terlaksananya Kongres Masyarakat Adat ketika terjadinya momentum reformasi.</p>
-                        
-                        <p><a href="https://aman.or.id/files/organization-document/790661937634718Profil%20AMAN%20-%20Bahasa(2).pdf">selengkapnya...</a></p>
-                    </div>
-
-                    <div class="clear"></div>
-
-                </div>
-
+                {{-- berita kegiatan --}}
                 {{-- <div class="col_full bottommargin-lg clearfix">
 
                     <div class="fancy-title title-border">
-                        <h3>Kegiatan</h3>
+                        <h3>Terbaru</h3>
                     </div>
+
+                    
+                    @foreach ($latest as $data )
 
                     <div class="ipost clearfix bottommargin-sm">
                         <div class="col_half nobottommargin">
                             <div class="entry-image">
-                                <a href="#"><img class="image_fade" src="{{ asset('tema/images/magazine/8.jpg')}}" alt="Image"></a>
+                                <a href="#"><img class="image_fade" src="{{ asset('storage/'.$data->foto)}}" alt="Image"></a>
                             </div>
                         </div>
                         <div class="col_half nobottommargin col_last">
                             <div class="entry-title">
-                                <h3><a href="{{ url('selengkapnya')}}">Beyonce Dropped A '50 Shades Of Grey', Teaser On Instagram Last Night</a></h3>
+                                <h3><a href="{{ url('selengkapnya')}}">{{ $data->judul }}</a></h3>
                             </div>
                             <ul class="entry-meta clearfix">
-                                <li><i class="icon-calendar3"></i> 7th Jun 2014</li>
+                                <li><i class="icon-calendar3"></i> {{ $data->tanggal }}</li>
                                 <li><a href="blog-single.html#comments"><i class="icon-comments"></i> 23</a></li>
                                 <li><a href="#"><i class="icon-camera-retro"></i></a></li>
                             </ul>
                             <div class="entry-content">
-                                <p>Neque nesciunt molestias soluta esse debitis. Magni impedit quae consectetur consequuntur adipisci veritatis modi a, officia cum. Eaque iusto quod assumenda beatae, nesciunt aliquid. Vel, eos eligendi?</p>
+                                <p style="white-space: pre-line">{!! substr($data->isi, 0, 200) !!}</p>
                             </div>
                         </div>
                     </div>
+
+                    @endforeach
+
 
                     <div class="clear"></div>
 
@@ -124,7 +101,7 @@
                             </div>
                             <div class="entry-c">
                                 <div class="entry-title">
-                                    <h4><a href="#">A Baseball Team Blew Up A Bunch Of Justin Bieber And Miley Cyrus Merch</a></h4>
+                                    <h4><a href="#">judul</a></h4>
                                 </div>
                                 <ul class="entry-meta">
                                     <li><i class="icon-calendar3"></i> 5th Nov 2014</li>
@@ -182,9 +159,91 @@
                             </div>
                         </div>
 
-                    </div>
+                    </div>   
+                    
+                    <div class="clear"></div>
+                    <br>
+                    <div class="ipost clearfix bottommargin-sm">
+                        <div class="col_half nobottommargin">
+                            <a href="blog-single.html" class="more-link">Read More</a>
+                        </div>
+                    </div>  
 
                 </div> --}}
+
+                {{-- asdas --}}
+
+                <div class="col_full bottommargin-lg clearfix">
+
+                    <div class="fancy-title title-border">
+                        <h3>Hot News</h3>
+                    </div>
+
+                    @foreach ($latest as $data )
+                        
+                    
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+                        <div class="ipost clearfix">
+                            <div class="entry-image">
+                                <a href="#"><img class="image_fade" src="{{ asset('storage/'.$data->foto) }}" alt="Image" style="height: 6cm"></a>
+                            </div>
+                            <div class="entry-title">
+                                <h3><a href="{{ url('selengkapnya/'.$data->id) }}">{{ $data->judul }}</a></h3>
+                            </div>
+                            <ul class="entry-meta clearfix">
+                                <li><i class="icon-calendar3"></i> {{ $data->tanggal }}</li>
+                                <li><a href="blog-single.html#comments"><i class="icon-comments"></i> 23</a></li>
+                            </ul>
+                            <div class="entry-content">
+                                <p>{!! substr($data->isi, 0, 100) !!} <br> <a href="{{ url('selengkapnya/'.$data->id) }}">Selengkapnya...</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    @endforeach
+
+                    <div class="clear"></div>
+                    <br>
+                    <div class="ipost clearfix bottommargin-sm">
+                        <div class="col_half nobottommargin">
+                            <a href="{{ url('semua-berita') }}" class="more-link">Baca Lainnya...</a>
+                        </div>
+                    </div> 
+                </div>
+
+                
+
+
+
+                <div class="col_full bottommargin-lg clearfix">
+
+                    <div class="fancy-title title-border">
+                        <h3>Profil AMAN</h3>
+                    </div>
+
+                    <div class="col_one_third bottommargin-sm center">
+                        <img data-animate="fadeInLeft" src="{{asset('logo/aman.png')}}" alt="Iphone">
+                    </div>
+        
+                    <div class="col_two_third bottommargin-sm col_last">
+        
+                        <p>Aliansi Masyarakat Adat Nusantara (AMAN) adalah organisasi kemasyarakatan (ORMAS)  independen yang anggotanya terdiri dari komunitas-komunitas Masyarakat Adat dari berbagai pelosok Nusantara. AMAN terdaftar secara resmi di Departemen Kehakiman dan Hak Azasi Manusia
+                            sebagai Organisasi Persekutuan melalui Akta Notaris No.26, H. Abu Yusuf, SH dan Akta Pendirian tanggal 24 April 2001. Selanjutnya, kemudian diperbaharui melalui Keputusan Menteri Hukum dan HAM Nomor: AHU-0000340.AH.01.08. Tahun 2017 melalui Akta Notaris & PPAT No. 2, Ellyza, SH., M.Kn dengan Nomor NPWP 02.072.633.7-015.000.</p>
+        
+                        <p>AMAN dideklarasikan berdasarkan bangunan sejarah pergerakan Masyarakat Adat yang panjang di Indonesia. Sejak pertengahan tahun 1980-an telah muncul kesadaran baru di kalangan organisasi non pemerintah (ORNOP) dan para ilmuwan sosial tentang dampak negatif pembangunan yang sangat luas terhadap berbagai kelompok masyarakat di Indonesia. Masyarakat Adat adalah salah satu kelompok utama dan terbesar jumlahnya yang paling banyak dirugikan oleh (dan menjadi korban) politik pembangunan selama tiga dasawarsa terakhir ini. Penindasan terhadap Masyarakat Adat ini terjadi baik di bidang ekonomi, politik, hukum, maupun di bidang sosial dan budaya lainnya.</p>
+
+                        <p>Sejak pertengahan tahun 1980-an perlawanan Masyarakat Adat terhadap berbagai kebijakan pemerintah mulai bermunculan secara sporadis. Situasi ini menggugah keprihatinan banyak aktivis gerakan sosial dan akademisi atas kondisi yang dihadapi oleh Masyarakat Adat di berbagai kampung di tanah air sejak tahun 1990-an. Akhirnya pada tahun 1993 di Toraja-Sulawesi Selatan disepakati pembentukan sebuah wadah yang diberi nama Jaringan Pembela Hak-hak Masyarakat Adat (JAPHAMA) yang dipelopori para tokoh adat, akademisi, pendamping hukum dan aktivis gerakan sosial. Kehadiran JAPHAMA juga sebagai tanggapan atas menguatnya gerakan perjuangan Masyarakat Adat di tingkat global.</p>
+
+                        <p>Dalam pertemuan JAPHAMA tersebut, juga dibicarakan dan disepakati mengenai istilah Indigenous Peoples dalam konteks Indonesia sebagai “Masyarakat Adat”. Penggunaan istilah tersebut merupakan bentuk perlawanan terhadap istilah yang dilekatkan kepada Masyarakat Adat yang
+                            melecehkan, seperti suku terasing, masyarakat perambah hutan, peladang liar, masyarakat primitive, penghambat pembangunan, dan sebagainya yang melanggar hak konstitusional Masyarakat Adat sebagai manusia bermartabat, untuk diperlakukan layaknya warga negara Indonesia. Melalui JAPHAMA, tokoh-tokoh adat dan berbagai elemen lainnya melakukan konsolidasi atas gagasan mengenai Masyarakat Adat dan identifikasi cita-cita bersama. Para pemimpin/ tokoh-tokoh adat pun kemudian mendapatkan dukungan dari berbagai aktivis dan ORNOP dengan berbagai latar belakang yakni lingkungan hidup, anti globalisasi, pembaruan agraria, pendamping hukum, aktivis kebudayaan dan lain-lain untuk bersama-sama mewujudkan
+                            terlaksananya Kongres Masyarakat Adat ketika terjadinya momentum reformasi.</p>
+                        
+                        <p><a href="https://aman.or.id/files/organization-document/790661937634718Profil%20AMAN%20-%20Bahasa(2).pdf">selengkapnya...</a></p>
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
 
             </div>
 
@@ -279,14 +338,14 @@
 
                     </div>
 
-                    <div class="widget clearfix">
+                    {{-- <div class="widget clearfix">
 
                         <h4>Flickr Photostream</h4>
                         <div id="flickr-widget" class="flickr-feed masonry-thumbs col-5" data-id="613394@N22" data-count="15" data-type="group" data-lightbox="gallery">
                             
                         </div>
 
-                    </div>
+                    </div> --}}
 
                 </div>
 

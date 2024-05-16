@@ -69,6 +69,10 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('cork-v3/src/plugins/css/light/tomSelect/custom-tomSelect.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('cork-v3/src/plugins/css/dark/tomSelect/custom-tomSelect.css') }}">
 
+    {{-- crete berita plugin --}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('cork-v3/src/plugins/css/light/editors/quill/quill.snow.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('cork-v3/src/plugins/css/dark/editors/quill/quill.snow.css') }}">
+
     {{-- apexcharts --}}
     <script src="{{ asset('apxcharts/dist/apexcharts.js') }}"></script>
     <link rel="stylesheet" href="{{ asset('apxcharts/dist/apexcharts.css') }}">
@@ -248,6 +252,10 @@
 
     <script src="{{ asset('cork-v3/src/plugins/src/tomSelect/tom-select.base.js') }}"></script>
     <script src="{{ asset('cork-v3/src/plugins/src/tomSelect/custom-tom-select.js') }}"></script>
+
+    {{-- create berita js --}}
+    <script src="{{ asset('cork/src/plugins/src/editors/quill/quill.js') }}"></script>
+    <script src="{{ asset('cork/src/plugins/src/editors/quill/custom-quill.js') }}"></script>
 
     
 

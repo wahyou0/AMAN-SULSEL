@@ -70,6 +70,10 @@
     <link rel="stylesheet" type="text/css" href="<?php echo e(asset('cork-v3/src/plugins/css/dark/tomSelect/custom-tomSelect.css')); ?>">
 
     
+    <link rel="stylesheet" type="text/css" href="<?php echo e(asset('cork-v3/src/plugins/css/light/editors/quill/quill.snow.css')); ?>">
+    <link rel="stylesheet" type="text/css" href="<?php echo e(asset('cork-v3/src/plugins/css/dark/editors/quill/quill.snow.css')); ?>">
+
+    
     <script src="<?php echo e(asset('apxcharts/dist/apexcharts.js')); ?>"></script>
     <link rel="stylesheet" href="<?php echo e(asset('apxcharts/dist/apexcharts.css')); ?>">
 
@@ -248,6 +252,10 @@
 
     <script src="<?php echo e(asset('cork-v3/src/plugins/src/tomSelect/tom-select.base.js')); ?>"></script>
     <script src="<?php echo e(asset('cork-v3/src/plugins/src/tomSelect/custom-tom-select.js')); ?>"></script>
+
+    
+    <script src="<?php echo e(asset('cork/src/plugins/src/editors/quill/quill.js')); ?>"></script>
+    <script src="<?php echo e(asset('cork/src/plugins/src/editors/quill/custom-quill.js')); ?>"></script>
 
     
 

@@ -12,6 +12,6 @@ class peta_wilayah extends Model
         'id',
         'nama_pd',
         'nama_komunitas',
-        'polygon',
+        'polygon'
     ];
 }

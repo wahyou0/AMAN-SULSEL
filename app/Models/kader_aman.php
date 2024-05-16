@@ -21,6 +21,6 @@ class kader_aman extends Model
         'email',
         'kegiatan_diikuti',
         'status_kader',
-        'keterangan',
+        'keterangan'
     ];
 }

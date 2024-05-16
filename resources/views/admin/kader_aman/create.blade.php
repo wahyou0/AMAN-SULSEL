@@ -39,12 +39,12 @@
                         <div class="col-sm-10">
                             <input type="file" class="form-control @error('image')
                             is-invalid
-                        @enderror" name="image" accept="image/*">
-                        @error('image')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
+                            @enderror" name="image" accept="image/*">
+                            @error('image')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
                         </div>
                     </div>
                     <div class="row mb-3">

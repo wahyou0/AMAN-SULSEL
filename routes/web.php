@@ -20,6 +20,7 @@ use App\Http\Controllers\chart\ChartSidrap;
 use App\Http\Controllers\chart\ChartSinjai;
 use App\Http\Controllers\chart\ChartToraya;
 use App\Http\Controllers\User\HomeController;
+use App\Http\Controllers\admin\BeritaController;
 use Illuminate\Support\Facades\App;
 
 // Route::get('/', function () {
@@ -27,7 +28,8 @@ use Illuminate\Support\Facades\App;
 // });
 
 Route::get('/', [AppController::class, 'index']);
-Route::get('selengkapnya', [AppController::class, 'detailKegiatan']);
+Route::get('selengkapnya/{id}', [AppController::class, 'detailKegiatan']);
+Route::get('semua-berita', [AppController::class, 'SemuaBerita']);
 Route::get('wilayah-adat', [AppController::class, 'petaWilayah']);
 
 Route::get('pd-gowa', [AppController::class, 'gowa']);
@@ -120,6 +122,14 @@ Route::group(['middleware' => ['auth']], function () {
 
         Route::get('daftar-user', [LoginController::class, 'daftarUser']);
         Route::delete('daftar-user/delete/{id}', [LoginController::class, 'destroy']);
+
+        // berita
+        Route::get('berita', [BeritaController::class, 'index']);
+        Route::get('berita/create', [BeritaController::class, 'create']);
+        Route::post('berita/store', [BeritaController::class, 'store']);
+        Route::get('berita/edit/{id}', [BeritaController::class, 'edit']);
+        Route::post('berita/update', [BeritaController::class, 'update']);
+        Route::delete('berita/delete/{id}', [BeritaController::class, 'destroy']);
 
     });
     Route::group(['middleware' => ['cekUserLogin:2']], function () {

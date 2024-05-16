@@ -12,6 +12,6 @@ class kegiatan extends Model
         'id',
         'id_kader',
         'nama_kader',
-        'kegiatan',
+        'kegiatan'
     ];
 }

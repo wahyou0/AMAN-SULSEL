@@ -22,15 +22,15 @@
 								<!-- Entry Title
 								============================================= -->
 								<div class="entry-title">
-									<h2>This is a Standard post with a Preview Image</h2>
+									<h2>{{ $data->judul }}</h2>
 								</div><!-- .entry-title end -->
 
 								<!-- Entry Meta
 								============================================= -->
 								<ul class="entry-meta clearfix">
-									<li><i class="icon-calendar3"></i> 10th July 2014</li>
-									{{-- <li><a href="#"><i class="icon-user"></i> admin</a></li> --}}
-									<li><i class="icon-folder-open"></i> <a href="#">Kegiatan</a>, <a href="#">AMAN SULSEL</a></li>
+									<li><a href="#"><i class="icon-user"></i> {{ $data->penulis }}</a></li>
+									<li><i class="icon-calendar3"></i> {{ $data->tanggal }}</li>
+									<li><i class="icon-folder-open"></i> {{ $data->kategori }}</li>
 									{{-- <li><a href="#"><i class="icon-comments"></i> 43 Comments</a></li> --}}
 									{{-- <li><a href="#"><i class="icon-camera-retro"></i></a></li> --}}
 								</ul><!-- .entry-meta end -->
@@ -38,39 +38,28 @@
 								<!-- Entry Image
 								============================================= -->
 								<div class="entry-image">
-									<a href="#"><img src="{{ asset('tema/images/blog/full/1.jpg')}}" alt="Blog Single"></a>
+									<a href="#"><img src="{{ asset('storage/'.$data->foto) }}" alt="Blog Single"></a>
 								</div><!-- .entry-image end -->
 
 								<!-- Entry Content
 								============================================= -->
 								<div class="entry-content notopmargin">
+									
+									
+									{!! $data->isi !!}
 
-									<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-
-									<p>Nullam id dolor id nibh ultricies vehicula ut id elit. <a href="#">Curabitur blandit tempus porttitor</a>. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper.</p>
-
-									<blockquote><p>Vestibulum id ligula porta felis euismod semper. Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.</p></blockquote>
-
-									<p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus.</p>
-
-									<p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Cras justo odio, dapibus ac facilisis in, egestas eget quam. <a href="#">Nullam quis risus eget urna</a> mollis ornare vel eu leo. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-
-
-									<p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-
-									<p>Nullam id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Donec id elit non mi porta gravida at eget metus. Vestibulum id ligula porta felis euismod semper.</p>
 									<!-- Post Single - Content End -->
 
 									<!-- Tag Cloud
 									============================================= -->
-									{{-- <div class="tagcloud clearfix bottommargin">
+									<div class="tagcloud clearfix bottommargin">
 										<a href="#">general</a>
 										<a href="#">information</a>
 										<a href="#">media</a>
 										<a href="#">press</a>
 										<a href="#">gallery</a>
 										<a href="#">illustration</a>
-									</div> --}}
+									</div>
 									<!-- .tagcloud end -->
 
 									<div class="clear"></div>
@@ -186,159 +175,37 @@
 					<div class="sidebar nobottommargin col_last clearfix">
 						<div class="sidebar-widgets-wrap">
 
-							<div class="widget widget-twitter-feed clearfix">
-
-								<h4>Twitter Feed</h4>
-								<ul class="iconlist twitter-feed" data-username="envato" data-count="2">
-									<li></li>
-								</ul>
-
-								<a href="#" class="btn btn-default btn-sm fright">Follow Us on Twitter</a>
-
-							</div>
-
-							<div class="widget clearfix">
-
-								<h4>Flickr Photostream</h4>
-								<div id="flickr-widget" class="flickr-feed masonry-thumbs" data-id="613394@N22" data-count="16" data-type="group" data-lightbox="gallery"></div>
-
-							</div>
-
 							<div class="widget clearfix">
 
 								<div class="tabs nobottommargin clearfix" id="sidebar-tabs">
 
 									<ul class="tab-nav clearfix">
-										<li><a href="#tabs-1">Popular</a></li>
-										<li><a href="#tabs-2">Recent</a></li>
-										<li><a href="#tabs-3"><i class="icon-comments-alt norightmargin"></i></a></li>
+										<li><a href="#tabs-2">Terkini</a></li>
 									</ul>
 
 									<div class="tab-container">
 
-										<div class="tab-content clearfix" id="tabs-1">
-											<div id="popular-post-list-sidebar">
-
-												<div class="spost clearfix">
-													<div class="entry-image">
-														<a href="#" class="nobg"><img class="img-circle" src="images/magazine/small/3.jpg" alt=""></a>
-													</div>
-													<div class="entry-c">
-														<div class="entry-title">
-															<h4><a href="#">Debitis nihil placeat, illum est nisi</a></h4>
-														</div>
-														<ul class="entry-meta">
-															<li><i class="icon-comments-alt"></i> 35 Comments</li>
-														</ul>
-													</div>
-												</div>
-
-												<div class="spost clearfix">
-													<div class="entry-image">
-														<a href="#" class="nobg"><img class="img-circle" src="images/magazine/small/2.jpg" alt=""></a>
-													</div>
-													<div class="entry-c">
-														<div class="entry-title">
-															<h4><a href="#">Elit Assumenda vel amet dolorum quasi</a></h4>
-														</div>
-														<ul class="entry-meta">
-															<li><i class="icon-comments-alt"></i> 24 Comments</li>
-														</ul>
-													</div>
-												</div>
-
-												<div class="spost clearfix">
-													<div class="entry-image">
-														<a href="#" class="nobg"><img class="img-circle" src="images/magazine/small/1.jpg" alt=""></a>
-													</div>
-													<div class="entry-c">
-														<div class="entry-title">
-															<h4><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
-														</div>
-														<ul class="entry-meta">
-															<li><i class="icon-comments-alt"></i> 19 Comments</li>
-														</ul>
-													</div>
-												</div>
-
-											</div>
-										</div>
+										
 										<div class="tab-content clearfix" id="tabs-2">
 											<div id="recent-post-list-sidebar">
 
+												@foreach ($recent as $item)
+
 												<div class="spost clearfix">
 													<div class="entry-image">
-														<a href="#" class="nobg"><img class="img-circle" src="images/magazine/small/1.jpg" alt=""></a>
+														<a href="{{ url('selengkapnya/'.$item->id) }}" class="nobg"><img class="img-circle" src="{{ asset('storage/'.$item->foto) }}" alt=""></a>
 													</div>
 													<div class="entry-c">
 														<div class="entry-title">
-															<h4><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
+															<h4><a href="{{ url('selengkapnya/'.$item->id) }}">{{ $item->judul }}</a></h4>
 														</div>
 														<ul class="entry-meta">
-															<li>10th July 2014</li>
+															<li>{{ $item->tanggal}}</li>
 														</ul>
 													</div>
 												</div>
-
-												<div class="spost clearfix">
-													<div class="entry-image">
-														<a href="#" class="nobg"><img class="img-circle" src="images/magazine/small/2.jpg" alt=""></a>
-													</div>
-													<div class="entry-c">
-														<div class="entry-title">
-															<h4><a href="#">Elit Assumenda vel amet dolorum quasi</a></h4>
-														</div>
-														<ul class="entry-meta">
-															<li>10th July 2014</li>
-														</ul>
-													</div>
-												</div>
-
-												<div class="spost clearfix">
-													<div class="entry-image">
-														<a href="#" class="nobg"><img class="img-circle" src="images/magazine/small/3.jpg" alt=""></a>
-													</div>
-													<div class="entry-c">
-														<div class="entry-title">
-															<h4><a href="#">Debitis nihil placeat, illum est nisi</a></h4>
-														</div>
-														<ul class="entry-meta">
-															<li>10th July 2014</li>
-														</ul>
-													</div>
-												</div>
-
-											</div>
-										</div>
-										<div class="tab-content clearfix" id="tabs-3">
-											<div id="recent-post-list-sidebar">
-
-												<div class="spost clearfix">
-													<div class="entry-image">
-														<a href="#" class="nobg"><img class="img-circle" src="images/icons/avatar.jpg" alt=""></a>
-													</div>
-													<div class="entry-c">
-														<strong>John Doe:</strong> Veritatis recusandae sunt repellat distinctio...
-													</div>
-												</div>
-
-												<div class="spost clearfix">
-													<div class="entry-image">
-														<a href="#" class="nobg"><img class="img-circle" src="images/icons/avatar.jpg" alt=""></a>
-													</div>
-													<div class="entry-c">
-														<strong>Mary Jane:</strong> Possimus libero, earum officia architecto maiores....
-													</div>
-												</div>
-
-												<div class="spost clearfix">
-													<div class="entry-image">
-														<a href="#" class="nobg"><img class="img-circle" src="images/icons/avatar.jpg" alt=""></a>
-													</div>
-													<div class="entry-c">
-														<strong>Site Admin:</strong> Deleniti magni labore laboriosam odio...
-													</div>
-												</div>
+												
+												@endforeach
 
 											</div>
 										</div>
@@ -349,51 +216,7 @@
 
 							</div>
 
-							<div class="widget clearfix">
-
-								<h4>Portfolio Carousel</h4>
-								<div id="oc-portfolio-sidebar" class="owl-carousel carousel-widget" data-items="1" data-margin="10" data-loop="true" data-nav="false" data-autoplay="5000">
-
-									<div class="oc-item">
-										<div class="iportfolio">
-											<div class="portfolio-image">
-												<a href="#">
-													<img src="images/portfolio/4/3.jpg" alt="Mac Sunglasses">
-												</a>
-												<div class="portfolio-overlay">
-													<a href="http://vimeo.com/89396394" class="center-icon" data-lightbox="iframe"><i class="icon-line-play"></i></a>
-												</div>
-											</div>
-											<div class="portfolio-desc center nobottompadding">
-												<h3><a href="portfolio-single-video.html">Mac Sunglasses</a></h3>
-												<span><a href="#">Graphics</a>, <a href="#">UI Elements</a></span>
-											</div>
-										</div>
-									</div>
-
-									<div class="oc-item">
-										<div class="iportfolio">
-											<div class="portfolio-image">
-												<a href="portfolio-single.html">
-													<img src="images/portfolio/4/1.jpg" alt="Open Imagination">
-												</a>
-												<div class="portfolio-overlay">
-													<a href="images/blog/full/1.jpg" class="center-icon" data-lightbox="image"><i class="icon-line-plus"></i></a>
-												</div>
-											</div>
-											<div class="portfolio-desc center nobottompadding">
-												<h3><a href="portfolio-single.html">Open Imagination</a></h3>
-												<span><a href="#">Media</a>, <a href="#">Icons</a></span>
-											</div>
-										</div>
-									</div>
-
-								</div>
-
-
-							</div>
-
-							<div class="widget clearfix">
+							{{-- <div class="widget clearfix">
 
 								<h4>Tag Cloud</h4>
 								<div class="tagcloud">
@@ -409,7 +232,7 @@
 									<a href="#">modern</a>
 								</div>
 
-							</div>
+							</div> --}}
 
 						</div>
 
