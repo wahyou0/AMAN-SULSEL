@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('penulis')->nullable();
             $table->string('foto')->nullable();
             $table->text('isi');
+            $table->string('status_berita');
             $table->timestamps();
         });
     }

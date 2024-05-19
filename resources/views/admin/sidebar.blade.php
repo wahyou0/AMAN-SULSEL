@@ -200,6 +200,24 @@
                         </a>
                     </li>
 
+                    <li class="menu">
+                        <a href="{{ url('/kategori-berita')}}" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <i data-feather="clipboard"></i>
+                                <span>Kategori</span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="menu">
+                        <a href="{{ url('/tag-berita')}}" aria-expanded="false" class="dropdown-toggle">
+                            <div class="">
+                                <i data-feather="clipboard"></i>
+                                <span>Tag Berita</span>
+                            </div>
+                        </a>
+                    </li>
+
                     @elseif ($a == '2')
 
                         <li class="menu active">

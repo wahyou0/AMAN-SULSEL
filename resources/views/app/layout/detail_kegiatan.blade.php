@@ -53,12 +53,20 @@
 									<!-- Tag Cloud
 									============================================= -->
 									<div class="tagcloud clearfix bottommargin">
+										
+										@foreach ($data as $key => $value)
+											@php
+												$tag = explode(',' , $value->tag);
+											@endphp
+											
+											<a href="#">{{ $value->tag }}</a>
+
+										@endforeach
 										<a href="#">general</a>
 										<a href="#">information</a>
 										<a href="#">media</a>
 										<a href="#">press</a>
 										<a href="#">gallery</a>
-										<a href="#">illustration</a>
 									</div>
 									<!-- .tagcloud end -->
 
@@ -83,7 +91,10 @@
 							
 							<!-- Post Single - Author End -->
 
-							<h4>Related Posts:</h4>
+							
+							{{-- berita terkait --}}
+							
+							{{-- <h4>Related Posts:</h4>
 
 							<div class="related-posts clearfix">
 
@@ -159,7 +170,7 @@
 
 								</div>
 
-							</div>
+							</div> --}}
 
 							<!-- Comments
 							============================================= -->

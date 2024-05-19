@@ -5,8 +5,10 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\berita;
+use App\Models\kategori_berita;
+use App\Models\tag;
+use Cviebrock\EloquentSluggable\Services\SlugService;
 use Illuminate\Support\Facades\Storage;
-use Illuminate\Support\Str;
 
 class BeritaController extends Controller
 {
@@ -20,7 +22,10 @@ class BeritaController extends Controller
     
     public function create()
     {
-        return view('admin.berita.create');
+        $kategori = kategori_berita::all();
+        $tag = tag::all();
+
+        return view('admin.berita.create', compact('kategori', 'tag'));
     }
 
     
@@ -29,7 +34,7 @@ class BeritaController extends Controller
         $request->validate([
             'judul' => 'required',
             'isi' => 'required',
-            'foto' => 'mimes:png,jpg,jpeg|image|max:20048'
+            'foto' => 'mimes:png,jpg,jpeg|image|max:10048'
         ],
             [
                 'judul.required' => 'Judul Tidak Boleh kosong',
@@ -38,12 +43,14 @@ class BeritaController extends Controller
 
         $judul = $request->judul;
         $kategori = $request->kategori;
-        $tag = $request->tag;
+
+        $ar = $request->tag;
+        $tag = implode(',' , $ar);
+
         $tanggal = $request->tanggal;
         $tempat = $request->tempat;
         $penulis = $request->penulis;
         $isi = $request->isi;
-        $slug = Str::slug($request->judul);
 
         if($request->hasFile('foto')){
             $path = $request->file('foto')->store('uploads');
@@ -53,7 +60,6 @@ class BeritaController extends Controller
 
         $data = new berita;
         $data->judul = $judul;
-        $data->slug = $slug;
         $data->kategori = $kategori;
         $data->tag = $tag;
         $data->tanggal = $tanggal;
@@ -61,6 +67,7 @@ class BeritaController extends Controller
         $data->penulis = $penulis;
         $data->foto = $path;
         $data->isi = $isi;
+        $data->status_berita = 'belum dipublish';
 
         if ($data->save()){
             return redirect('/berita')->with('success', 'Berita AMAN Berhasil ditambah');
@@ -81,24 +88,30 @@ class BeritaController extends Controller
     public function edit($id)
     {
         $data = berita::find($id);
-        return view('admin.berita.edit', compact('data'));
+        $kategori = kategori_berita::all();
+        $tag = tag::all();
+
+        return view('admin.berita.edit', compact('data','kategori', 'tag'));
     }
 
    
     public function update(Request $request)
     {
-        $request->validate([
-            'foto' => 'mimes:png,jpg,jpeg|image|max:20048'
+        $request->validate([           
         ]);
 
-        $judul = $request->judul;
-        $kategori = $request->kategori;
-        $tag = $request->tag;
-        $tanggal = $request->tanggal;
-        $tempat = $request->tempat;
-        $penulis = $request->penulis;
-        $isi      = $request->isi;
-        $slug = Str::slug($request->judul);
+        $judul      = $request->judul;
+        $kategori   = $request->kategori;
+
+        $ar = $request->tag;
+        $tag = implode(',' , $ar);
+
+        $tanggal    = $request->tanggal;
+        $tempat     = $request->tempat;
+        $penulis    = $request->penulis;
+        $isi        = $request->isi;
+        $status     = $request->status_berita;
+        $slug = SlugService::createSlug(tag::class, 'slug', $tag);
 
         $data = berita::find($request['id']);
         $cekfoto = $data->foto;
@@ -112,15 +125,16 @@ class BeritaController extends Controller
             $path = $data->foto;
         }
 
-        $data->judul = $judul;
-        $data->slug = $slug; 
+        $data->judul    = $judul;
         $data->kategori = $kategori;
-        $data->tag = $tag;
-        $data->tanggal = $tanggal;
-        $data->tempat = $tempat;
-        $data->penulis = $penulis;
-        $data->foto = $path;
-        $data->isi = $isi;
+        $data->tag      = $tag;
+        $data->tanggal  = $tanggal;
+        $data->tempat   = $tempat;
+        $data->penulis  = $penulis;
+        $data->foto     = $path;
+        $data->isi      = $isi;
+        $data->status_berita = $status;
+        $data->slug = $slug;
 
         if ($data->save()){
             return redirect('/berita')->with('success', 'Edit Data Berhasil');

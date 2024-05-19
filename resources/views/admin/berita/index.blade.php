@@ -28,10 +28,12 @@
                                 <th>Tanggal</th>
                                 <th>Judul</th>
                                 <th>Kategori</th>
-                                <th>tag</th>
+                                <th>Tag</th>
+                                <th>Slug</th>
                                 <th>tempat</th>
                                 <th>Penulis</th>
                                 <th>foto</th>
+                                <th>Status</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -46,9 +48,18 @@
                                 <td>{{ $data->judul }}</td>
                                 <td>{{ $data->kategori }}</td>
                                 <td>{{ $data->tag }}</td>
+                                <td>{{ $data->slug }}</td>
                                 <td>{{ $data->tempat }}</td>
                                 <td>{{ $data->penulis }}</td>
                                 <td><img src="{{ asset('storage/'.$data->foto)}}" alt="" style="width: 2cm"></td>
+                                <td>
+                                    @if ($data->status_berita == 'publish')
+                                        <a class="btn btn-success  bs-popover rounded">Terpublish</a>
+                                    @else
+                                        <a class="btn btn-danger  bs-popover rounded">Belum Dipublish</a>
+                                    @endif
+                                    
+                                </td>
                                 <td>
                                     <form method="POST" action="{{ url('berita/delete/'.$data->id) }}">
                                         @csrf
@@ -72,9 +83,11 @@
                                 <th>Judul</th>
                                 <th>Kategori</th>
                                 <th>Tag</th>
+                                <th>Slug</th>
                                 <th>Tempat</th>
                                 <th>Penulis</th>
                                 <th>Foto</th>
+                                <th>Status</th>
                                 <th>Aksi</th>
                             </tr>
                         </tfoot>

@@ -8,6 +8,7 @@ use App\Models\kordinat;
 use App\Models\peta_wilayah;
 use App\Models\kegiatan_aman;
 use App\Models\berita;
+use App\Models\tag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -56,7 +57,7 @@ class AppController extends Controller
         $nama_mark = kordinat::all();
         $draw = peta_wilayah::select(DB::raw("polygon as draw"))->pluck('draw');
 
-        $latest = berita::latest()->get()->take(6);
+        $latest = berita::latest()->where('status_berita','Publish')->get()->take(6);
         $terbaru = berita::get()->first();
 
         return view('app.layout.index', compact('laki',

@@ -21,6 +21,8 @@ use App\Http\Controllers\chart\ChartSinjai;
 use App\Http\Controllers\chart\ChartToraya;
 use App\Http\Controllers\User\HomeController;
 use App\Http\Controllers\admin\BeritaController;
+use App\Http\Controllers\admin\KategoriController;
+use App\Http\Controllers\admin\TagController;
 use Illuminate\Support\Facades\App;
 
 // Route::get('/', function () {
@@ -130,6 +132,22 @@ Route::group(['middleware' => ['auth']], function () {
         Route::get('berita/edit/{id}', [BeritaController::class, 'edit']);
         Route::post('berita/update', [BeritaController::class, 'update']);
         Route::delete('berita/delete/{id}', [BeritaController::class, 'destroy']);
+
+        // kategori
+        Route::get('kategori-berita', [KategoriController::class, 'index']);
+        Route::get('kategori-berita/create', [KategoriController::class, 'create']);
+        Route::post('kategori-berita/store', [KategoriController::class, 'store']);
+        Route::get('kategori-berita/edit/{id}', [KategoriController::class, 'edit']);
+        Route::post('kategori-berita/update', [KategoriController::class, 'update']);
+        Route::delete('kategori-berita/delete/{id}', [KategoriController::class, 'destroy']);
+
+        // tag
+        Route::get('tag-berita', [TagController::class, 'index']);
+        Route::get('tag-berita/create', [TagController::class, 'create']);
+        Route::post('tag-berita/store', [TagController::class, 'store']);
+        Route::get('tag-berita/edit/{slug}', [TagController::class, 'edit']);
+        Route::post('tag-berita/update', [TagController::class, 'update']);
+        Route::delete('tag-berita/delete/{slug}', [TagController::class, 'destroy']);
 
     });
     Route::group(['middleware' => ['cekUserLogin:2']], function () {

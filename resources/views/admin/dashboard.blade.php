@@ -65,7 +65,8 @@
     <link href="{{ asset('cork-v3/src/assets/css/light/users/user-profile.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('cork-v3/src/assets/css/dark/users/user-profile.css') }}" rel="stylesheet" type="text/css" />
 
-    
+    {{-- tom select --}}
+    <link rel="stylesheet" type="text/css" href="{{ asset('cork-v3/src/plugins/src/tomSelect/tom-select.default.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('cork-v3/src/plugins/css/light/tomSelect/custom-tomSelect.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('cork-v3/src/plugins/css/dark/tomSelect/custom-tomSelect.css') }}">
 
@@ -250,6 +251,9 @@
         });
     </script>
 
+
+    
+    <script src="{{ asset('cork-v3/src/assets/js/scrollspyNav.js') }}"></script>
     <script src="{{ asset('cork-v3/src/plugins/src/tomSelect/tom-select.base.js') }}"></script>
     <script src="{{ asset('cork-v3/src/plugins/src/tomSelect/custom-tom-select.js') }}"></script>
 
@@ -257,7 +261,11 @@
     <script src="{{ asset('cork/src/plugins/src/editors/quill/quill.js') }}"></script>
     <script src="{{ asset('cork/src/plugins/src/editors/quill/custom-quill.js') }}"></script>
 
-    
+    <script>
+        new TomSelect("#select-tag",{
+        maxItems: 6
+    });
+    </script>
 
 </body>
 </html>

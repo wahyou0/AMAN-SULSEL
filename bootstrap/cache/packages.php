@@ -10,6 +10,13 @@
       'LarapexChart' => 'ArielMejiaDev\\LarapexCharts\\Facades\\LarapexChart',
     ),
   ),
+  'cviebrock/eloquent-sluggable' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Cviebrock\\EloquentSluggable\\ServiceProvider',
+    ),
+  ),
   'fruitcake/laravel-cors' => 
   array (
     'providers' => 

@@ -5,7 +5,7 @@
         <nav class="breadcrumb-style-one" aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Form</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Tambah Berita AMAN</li>
+                <li class="breadcrumb-item active" aria-current="page">Edit Berita AMAN</li>
             </ol>
         </nav>
     </div>
@@ -31,15 +31,29 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Kategori</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="kategori" value="{{ $data->kategori }}">
+                            <select id="select-beast" class="form-control" autocomplete="off" name="kategori">
+                                <option value="{{ $data->kategori }}">{{ $data->kategori }}</option>
+                                @foreach ($kategori as $item)
+                                    
+                                    <option value="{{ $item->kategori}}">{{ $item->kategori }}</option>
+
+                                @endforeach
+                            </select>
                         </div>
                     </div>
-                    <div class="row mb-3">
+                    
+                    <div id="multi-select" class="row mb-3">
                         <label class="col-sm-2 col-form-label">Tag</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="tag" value="{{ $data->tag }}">
+                            <select id="select-tag" class="form-control" name="tag[]" multiple placeholder="Pilih Tag..." autocomplete="off">
+                                <option value="{{ $data->tag }}">{{ $data->tag }}</option>
+                                @foreach ($tag as $item)
+                                    <option value="{{ $item->tag_berita }}">{{ $item->tag_berita }}</option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
+
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Tempat</label>
                         <div class="col-sm-10">
@@ -63,6 +77,10 @@
                                     {{ $message }}
                                 </div>
                             @enderror
+                            <div class="mt-2">
+                                gambar sebelumnya : <img src="{{ asset('storage/'.$data->foto) }}" width="200">
+
+                            </div>
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -73,6 +91,16 @@
                             <textarea class="ckeditor form-control" name="isi">
                                 {{ $data->isi }}"
                             </textarea>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label class="col-sm-2 col-form-label">Status</label>
+                        <div class="col-sm-10">
+                            <select id="select-beast" class="form-control" autocomplete="off" name="status_berita">
+                                <option value="{{ $data->status_berita }}">{{ $data->status_berita }}</option>
+                                <option value="belum dipublish">Belum Dipublish</option>
+                                <option value="publish">Publish</option>
+                            </select>
                         </div>
                     </div>
 

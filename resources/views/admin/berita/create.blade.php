@@ -37,15 +37,29 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Kategori</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="kategori">
+                            <select id="select-beast" class="form-control" placeholder="Select a person..." autocomplete="off" name="kategori">
+                                <option hidden value="">Pilih Kategori ...</option>
+                                @foreach ($kategori as $item)
+                                    
+                                    <option value="{{ $item->kategori}}">{{ $item->kategori }}</option>
+
+                                @endforeach
+                            </select>
                         </div>
                     </div>
-                    <div class="row mb-3">
+                    <div id="multi-select" class="row mb-3">
                         <label class="col-sm-2 col-form-label">Tag</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="tag">
+                            <select id="select-tag" class="form-control" name="tag[]" multiple placeholder="Pilih Tag..." autocomplete="off">
+                                @foreach ($tag as $item)
+                                    <option value="{{ $item->tag_berita }}">{{ $item->tag_berita }}</option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
+
+                    
+
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Tempat</label>
                         <div class="col-sm-10">
@@ -55,7 +69,7 @@
                     <div class="row mb-3">
                         <label class="col-sm-2 col-form-label">Penulis</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="penulis">
+                            <input type="disabled" class="form-control" name="penulis" value="{{ Auth::user()->name }}">
                         </div>
                     </div>
                     <div class="row mb-3">
@@ -73,7 +87,7 @@
                     </div>
                     <div class="row mb-3">
                         <div class="col-sm-2 col-form-label">
-                            <label>Isi</label>
+                            <label>Deskripsi</label>
                         </div>
                         <div class="col-sm-10">
                             <textarea class="ckeditor form-control @error('isi')
@@ -109,6 +123,10 @@
         });
 
     </script>
+
+
+
+
 
 @endsection    
 
